@@ -1,0 +1,190 @@
+
+  <!DOCTYPE HTML>
+<html lang="utf-8">
+<head>
+  <meta charset="UTF-8">
+  
+    <title>Archives: 2015 | 欧阳之家</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    
+    <meta name="author" content="欧阳">
+    
+    
+    
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="ouyli" />
+    <meta name="twitter:title" content="Archives: 2015 | 欧阳之家" />
+      
+    
+    
+    
+    <link rel="icon" href="/img/favicon.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/img/pacman.jpg">
+    <link rel="apple-touch-icon-precomposed" href="/img/pacman.jpg">
+    
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+    <link href="/css/hover.css" rel="stylesheet">
+    <link href="/css/bottom.css" rel="stylesheet">
+</head>
+
+    <body>
+      <header>
+        <div>
+		
+			<div id="imglogo">
+				<a rel="pulse" class="pulse" href="/"><img src="/img/pacman.png" alt="欧阳之家" title="欧阳之家"/></a>
+			</div>
+			
+			<div id="textlogo">
+				<h1 class="site-name"><a rel="hover" class="hover" href="/" title="欧阳之家">欧阳之家</a></h1>
+				<h2 class="blog-motto"><a rel="wobble-to-bottom-right" class="wobble-to-bottom-right" href="#" title="#">成本管理</a></h2>
+			</div>
+			<div class="navbar"><a rel="buzz" class="buzz" href="#" title="菜單">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					<ul>
+					 
+						<li><a rel="wobble-top" class="wobble-top" href="/">首页</a></li>
+					
+						<li><a rel="wobble-top" class="wobble-top" href="/archives">存档</a></li>
+					
+						<li><a rel="wobble-top" class="wobble-top" href="/tags">标签</a></li>
+					
+						<li><a rel="wobble-top" class="wobble-top" href="/about">关于</a></li>
+					
+						<li><a rel="wobble-top" class="wobble-top" href="/categories">目录</a></li>
+					
+				</ul>
+			</nav>			
+</div>
+
+      </header>
+      <div id="container">
+        
+
+<div class="archive-title" >
+  <h2 class="archive-icon">2015</h2>
+  
+  <div class="archiveslist archive-float clearfix">
+   <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/07/">July 2015</a><span class="archive-list-count">2</span></li></ul>
+ </div>
+  
+</div>
+<div id="main" class="archive-part clearfix">
+  <div id="archive-page">
+
+  <section class="post" itemscope itemprop="blogPost">
+  
+    <a rel="sink" class="sink" href="/2015/07/10/hello-world/" title="Hello World" itemprop="url">
+  
+    <h1 itemprop="name">Hello World</h1>
+    
+    <time datetime="2015-07-10T14:25:17.995Z" itemprop="datePublished">2015-07-10</time>
+  </a>
+</section>
+
+
+  <section class="post" itemscope itemprop="blogPost">
+  
+    <a rel="sink" class="sink" href="/2015/07/10/第一篇测试文章/" title="第一篇测试文章" itemprop="url">
+  
+    <h1 itemprop="name">第一篇测试文章</h1>
+    
+    <time datetime="2015-07-10T14:23:03.000Z" itemprop="datePublished">2015-07-10</time>
+  </a>
+</section>
+
+
+
+  </div>
+</div>
+
+      </div>
+      <footer><div id="footer" >
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<section class="info">
+		<span class="buzz" rel="buzz"> 屌丝. <br/>
+			一个</span>
+	</section>
+	 
+	<div class="social-font" class="clearfix">
+		
+		<a rel="grow-rotate" class="grow-rotate" href="http://weibo.com/ouyli" target="_blank" title="weibo"></a>
+		
+		
+		<a href="https://twitter.com/ouyli" target="_blank" title="twitter"></a>
+		
+		
+		
+	</div>
+		<p class="copyright">Powered by <a rel="float-shadow" class="float-shadow" href="http://zespia.tw/hexo/" target="_blank" title="hexo">Hexo</a> and Theme by <a class="box-shadow-inset"href="https://github.com/uruir/pacmanhover" target="_blank" title="Pacman">PacmanHover</a> © 2015 
+		
+		
+		<a class="wobble-horizontal" rel="wobble-horizontal" href="http://yoursite.com" target="_blank" title="欧阳">欧阳</a>
+		
+		</p>
+</div>
+</footer>
+      <script src="/js/jquery-2.0.3.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else
+    {
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+        
+    }
+  });
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+});
+</script>
+
+
+
+
+
+
+
+    </body>
+   </html>
