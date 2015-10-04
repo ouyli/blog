@@ -57,7 +57,7 @@
   </nav>
   <div class="clearfix"></div>
 </header>
-<span id="sbs" onclick="$use()"><b><font color=red>查看栏目、友情链接、关于作者更多信息</font></b></span>
+<span id="sbs" onclick="$use()"><b><font color=red>点击就可以打开！查看栏目、友情链接、标签、以及关于作者更多信息。</font></b></span>
 <div id="sb">
   
 <div class="widget tag">
@@ -177,7 +177,7 @@
   
 </div>
 <div class="theme-copyright">
-  Powered by  <a href="http://hrxo.io" target="_blank">Hexo</a>
+  Powered by  <a href="http://hexo.io" target="_blank">Hexo</a>
    | 
   Thanks <a href="/about" target="_blank">GITHUB & GITCAFE</a>
 </div>
@@ -311,13 +311,13 @@ function $use()
     if(d.style.display=='none')
     { 
         $D();
-        sb.innerHTML='收缩<——————————————————————';
+        sb.innerHTML='<——————————————————收缩列表———————————————————>';
        
     }
     else
     { 
         $D3(); 
-        sb.innerHTML='展开———————————————————————>'; 
+        sb.innerHTML='<——————————————————展开列表———————————————————>'; 
      
     }
 }
