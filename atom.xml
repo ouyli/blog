@@ -30,6 +30,30 @@
   </entry>
   
   <entry>
+    <title><![CDATA[利用excel快速求出盈亏平衡]]></title>
+    <link href="http://ou-yang.net/2015/11/14/%E5%88%A9%E7%94%A8excel%E5%BF%AB%E9%80%9F%E6%B1%82%E5%87%BA%E7%9B%88%E4%BA%8F%E5%B9%B3%E8%A1%A1/"/>
+    <id>http://ou-yang.net/2015/11/14/利用excel快速求出盈亏平衡/</id>
+    <published>2015-11-14T09:36:57.000Z</published>
+    <updated>2015-11-14T09:45:22.738Z</updated>
+    <content type="html"><![CDATA[<p>A公司制造一种高质量运动鞋。公司最大生产能力为1500，固定成本为40000元，每双可变成本为36元，当前的销量为900，平均销售价格为90元<br><a id="more"></a><br>1） 计算单位边际贡献及边际贡献率；<br>2） 计算销售收益、总成本及利润；<br>3） 计算盈亏平衡销量及盈亏平衡销售收益；<br>4） 假定公司希望获得24000元利润，计算为达到利润目标所需要的销量及销售收益；</p>
+<p>利用EXCEL 我们能快速做出如下表格。</p>
+<p><img src="http://7xnrnj.com1.z0.glb.clouddn.com/2.png" alt=""></p>
+<p>销量<em>售价-（销量</em>单位变动成本+固定成本）=利润<br>单位边际贡献=售价-单位变动成本<br>所以销量=（利润+固定成本）/单位边际贡献</p>
+<p>上图制作时红色部分为输入值，其他为公式，可参考如下</p>
+<p><img src="http://7xnrnj.com1.z0.glb.clouddn.com/1.png" alt=""></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>A公司制造一种高质量运动鞋。公司最大生产能力为1500，固定成本为40000元，每双可变成本为36元，当前的销量为900，平均销售价格为90元<br>]]>
+    
+    </summary>
+    
+      <category term="盈亏" scheme="http://ou-yang.net/tags/%E7%9B%88%E4%BA%8F/"/>
+    
+      <category term="预测分析" scheme="http://ou-yang.net/categories/%E9%A2%84%E6%B5%8B%E5%88%86%E6%9E%90/"/>
+    
+  </entry>
+  
+  <entry>
     <title><![CDATA[成本控制的基本程式和方法]]></title>
     <link href="http://ou-yang.net/2015/11/04/%E6%88%90%E6%9C%AC%E6%8E%A7%E5%88%B6%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%A8%8B%E5%BC%8F%E5%92%8C%E6%96%B9%E6%B3%95/"/>
     <id>http://ou-yang.net/2015/11/04/成本控制的基本程式和方法/</id>
@@ -1031,31 +1055,6 @@
     <summary type="html">
     <![CDATA[<h2 id="一、BOM的概念和重要性">一、BOM的概念和重要性</h2><p>物料清单（Bill Of Material 简称BOM）是母件与所有子件的从属关系、单位用量及其他属性.<br>]]>
     
-    </summary>
-    
-      <category term="制造" scheme="http://ou-yang.net/tags/%E5%88%B6%E9%80%A0/"/>
-    
-      <category term="成本工作" scheme="http://ou-yang.net/categories/%E6%88%90%E6%9C%AC%E5%B7%A5%E4%BD%9C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[制造业设立主要部门]]></title>
-    <link href="http://ou-yang.net/2015/07/11/%E5%88%B6%E9%80%A0%E4%B8%9A%E8%AE%BE%E7%AB%8B%E4%B8%BB%E8%A6%81%E9%83%A8%E9%97%A8/"/>
-    <id>http://ou-yang.net/2015/07/11/制造业设立主要部门/</id>
-    <published>2015-07-11T03:10:01.000Z</published>
-    <updated>2015-07-11T03:53:22.245Z</updated>
-    <content type="html"><![CDATA[<ol>
-<li>研发: <strong>技术部或者研发部</strong>    <code>产品研发、改进，提供BOM</code>    研发支出</li>
-<li>制造:    <strong>生管部或者制造部</strong>    <code>产品生产、生产管理</code>    生产成本－直接材料<br>生产成本－直接人工</li>
-<li>辅助生产部门:    <strong>采购开发、采购部、生技部、质量部等</strong>    <code>寻找供应商、询报价，材料采购、货款支付，品质管理，技术指导等</code>    生产成本－制造费用</li>
-<li>销售:    <strong>市场部或者营业部</strong>    <code>市场开拓，产品销售，售后服务</code>    销售费用</li>
-</ol>
-]]></content>
-    <summary type="html">
-    <![CDATA[<ol>
-<li>研发: <strong>技术部或者研发部</strong>    <code>产品研发、改进，提供BOM</code>    研发支出</li>
-<li>制造:    <strong>生管部或者制造部</strong>    <code>产品生产、生产管理</c]]>
     </summary>
     
       <category term="制造" scheme="http://ou-yang.net/tags/%E5%88%B6%E9%80%A0/"/>
