@@ -30,6 +30,43 @@
   </entry>
   
   <entry>
+    <title><![CDATA[生产企业出口退税账务处理]]></title>
+    <link href="http://ou-yang.net/2015/12/16/%E7%94%9F%E4%BA%A7%E4%BC%81%E4%B8%9A%E5%87%BA%E5%8F%A3%E9%80%80%E7%A8%8E%E8%B4%A6%E5%8A%A1%E5%A4%84%E7%90%86/"/>
+    <id>http://ou-yang.net/2015/12/16/生产企业出口退税账务处理/</id>
+    <published>2015-12-16T14:12:07.000Z</published>
+    <updated>2015-12-16T14:16:22.056Z</updated>
+    <content type="html"><![CDATA[<p><strong>执行免抵退税办法的生产企业，其出口退税如何进行账务处理? </strong><br><a id="more"></a></p>
+<h1 id="账务处理如下：">账务处理如下：</h1><p>　　1、购入货物及接受应税劳务时，按增值税扣税凭证注明的增值税额。 </p>
+<p>　　借：应交税费——应交增值税(进项税额)/原材料/管理费用/制造费用等 </p>
+<p>　　  贷：银行存款/应付账款等。 </p>
+<p>　　2、出口货物 </p>
+<p>　　借：银行存款/应收账款等 </p>
+<p>　　  贷：主营业务收入 </p>
+<p>　  　结转成本 </p>
+<p>　　借：主营业务成本 </p>
+<p>　  　贷：库存商品。 </p>
+<p>　　3、计算当期不得免征和抵扣税额、当期免抵退税额、当期应退税额、当期免抵税额。账务处理如下： </p>
+<p>　　借：其他应收款——应收出口退税款(增值税)(当期应退税额) </p>
+<p>　    　应交税费——应交增值税(出口抵减内销产品应纳税额)(当期免抵税额) </p>
+<p>　　    主营业务成本(当期不得免征和抵扣税额) </p>
+<p>　  　贷：应交税费——应交增值税(出口退税)(当期免抵退税额) </p>
+<p>　　      应交税费——应交增值税(进项税额转出)(当期不得免征和抵扣税额)。 </p>
+<p>　　4、收到出口退税款 </p>
+<p>　　借：银行存款 </p>
+<p>　　   贷：其他应收款——应收出口退税款(增值税)。 </p>
+]]></content>
+    <summary type="html">
+    <![CDATA[生产企业出口退税账务处理]]>
+    
+    </summary>
+    
+      <category term="税务" scheme="http://ou-yang.net/tags/%E7%A8%8E%E5%8A%A1/"/>
+    
+      <category term="成本工作" scheme="http://ou-yang.net/categories/%E6%88%90%E6%9C%AC%E5%B7%A5%E4%BD%9C/"/>
+    
+  </entry>
+  
+  <entry>
     <title><![CDATA[增值税怎样做会计处理]]></title>
     <link href="http://ou-yang.net/2015/12/05/%E5%A2%9E%E5%80%BC%E7%A8%8E%E6%80%8E%E6%A0%B7%E5%81%9A%E4%BC%9A%E8%AE%A1%E5%A4%84%E7%90%86/"/>
     <id>http://ou-yang.net/2015/12/05/增值税怎样做会计处理/</id>
@@ -674,32 +711,6 @@
 <pre><code>（1）、作业方法必须是标准的；
 （2）、作业速度也必须是标准的； 
 （3）、]]>
-    </summary>
-    
-      <category term="制造" scheme="http://ou-yang.net/tags/%E5%88%B6%E9%80%A0/"/>
-    
-      <category term="成本工作" scheme="http://ou-yang.net/categories/%E6%88%90%E6%9C%AC%E5%B7%A5%E4%BD%9C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[工序工艺]]></title>
-    <link href="http://ou-yang.net/2015/07/24/%E5%B7%A5%E5%BA%8F%E5%B7%A5%E8%89%BA/"/>
-    <id>http://ou-yang.net/2015/07/24/工序工艺/</id>
-    <published>2015-07-24T11:51:49.000Z</published>
-    <updated>2015-07-24T11:59:55.374Z</updated>
-    <content type="html"><![CDATA[<h1 id="工序：">工序：</h1><p>一个或一组工人连续完成工艺过程被称为工序。</p>
-<pre><code>例如：一个工人在一台贴片机上完成LED灯珠的贴片；
-     一组工人对灯头和灯罩的组合。
-</code></pre><h1 id="工艺：">工艺：</h1><p>在生产过程中，组装原材料或者直接改变原材料（或毛坯）形状、尺寸和性能，使之变为半成品或成品的过程，称为工艺过程。它是生产过程的主要部分。</p>
-<pre><code>例如毛坯的铸造、锻造和焊接；改变材料性能的热处理；零件的机械加工等，都属于工艺过程。
-</code></pre><p>工艺过程又是由一个或若干个顺序排列的工序组成的。</p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<h1 id="工序：">工序：</h1><p>一个或一组工人连续完成工艺过程被称为工序。</p>
-<pre><code>例如：一个工人在一台贴片机上完成LED灯珠的贴片；
-     一组工人对灯头和灯罩的组合。
-</code></pre><h1 id="工艺：">工艺：</h1]]>
     </summary>
     
       <category term="制造" scheme="http://ou-yang.net/tags/%E5%88%B6%E9%80%A0/"/>
