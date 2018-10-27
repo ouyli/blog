@@ -259,9 +259,7 @@ function buildOptions($cont, $slides, els, options, o) {
 	$slides.css({position: 'absolute', top:0, left:0}).hide().each(function(i) {
 		var z;
 		if (opts.backwards)
-			z = first ? i <= first ? els.length + (i-first) : first-i : els.length-i;
-		else
-			z = first ? i >= first ? els.length - (i-first) : first-i : els.length-i;
+			z = first ? i <= first="" ?="" els.length="" +="" (i-first)="" :="" first-i="" els.length-i;="" else="" z="first" i="">= first ? els.length - (i-first) : first-i : els.length-i;
 		$(this).css('z-index', z)
 	});
 
@@ -538,27 +536,7 @@ function go(els, opts, manual, fwd) {
 
 	// check to see if we should stop cycling based on autostop options
 	if (!manual && !p.cyclePause && !opts.bounce &&
-		((opts.autostop && (--opts.countdown <= 0)) ||
-		(opts.nowrap && !opts.random && opts.nextSlide < opts.currSlide))) {
-		if (opts.end)
-			opts.end(opts);
-		return;
-	}
-
-	// if slideshow is paused, only transition on a manual trigger
-	var changed = false;
-	if ((manual || !p.cyclePause) && (opts.nextSlide != opts.currSlide)) {
-		changed = true;
-		var fx = opts.fx;
-		// keep trying to get the slide size if we don't have it yet
-		curr.cycleH = curr.cycleH || $(curr).height();
-		curr.cycleW = curr.cycleW || $(curr).width();
-		next.cycleH = next.cycleH || $(next).height();
-		next.cycleW = next.cycleW || $(next).width();
-
-		// support multiple transition types
-		if (opts.multiFx) {
-			if (opts.lastFx == undefined || ++opts.lastFx >= opts.fxs.length)
+		((opts.autostop && (--opts.countdown <= 0))="" ||="" (opts.nowrap="" &&="" !opts.random="" opts.nextslide="" <="" opts.currslide)))="" {="" if="" (opts.end)="" opts.end(opts);="" return;="" }="" slideshow="" is="" paused,="" only="" transition="" on="" a="" manual="" trigger="" var="" changed="false;" ((manual="" !p.cyclepause)="" (opts.nextslide="" !="opts.currSlide))" fx="opts.fx;" keep="" trying="" to="" get="" the="" slide="" size="" we="" don't="" have="" it="" yet="" curr.cycleh="curr.cycleH" $(curr).height();="" curr.cyclew="curr.cycleW" $(curr).width();="" next.cycleh="next.cycleH" $(next).height();="" next.cyclew="next.cycleW" $(next).width();="" support="" multiple types="" (opts.multifx)="" (opts.lastfx="=" undefined="" ++opts.lastfx="">= opts.fxs.length)
 				opts.lastFx = 0;
 			fx = opts.fxs[opts.lastFx];
 			opts.currFx = fx;
@@ -762,21 +740,7 @@ $.fn.cycle.createPagerAnchor = function(i, el, $p, els, opts) {
 		if ($.isFunction(cb))
 			cb(opts.nextSlide, els[opts.nextSlide]);
 		go(els,opts,1,opts.currSlide < i); // trigger the trans
-//		return false; // <== allow bubble
-	});
-	
-	if ( ! /^click/.test(opts.pagerEvent) && !opts.allowPagerClickBubble)
-		$a.bind('click.cycle', function(){return false;}); // suppress click
-	
-	if (opts.pauseOnPagerHover)
-		$a.hover(function() { opts.$cont[0].cyclePause++; }, function() { opts.$cont[0].cyclePause--; } );
-};
-
-// helper fn to calculate the number of slides between the current and the next
-$.fn.cycle.hopsFromLast = function(opts, fwd) {
-	var hops, l = opts.lastSlide, c = opts.currSlide;
-	if (fwd)
-		hops = c > l ? c - l : opts.slideCount - l;
+//		return false; // <== allow="" bubble="" });="" if="" (="" !="" ^click="" .test(opts.pagerevent)="" &&="" !opts.allowpagerclickbubble)="" $a.bind('click.cycle',="" function(){return="" false;});="" suppress="" click="" (opts.pauseonpagerhover)="" $a.hover(function()="" {="" opts.$cont[0].cyclepause++;="" },="" function()="" opts.$cont[0].cyclepause--;="" }="" );="" };="" helper="" fn="" to="" calculate="" the="" number="" of="" slides="" between="" current="" and="" next="" $.fn.cycle.hopsfromlast="function(opts," fwd)="" var="" hops,="" l="opts.lastSlide," c="opts.currSlide;" (fwd)="" hops="c"> l ? c - l : opts.slideCount - l;
 	else
 		hops = c < l ? l - c : l + opts.slideCount - c;
 	return hops;
@@ -1321,12 +1285,4 @@ $.fn.cycle.transitions.wipe = function($cont, $slides, opts) {
 			var bb = b < h ? b + parseInt(step * ((h-b)/count || 1)) : h;
 			var rr = r < w ? r + parseInt(step * ((w-r)/count || 1)) : w;
 			$next.css({ clip: 'rect('+tt+'px '+rr+'px '+bb+'px '+ll+'px)' });
-			(step++ <= count) ? setTimeout(f, 13) : $curr.css('display', 'none');
-		})();
-	});
-	opts.cssBefore = { display: 'block', top: 0, left: 0 };
-	opts.animIn	   = { left: 0 };
-	opts.animOut   = { left: 0 };
-};
-
-})(jQuery);
+			(step++ </==></=></=>

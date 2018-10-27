@@ -131,11 +131,7 @@
 					},
 					nextFu:function(){
 						var n=_.n
-						_.chngFu(++n<_.li.length?n:0)
-					},
-					prevFu:function(){
-						var n=_.n
-						_.chngFu(--n>=0?n:_.li.length-1)
+						_.chngFu(++n<_.li.length?n:0) },="" prevfu:function(){="" var="" n="_.n" _.chngfu(--n="">=0?n:_.li.length-1)
 					},
 					customStr:function(str){
 						//console.log(str)
@@ -245,12 +241,7 @@
 					nextFu:function(){
 						var n=_.n
 						_.way=1
-						_.chngFu(++n<_.li.length-_.show?n:0)
-					},
-					prevFu:function(){
-						var n=_.n
-						_.way=-1
-						_.chngFu(--n>=0?n:_.li.length-1-_.show)						
+						_.chngFu(++n<_.li.length-_.show?n:0) },="" prevfu:function(){="" var="" n="_.n" _.way="-1" _.chngfu(--n="">=0?n:_.li.length-1-_.show)						
 					},
 					closeFu:function(){						
 						if(_.pres=='close')
@@ -286,3 +277,4 @@
 		})		
 	}	
 })(jQuery)
+</_.li.length-_.show?n:0)></_.li.length?n:0)>

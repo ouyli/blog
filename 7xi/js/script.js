@@ -246,8 +246,7 @@ $(window).load(function() {
                                 $('#menu > li').css({display:'block'});
                                 $('#navigation').css({display:'block'})
                                 var num=$('#menu > li').length;
-                                for (i=0;i<num;i++) {
-                                    var th=$('#menu > li').eq(i);
+                                for (i=0;i<num;i++) {="" var="" th="$('#menu"> li').eq(i);
                                     th.stop().delay(220*i).animate({top:th.data('top'), left:th.data('left')}, 600, 'easeOutBack')
                                     th.find(' > img').stop().delay(220*i).animate({top:15, left:15, width:145, height:157},600,'easeOutBack', function(){})
                                 }
@@ -306,4 +305,4 @@ $(window).load(function() {
     centre();
     $(window).resize(centre);
 
-})
+})</num;i++)>
