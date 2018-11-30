@@ -181,11 +181,11 @@
 </body>
 </html>
 
-    <script type="text/javascript" src="images/ThreeWebGL.js"></script>
+    <script type="text/javascript" src="Images/ThreeWebGL.js"></script>
 
-    <script type="text/javascript" src="images/ThreeExtras.js"></script>
+    <script type="text/javascript" src="Images/ThreeExtras.js"></script>
 
-    <script type="text/javascript" src="images/Detector.js"></script>
+    <script type="text/javascript" src="Images/Detector.js"></script>
 
 
     <script id="vs" type="x-shader/x-vertex">
