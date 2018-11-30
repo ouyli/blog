@@ -1,0 +1,264 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>题库</title>
+    <link href="./css/reset2.css" rel="stylesheet" type="text/css" />
+    <link href="./css/weui.css" rel="stylesheet" type="text/css" />
+    <link href="./css/style2.css" rel="stylesheet" type="text/css" />
+
+
+</head>
+
+<body>
+
+    <div class="load-frame"></div>
+    <div id="root">
+        <h2>题库 <small>总题数{{questions.allLength}}</small>
+
+		<a href="http://7xi.bid/blog/about/index.html" class="fr weui-btn weui-btn_mini weui-btn_primary" id="showPi">关于</a>
+        </h2>
+        <div class="search-panel">
+            <div class="weui-cell weui-cell_vcode">
+                <div class="weui-cell__bd">
+                    <input class="weui-input" type="text" v-model="searchValue" placeholder="搜索题目">
+                </div>
+                <div class="weui-cell__ft">
+                    <button class="weui-vcode-btn" id="searchBtn" v-on:click="search">搜索</button>
+                </div>
+            </div>
+        </div>
+       <div>
+            <div class="question" v-if="showQuestion">
+              <div  v-if="question.type!=3">
+			         <div id="xxx" class="title" v-if="question.type!=2"><b v-if="question.type!=4">[单选题]</b><b v-else>[计算题]</b></div>
+                     <div id="xxx" class="title" v-else>[多选题]</div>
+			  </div>
+              <div  v-else><div  id="xxx" class="title">[判断题]</div></div>
+
+
+
+			<label id="defen" style="display:none;color:red;"  onclick="xianshi()"></label>
+
+				<div id="tm">
+                   <label id="km">[{{question.km}}]</label> ※.<b v-html="question.title">{{question.title}}</b></div>
+
+
+                ※※※※※※※※※※※※※※※※※※※※※※※※※※※※
+
+		<div id="q1">
+                <ul v-if="question.type!='3'">
+                <div v-if="question.type!='2'">
+				  <b v-if="question.type!=4">
+                    <p  v-if="question.answers[0]"><span><input id="rd2_1" name="rd1" type="radio" value="A"></span><label for="rd2_1">{{question.answers[0]}}</label></p>
+					<p  v-if="question.answers[1]"><span><input id="rd2_2" name="rd1" type="radio" value="B"></span><label for="rd2_2">{{question.answers[1]}}</label></p>
+					<p  v-if="question.answers[2]"><span><input id="rd2_3" name="rd1" type="radio" value="C"></span><label for="rd2_3">{{question.answers[2]}}</label></p>
+					<p  v-if="question.answers[3]"><span><input id="rd2_4" name="rd1" type="radio" value="D"></span><label for="rd2_4">{{question.answers[3]}}</label></p>
+					<p  v-if="question.answers[4]"><span><input id="rd2_5" name="rd1" type="radio" value="E"></span><label for="rd2_4">{{question.answers[4]}}</label></p>
+					<p  v-if="question.answers[5]"><span><input id="rd2_6" name="rd1" type="radio" value="F"></span><label for="rd2_4">{{question.answers[5]}}</label></p>
+				  </b>
+				  <b v-else><p  v-if="question.answers[0]" style="color:red;"><span><input id="rd2_1" name="rd1" type="radio" value="A"></span><label for="rd2_1">{{question.answers[0]}}</label>不需答，选择此处直接看答案！</p></b>
+                </div>
+
+				<div v-else>
+                    <p  v-if="question.answers[0]"><span><input id="rd2_1" name="rd2" type="checkbox" value="A"></span><label for="rd2_1">{{question.answers[0]}}</label></p>
+					<p  v-if="question.answers[1]"><span><input id="rd2_2" name="rd2" type="checkbox" value="B"></span><label for="rd2_2">{{question.answers[1]}}</label></p>
+					<p  v-if="question.answers[2]"><span><input id="rd2_3" name="rd2" type="checkbox" value="C"></span><label for="rd2_3">{{question.answers[2]}}</label></p>
+					<p  v-if="question.answers[3]"><span><input id="rd2_4" name="rd2" type="checkbox" value="D"></span><label for="rd2_4">{{question.answers[3]}}</label></p>
+					<p  v-if="question.answers[4]"><span><input id="rd2_5" name="rd2" type="checkbox" value="E"></span><label for="rd2_4">{{question.answers[4]}}</label></p>
+					<p  v-if="question.answers[5]"><span><input id="rd2_6" name="rd2" type="checkbox" value="F"></span><label for="rd2_4">{{question.answers[5]}}</label></p>
+				 </div>
+                </ul>
+
+                <ul v-else>
+                    <p><span><input id="rd1_1" name="rd1" type="radio" value="A"></span><label for="rd1_1">A.对</label></p>
+                    <p><span><input id="rd1_2" name="rd1" type="radio" value="B"></span><label for="rd1_1">B.错</label></p>
+                </ul>
+※※※※※※※※※※※※※※※※※※※※※※※※※※※※
+
+		      <div id="msg1" class="no_choice" style="display:none;">您还没选择！</div>
+
+		</div>
+
+
+	    <div id="a1" style="display:none;">
+			<div id="fs"  style="display:none;" ></div>
+			<span id="r1" class="right" style="display:none;"></span>
+			<span id="w1" class="wrong" style="display:none;"></span>
+		
+		<div>
+                <label id="uan"  style="display:none;"></label>                    
+        </div>
+		  <div class="content_jd">
+
+                 标准答案： <label id="an">{{question.ans}}</label>
+		  
+			<br>
+
+		※※※※※※※※※※※※※※※※※※※※※※※※※※※※
+		<div>
+		答案解析： <label id="an" v-html="question.jiexi">{{question.jiexi}}</label></div>
+	   </div>
+	   </div>
+
+
+            </div>
+            <div v-else>
+                <p class="tip50" v-if="searchList.length == 0">没有搜索到结果</p>
+                <p class="tip50" v-if="searchList.length == 50">最多显示50条，请细化关键词哦</p>
+                <ul class="search-list">
+                    <li class="question" v-for="item in searchList">
+                        <div class="title">
+                            <b> [{{item.km}}] ※.</b><b v-html="item.title">{{item.title}}</b>
+                        </div>
+                        <ul v-if="item.answers[3]!=null">
+                            <li v-if="item.answers[0]">{{item.answers[0]}}</li>
+                            <li v-if="item.answers[1]">{{item.answers[1]}}</li>
+                            <li v-if="item.answers[2]">{{item.answers[2]}}</li>
+                            <li v-if="item.answers[3]">{{item.answers[3]}}</li>
+							<li v-if="item.answers[4]">{{item.answers[4]}}</li>
+							<li v-if="item.answers[5]">{{item.answers[5]}}</li>
+                        </ul>
+                        <ul v-else>
+						   <b v-if="item.type!=4">
+                            <li>A.对
+                            </li>
+                            <li>B.错
+                            </li>
+						   </b>
+						   <b  v-else ><p style="color:red;">计算题答案如下：</p><p v-html="item.jiexi">{{item.jiexi}}</p></b>
+                        </ul>
+                        答案： {{item.ans}}
+                    </li>
+                </ul>
+            </div>
+            <div class="button-sp-area">
+                <!--<a href="javascript:;" class="weui-btn weui-btn_plain-default" id="b1" v-on:click="showAnswer" v-if="showQuestion">确定</a>-->
+				<a href="javascript:;" class="weui-btn weui-btn_plain-default" id="b1">确定</a>
+                <a href="javascript:;" class="weui-btn weui-btn_plain-primary" id="next1" v-on:click="getRandom" v-if="showQuestion">下一题</a>
+                <a href="javascript:;" class="weui-btn weui-btn_plain-primary" id="next2" v-on:click="getRandom" v-else>继续答题</a>
+            </div>
+        </div>
+    </div>
+    <div style="display: none;">
+        <script src="" language="JavaScript"></script>
+    </div>
+    <script src="./js/zepto.js"></script>
+    <script src="./js/weui.js"></script>
+    <script src="./js/vue.js"></script>
+    <script src="./qs.js"></script>
+    <script src="./js/index.js"></script>
+	<script src="./js/jquery-1.8.3.min.js"></script>
+
+
+
+
+
+<script type="text/javascript">
+	$(function () {
+		$("#b1").click(function () {
+			
+//if(document.getElementById("b1").innerText==="下一题"){document.getElementById("b1").innerText="答完查看"; document.getElementById("next1").click();}else{document.getElementById("b1").innerText="下一题";
+			if (document.getElementById("xxx").innerText !== "[多选题]"){
+				var rl1 = $('#q1 input:radio[name="rd1"]:checked').val();
+				
+			}
+			else{
+				rl1 =""
+
+                var obj = document.getElementsByName("rd2"); 
+				var obj_legth = obj.length;                     
+				  for(var i=0;i<obj_legth;i++){         
+					  if(obj[i].checked){ rl1 = rl1 +obj[i].value}  
+				  }
+			}
+
+			document.getElementById("uan").innerText =rl1  
+
+			if (rl1 == null) {
+				$("#msg1").fadeIn(500);
+			}
+			else {
+				setTimeout('$("#msg1").fadeOut(100);', 1);
+				setTimeout('$("#a1").fadeIn(1000);', 100);
+				setTimeout('$("#defen").slideUp()', 100);
+                if (document.getElementById("uan").innerText === document.getElementById("an").innerText) {
+                    setTimeout('$("#r1").slideDown()', 1);setTimeout('$("#r1").slideDown()', 100);
+                    setTimeout('$("#r1").slideUp()', 2000);}else	
+	                                       {setTimeout('$("#w1").slideDown()', 1);setTimeout('$("#w1").slideDown()', 100);setTimeout('$("#w1").slideUp()', 2000);}
+										   document.getElementById("q1").style.display="none";
+                                            setTimeout('$("#fs").slideDown()', 2000);
+                                            setTimeout('$("#fs").slideUp()', 3500);
+                                            setTimeout('$("#defen").slideDown()', 4000);
+                if (document.getElementById("tm").innerText === tm){tm=document.getElementById("tm").innerText;
+}else{
+
+				if (document.getElementById("uan").innerText === document.getElementById("an").innerText) {
+					if(a1>0){a1=a1 + 1;}else{a1 =1;}
+					if(b1>0){b1=b1;}else{b1 =0;}
+				//	setTimeout('$("#W1").slideUp()', 500);
+				}
+				else {
+					if(b1>0){b1=b1+1;}else{b1 =1;}
+					if(a1>0){a1=a1;}else{a1 =0;}
+				//	setTimeout('$("#R1").slideUp()', 500);
+				}
+
+                tm=document.getElementById("tm").innerText
+
+}
+				document.getElementById("defen").innerText ="累计答对"+a1+"题,答错"+b1+"题！准确率"+(a1*100/(a1+b1)).toFixed(0)+"%！点击显示选项"
+
+				sc = Math.floor(a1*10/(a1+b1));
+				var div = document.getElementById('fs');
+			if (sc == 0) {
+				div.className = 'f0';
+			} else if (sc == 1) {
+				div.className = 'f10';
+			} else if (sc == 2) {
+				div.className = 'f20';
+			} else if (sc == 3) {
+				div.className = 'f30';
+			} else if (sc == 4) {
+				div.className = 'f40';
+			} else if (sc == 5) {
+				div.className = 'f50';
+			} else if (sc == 6) {
+				div.className = 'f60';
+			} else if (sc == 7) {
+				div.className = 'f70';
+			} else if (sc == 8) {
+				div.className = 'f80';
+			} else if (sc == 9) {
+				div.className = 'f90';
+			} else if (sc == 10) {
+				div.className = 'f100';
+			}
+			}
+		//}
+		});
+
+
+
+		        	$("#next1").click(function () {
+			          setTimeout('$("#a1").fadeOut(100);', 1);
+					  setTimeout('$("#defen").fadeOut(100);', 1);
+			          $("input:checkbox").removeAttr("checked");
+			          $("input:radio").removeAttr("checked");
+			          setTimeout('$("#q1").fadeIn(1000);', 100);
+		              });
+
+
+
+});
+</script>
+<script type="text/javascript">
+function xianshi(){
+document.getElementById("q1").style.display="";
+}
+</script>
+</body>
+
+</html>

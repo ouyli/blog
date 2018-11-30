@@ -1,235 +1,507 @@
-<!--[if IE 8 ]><html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!-->
-<!DOCTYPE html>
-<html lang="cn">
-<!--<![endif]-->
-
+﻿<html>
 <head>
 <meta charset="utf-8">
-<title>栖息地</title>
-<meta content="yes" name="apple-mobile-web-app-capable">
-<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport"><!-- Core Meta Data -->
-<meta http-equiv=refresh content="60;url=HTTP://7xi.bid/blog">
-<link href="favicon.png" rel="shortcut icon" type="image/png">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>再来一题</title>
+<meta name="keywords" content="再来一题" />
+<link rel="stylesheet" type="text/css" href="styles.css" />
+<style type="text/css">
+body {margin-left: 0px;margin-top: 0px;margin-right: 0px;margin-bottom: 0px;overflow: hidden;}
+.demo{width:auto; margin:1px auto 2px auto}
+input {padding:2px auto;margin:5px 0;outline:none;color:#4c4c4c;-webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px;text-shadow:0 1px 0 rgba(255,255,255,0.3);-webkit-box-shadow:inset 0 0 0 1px rgba(255,255,255,0.2),inset 0 0 6px 0 rgba(255,255,255,0.3),0 1px 2px rgba(0,0,0,0.4);-moz-box-shadow:inset 0 0 0 1px rgba(255,255,255,0.2),inset 0 0 6px 0 rgba(255,255,255,0.3),0 1px 2px rgba(0,0,0,0.4);box-shadow:inset 0 0 0 1px rgba(255,255,255,0.2),inset 0 0 6px 0 rgba(255,255,255,0.3),0 1px 2px rgba(0,0,0,0.4);background:#f6f6f6;background:-webkit-gradient(linear,left top,left bottom,from(#f6f6f6),to(#d4d4d4));background:-webkit-linear-gradient(#f6f6f6,#d4d4d4);background-image:-moz-linear-gradient(top,#f6f6f6,#d4d4d4);background-image:-moz-gradient(top,#f6f6f6,#d4d4d4);border:1px solid #a1a1a1;}
+.btn1{background:#c3e462;box-shadow:0 1px 5px #0061aa,inset 0 10px 20px #b6f9ff;-o-box-shadow:0 1px 5px #0061aa,inset 0 10px 20px #b6f9ff;-webkit-box-shadow:0 1px 5px #0061aa,inset 0 10px 20px #b6f9ff;-moz-box-shadow:0 1px 5px #0061aa,inset 0 10px 20px #b6f9ff;}
 
-<!--[if lt IE 9]>
-	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-<![endif]-->
 
-<!-- CSS -->
 
-<link href="css/loader.css" rel="stylesheet" type="text/css">
-<link href="css/normalize.css" rel="stylesheet" type="text/css">
-<link rel="stylesheet" href="css/font-awesome.min.css">
-<link href="css/style.css" rel="stylesheet" type="text/css">
-<!--[if lt IE 9]>
-	<link rel="stylesheet" type="text/css" href="css/ie.css" />
-<![endif]-->
-<!-- Javascript -->
 
-<script src="js/jquery.js"></script>
+</style>
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="autoPlayAudios.js" ></script>
+<script src="quiz.js"></script>
+<script src="qs.js"></script>
+
+<!--必要样式-->
+<link type="text/css" href="css/style1.css" rel="stylesheet">
+<link href="css/component.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
+<link rel="stylesheet" href="win/win.css"> <!-- CSS reset -->
+
+<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
+
+
+<script type="text/javascript" src="js/modernizr.custom.js"></script>
+<script type="text/javascript" src="js/jquery.dlmenu.js"></script>
+<script src="js/main.js"></script> <!-- Resource jQuery -->
+<script src="win/win.js"></script>
+
+<script type="text/javascript">
+ var y="" ;
+ var ie='';
+ var nav =  navigator.userAgent.toLowerCase();
+ ie = nav.match(/msie([^.]*)/);
+ if(ie){ie='你正在使用IE'+ie[1];
+//alert(ie);
+       document.write('<bgsound src="'+y+'" loop="infinite" id="i_bg">');} 
+	   
+               else{
+                   ie=nav.match(/Trident.*rv.*11/i);
+                   if(ie){ie='你正在使用IE11';
+//alert(ie);
+       document.write('<bgsound src="'+y+'" loop="infinite" id="i_bg">');}
+                    else{
+                         document.write('<audio src="'+y+'" autoplay="autoplay" controls="controls" loop="1" onended="bg_start()"  id="i_bg" hidden></audio>');
+						 
+                         }
+}
+
+
+
+function bg_stop(){
+  i_bg.src="";
+}
+function bg_start(){
+  var y="mp3/"+Math.floor(Math.random()*16)+".mp3" ;
+  i_bg.src=y ;
+  audio.play();
+}
+
+function close(){
+ var cbtn = ["取消","确定"];  
+plus.confirm('确认关闭当前窗口？','Hello',cbtn,function(e){  
+if(e.index==1){  
+ plus.currentWebview.close(); 
+ plus.runtime.quit(); ;
+}  
+});  
+}
+</script>
+
+	<script>
+	var apas = new autoPlayAudios();
+	apas.play();
+	</script>
+
+<SCRIPT language=javascript>
+<!-- begin
+ function click() {
+ if (event.button==2) {
+	  win.alert('系统提示', '练习期间，请不要使用右键！');
+// alert('练习期间，请不要使用右键！')
+ }
+ }
+ document.onmousedown=click
+ end -->
+</script>
+<script>
+    document.addEventListener("plusready", function() {
+        // 注册返回按键事件
+        plus.key.addEventListener('backbutton', function() {
+        // 事件处理
+            plus.nativeUI.confirm("退出程序？", function(event) {
+                if (event.index==0) {
+                    plus.runtime.quit();
+                }
+            }, null, ["确定","取消"]);
+        }, false);
+    });
+</script>
+
+
+<script>
+    var i1 = 0; //分钟第一位
+    var i2 = 0; //分钟第二位
+    var s1 = 0; //秒第一位
+    var s2 = 0; //秒第二位
+    var ms1 = 0; //百分秒第一位
+    var ms2 = 0; //百分秒第二位
+    var t;　　//计时函数保存
+    function time_start(){
+    	setTimeout('$("#lm").fadeIn(100);', 1);
+        document.getElementById("time_start").disabled = "true";  //开始后使开始按钮失效，防止多次点击计时加快的bug
+        ms2++; //只需百分秒最后一位自加，前面依次进位
+        if(ms2>9){
+            ms2 = 0;
+            ms1++;
+        }
+        if(ms1>9){
+            ms1 = 0;
+            s2++;
+        }
+        if(s2>9){
+            s2 = 0;
+            s1++;
+        }
+        if(s1>5){
+            s1 = 0;
+            i2++;
+        }
+        if(i2>9){
+            i2 = 0;
+            i1++;
+        }
+        if(i1>5){
+            //超出秒表计数范围
+            clearTimeout(t);
+            return false;
+        }
+        document.getElementById("second_watch").innerHTML = ""+i1+i2+":"+s1+s2+":"+ms1+ms2+"";
+        document.getElementById("second_watch").style.color = "black";
+        t = setTimeout("time_start()",10);　　//百分秒百分之一秒执行一次
+    }
+
+    function stop(){
+        clearTimeout(t);
+        document.getElementById("second_watch").style.color = "red";
+        document.getElementById("time_start").disabled = ""; //停止时恢复按钮功能
+    }
+
+    function reset(){
+    	setTimeout('$("#lm").fadeOut(100);', 1);
+        clearTimeout(t);
+        i1 = 0;
+        i2 = 0;
+        s1 = 0;
+        s2 = 0;
+        ms1 = 0;
+        ms2 = 0;
+        document.getElementById("second_watch").innerHTML = ""+i1+i2+":"+s1+s2+":"+ms1+ms2+"";
+        document.getElementById("second_watch").style.color = "black";
+        document.getElementById("time_start").disabled = "";
+        document.getElementById('ct').value='';
+        document.getElementById('answ').checked=false;
+        document.getElementById('about').value="关于";
+    }
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+    function bstart()//重载
+    { 
+		if(document.getElementById('sct').value===document.getElementById('ct').value){
+			win.alert('系统提示', "ARE YOU *ING ME?抽题数本来就是"+document.getElementById('ct').value+"题，你重载个毛线呀！");}
+		//	alert("ARE YOU *ING ME?抽题数本来就是"+document.getElementById('ct').value+"题，你重载个毛线呀！")}
+		else{
+			document.getElementById('about').value="关于";
+      	$('#quiz-container').jquizzy({
+        questions: init.singleSelect});
+        
+		}
+    }
+    function again()//重载
+    { 
+    	document.getElementById('about').value="关于";
+      	$('#quiz-container').jquizzy({
+        questions: init.singleSelect});
+		
+    }
+    function about()//关于
+    { 
+		if(document.getElementById('about').value==="关于"){document.getElementById('about').value="官网";
+        win.alert('系统提示', "访问我的网站（即浏览我的网页），注意返回操作：再次点击按钮（官网）即可！退出APP操作：点击手机返回，弹出窗口，然后选择取消！");
+	//	alert("访问我的网站（即浏览我的网页），注意返回操作：再次点击按钮（官网）即可！退出APP操作：点击手机返回，弹出窗口，然后选择取消！");
+      	$('#quiz-container').jquizzy({
+        questions: init.singleSelect});
+		}
+		else{
+			document.getElementById('about').value="关于";
+      	$('#quiz-container').jquizzy({
+        questions: init.singleSelect});
+		}
+    }
+    function breset()//单刷
+    { 
+    	document.getElementById('about').value="关于";
+		win.alert('系统提示', '模式：题量设置为1题且显示答案！点击重载进行答题 ');
+    //	alert('模式：题量设置为1题且显示答案！点击重载进行答题 ')
+      	document.getElementById('ct').value=1;
+      	document.getElementById('answ').checked=true;
+		
+    }
+
+   
+</script>
+
+<script>
+//var init={'singleSelect':{'T1':[{'question':'爱是什么？','answers':['不知道','不知道','不知道','以上都不是','以上都是'],'correctAnswer':'A'}]}};
+$(function(){
+	$('#quiz-container').jquizzy({
+        questions: init.singleSelect
+    });
+});
+</script>
+
+    <script type="text/javascript">
+		function selectcity(){
+			setTimeout('$("#ssid").fadeIn(100);', 1);
+			var zjkjkm=[["会计总论","存货","固定资产","投资性房地产","长期股权投资","无形资产","非货币性资产交换","资产减值","金融资产","负债及借款费用","债务重组","或有事项","收入","政府补助","所得税","外币折算","会计政策、会计估计变更和差错更正","资产负债表日后事项","财务报告","政府会计","民间非营利组织会计"
+
+],
+						["经济法总论","公司法律制度","其他法律制度","金融法律制度","合同法律制度","增值税法律制度","企业所得税","相关法律制度"
+
+],
+						["财管总论","财务管理基础","预算管理","筹资管理上","筹资管理下","投资管理","营运资金","成本管理","收入与分配","财务分析与评价"
+
+]
+			];
+			var index1=document.getElementById("sid").selectedIndex;//获得用户在省份组合框所选的选项序号  获得所选项的序列号，方便匹配上面二维数组添加
+			var option1=document.getElementById("ssid");//添加到该节点下，需要一一循环
+			option1.options.length=1;//直接设置总长度为1,留一个《请选择》，直接设置长度为1，，可以省去很多移除元素的麻烦
+			for(var x=0;x<zjkjkm[index1-1].length;x++){//zjkjkm是一个中级会计科目的二维数组  lenth zjkjkm[index1]
+				var opt=document.createElement("option");
+				opt.innerHTML=zjkjkm[index1-1][x];
+				opt.value=opt.innerHTML;
+				option1.appendChild(opt);
+				
+			}
+	   	};
+
+function selectcity1(){
+	  document.getElementById("kmxz").value = document.getElementById("ssid").value 
+win.alert('系统提示', document.getElementById("kmxz").value);
+}
+
+
+
+     </script>
+     
+  <script type="text/javascript">
+$(function(){
+	$( '#dl-menu' ).dlmenu();
+});
+</script>   
+
+
+<script language="javascript" type="text/javascript">   
+
+function search1(){
+	document.getElementById("quiz-container").innerHTML = '<object type="text/html" data="ss.html" width="100%" height="85%"></object>'; 
+}
+</script>
+
+<script language="javascript" type="text/javascript">   
+
+    function work(target) {
+
+  document.getElementById("kmxz").value = $(target).text();
+//win.alert('系统提示', document.getElementById("kmxz").value);
+ bstart();
+    }
+
+
+</script>
+
+
+<script type="text/javascript">
+  // 弹窗
+  function showWindow() {
+    $('#showp').show();  //显示弹窗
+    $('#cover').css('display','block'); //显示遮罩层
+    $('#cover').css('height',document.body.clientHeight+'px'); //设置遮罩层的高度为当前页面高度
+  }
+  // 关闭弹窗
+  function closeWindow() {
+    $('#showp').hide();  //隐藏弹窗
+    $('#cover').css('display','none');   //显示遮罩层
+  }
+</script>
+
+
+
 </head>
 <body>
-<div class="preloader">
-	<div class="loading">
-		<h2>
-			7XI.BID
-		</h2>
-		<span class="progress"></span>
+
+<header class="header">
+	<a href="#" class="logo"><img src="images/logo.png" alt="答题"></a>
+	<a href="javascript:;"  onClick="search1()" class="search"><span>搜索</span></a>
+	<a href="javascript:;" class="user-icon"   id="about" value="关于"  onclick="about()"><span>关于</span></a>
+
+	<div class="cd-bouncy-nav-modal">
+		<nav>
+			<ul class="cd-bouncy-nav">
+				<li><a class="cd-bouncy-nav-d" href="#"  onclick="bstart()">重载</a></li>
+				<li><a class="cd-bouncy-nav-d" href="#"  onclick="reset()">重置</a></li>
+				<li><a class="cd-bouncy-nav-d" href="#"  onclick="about()">关于</a></li>
+				<li><a class="cd-bouncy-nav-d" href="#" onclick="bg_start()">换歌</a></li>
+				<li><a class="cd-bouncy-nav-d" href="#" onclick="bg_stop()">静音</a></li>
+				<li><a class="cd-bouncy-nav-d" href="#" onclick="breset()">单刷</a></li>
+			</ul>
+		</nav>
+		<a href="#0" class="cd-close">Close modal</a>
 	</div>
 </div>
-	<audio autoplay="autopaly" >
-	<source src="css/4.mp3" type="audio/mp3" /></audio>
-<div class="wrapper">
-	<ul class="scene unselectable" data-friction-x="0.1" data-friction-y="0.1" data-scalar-x="25" data-scalar-y="15" id="scene">
-
-		<li class="layer" data-depth="0.00">
-		</li>
-		<!-- BG -->
-
-		<li class="layer" data-depth="0.10">
-			<div class="background">
-			</div>
-		</li>
-
-		<!-- Hero -->
-
-		<li class="layer" data-depth="0.20">
-			<div class="title">
-				<h2>
-					栖息地
-				</h2>
-				<span class="line"></span>
-			</div>
-		</li>
-
-		<li class="layer" data-depth="0.25">
-			<div class="sphere">
-				<img alt="sphere" src="images/sphere.png">
-			</div>
-		</li>
-
-		<li class="layer" data-depth="0.30">
-			<div class="hero">
-				<h1 id="countdown">
-					Time!
-				</h1>
-
-				<p class="sub-title">
-					欢迎光临，本页停留1分钟！
-				</p>
-			</div>
-		</li>
-		<!-- Flakes -->
 
 
-		<li class="layer" data-depth="0.40">
-			<div class="depth-1 flake1">
-				<img alt="flake" src="images/flakes/depth1/flakes1.png">
-			</div>
-
-			<div class="depth-1 flake2">
-				<img alt="flake" src="images/flakes/depth1/flakes2.png">
-			</div>
-
-			<div class="depth-1 flake3">
-				<img alt="flake" src="images/flakes/depth1/flakes3.png">
-			</div>
-
-			<div class="depth-1 flake4">
-				<img alt="flake" src="images/flakes/depth1/flakes4.png">
-			</div>
-		</li>
-
-		<li class="layer" data-depth="0.50">
-			<div class="depth-2 flake1">
-				<img alt="flake" src="images/flakes/depth2/flakes1.png">
-			</div>
-
-			<div class="depth-2 flake2">
-				<img alt="flake" src="images/flakes/depth2/flakes2.png">
-			</div>
-		</li>
-
-		<li class="layer" data-depth="0.60">
-			<div class="depth-3 flake1">
-				<img alt="flake" src="images/flakes/depth3/flakes1.png">
-			</div>
-
-			<div class="depth-3 flake2">
-				<img alt="flake" src="images/flakes/depth3/flakes2.png">
-			</div>
-
-			<div class="depth-3 flake3">
-				<img alt="flake" src="images/flakes/depth3/flakes3.png">
-			</div>
-
-			<div class="depth-3 flake4">
-				<img alt="flake" src="images/flakes/depth3/flakes4.png">
-			</div>
-		</li>
-
-		<li class="layer" data-depth="0.80">
-			<div class="depth-4">
-				<img alt="flake" src="images/flakes/depth4/flakes.png">
-			</div>
-		</li>
-
-		<li class="layer" data-depth="1.00">
-			<div class="depth-5">
-				<img alt="flake" src="images/flakes/depth5/flakes.png">
-			</div>
-		</li>
-		<!-- Contact -->
 
 
-	</ul>
+	<div id="dl-menu" class="dl-menuwrapper">
+		<button id="dl-menu-button">Open Menu</button>
+		<ul class="dl-menu">
+
+			<li>
+				<a href="Line">选择科目</a>
+				<ul class="dl-submenu">
+					<li class="dl-back"><a href="#">返回上一级</a></li>
+								<li>
+				                   <a href="Line">会计实务</a>
+				                   <ul class="dl-submenu">
+					                    <li class="dl-back"><a href="#">返回上一级</a></li>
+<li><a href="#" onclick="work(this)">会计总论</a></li>
+<li><a href="#" onclick="work(this)">存货</a></li>
+<li><a href="#" onclick="work(this)">固定资产</a></li>
+<li><a href="#" onclick="work(this)">投资性房地产</a></li>
+<li><a href="#" onclick="work(this)">长期股权投资</a></li>
+<li><a href="#" onclick="work(this)">无形资产</a></li>
+<li><a href="#" onclick="work(this)">非货币性资产交换</a></li>
+<li><a href="#" onclick="work(this)">资产减值</a></li>
+<li><a href="#" onclick="work(this)">金融资产</a></li>
+<li><a href="#" onclick="work(this)">负债及借款费用</a></li>
+<li><a href="#" onclick="work(this)">债务重组</a></li>
+<li><a href="#" onclick="work(this)">或有事项</a></li>
+<li><a href="#" onclick="work(this)">收入</a></li>
+<li><a href="#" onclick="work(this)">政府补助</a></li>
+<li><a href="#" onclick="work(this)">所得税</a></li>
+<li><a href="#" onclick="work(this)">外币折算</a></li>
+<li><a href="#" onclick="work(this)">会计政策、会计估计变更和差错更正</a></li>
+<li><a href="#" onclick="work(this)">资产负债表日后事项</a></li>
+<li><a href="#" onclick="work(this)">财务报告</a></li>
+<li><a href="#" onclick="work(this)">政府会计</a></li>
+<li><a href="#" onclick="work(this)">民间非营利组织会计</a></li>
+
+
+				                   </ul>
+			                   </li>
+								<li>
+				                   <a href="Line">财务管理</a>
+				                   <ul class="dl-submenu">
+					                    <li class="dl-back"><a href="#">返回上一级</a></li>
+<li><a href="#" onclick="work(this)">财管总论</a></li>
+<li><a href="#" onclick="work(this)">财务管理基础</a></li>
+<li><a href="#" onclick="work(this)">预算管理</a></li>
+<li><a href="#" onclick="work(this)">筹资管理上</a></li>
+<li><a href="#" onclick="work(this)">筹资管理下</a></li>
+<li><a href="#" onclick="work(this)">投资管理</a></li>
+<li><a href="#" onclick="work(this)">营运资金</a></li>
+<li><a href="#" onclick="work(this)">成本管理</a></li>
+<li><a href="#" onclick="work(this)">收入与分配</a></li>
+<li><a href="#" onclick="work(this)">财务分析与评价</a></li>
+
+
+				                   </ul>
+			                   </li>
+								<li>
+				                   <a href="Line">经济法</a>
+				                   <ul class="dl-submenu">
+					                    <li class="dl-back"><a href="#">返回上一级</a></li>
+<li><a href="#" onclick="work(this)">经济法总论</a></li>
+<li><a href="#" onclick="work(this)">公司法律制度</a></li>
+<li><a href="#" onclick="work(this)">其他法律制度</a></li>
+<li><a href="#" onclick="work(this)">金融法律制度</a></li>
+<li><a href="#" onclick="work(this)">合同法律制度</a></li>
+<li><a href="#" onclick="work(this)">增值税法律制度</a></li>
+<li><a href="#" onclick="work(this)">企业所得税</a></li>
+<li><a href="#" onclick="work(this)">相关法律制度</a></li>
+
+
+				                   </ul>
+			                   </li>
+				</ul>
+			</li>
+
+
+
+			<li class="dl-noback"><a href="javascript:;"  onclick="bstart()">重载</a></li>
+			<li><a href="javascript:;" id="time_start"  onclick="time_start()">计时</a></li>
+			<li><a href="javascript:;"  onclick="stop()">暂停</a></li>
+			<li><a href="javascript:;"  onclick="reset()">重置</a></li>
+			<li><a href="javascript:;"  onclick="breset()">单刷</a></li>
+			<li><a href="javascript:;"  onclick="bg_start()">换歌</a></li>
+			<li><a href="javascript:;"  onclick="bg_stop()">静音</a></li>
+			<li><a href="javascript:;" onClick="showWindow()">抽题设置</a></li>
+
+		</ul>
+	</div>
+</header>
+
+
+<div id="main">
+
+
+<div class="demo">
+<div id='lm' style="text-align:center;color:#4c4c4c;display:none;">
+	
+<p  align="center" id="second_watch" style="font-size: 20px; text-shadow: 0.1em 0.1em 0.15em #1e90ff">00:00:00</p>
+
 </div>
 
-		<li class="layer" data-depth="0.20"  >
-			<div class="contact" style=" position:absolute;z-index:11;">
+<!-- 遮罩层 -->
+<p id="cover" style="background: #000; position: absolute; left: 0px; top: 0px; width: 100%; filter: alpha(opacity=30); opacity: 0.3; display: none; z-index: 2 ">
+   
+</p>
+<!-- 弹窗 -->
+<div id="showp" style="width: 80%;max-width:450px; margin:  auto; height: 10rem; border: 1px solid #999; text-align:center;
+display: none; position: absolute; top: 0; left: 0; right: 0;bottom: 0; z-index: 3; background: #fff">
+  <!-- 标题 -->
+  <p style=" position: absolute; height: 36px; width: 100%; text-align: center; border-radius: 4px 4px 0 0; line-height: 36px; vertical-align: middle; background-color: #77BFA3; /*标题背景色*/ border-bottom: 1px solid rgb(233, 233, 233); z-index: 1;" >
+    提示
+  </p>
+  <!-- 内容 -->
+  <br>
+  <br>
+  <p style=" padding: 18px 5px 0px 5px;text-align:center;  font-size: 16px; min-height: 40px; line-height: 22px; text-shadow: 0.1em 0.1em 0.15em #1e90ff ">
+      <input type="text" style="width:60%;max-width:300px;height:20px; text-shadow: 0.1em 0.1em 0.15em #1e90ff" id="ct"   placeholder="输入题数，可勾选右侧（显示答案），点击重载！" >
+  <input type="hidden" id="sct" value=""><input type="checkbox" id="answ" >	<br>							
+                              <select  id="sid" onchange="selectcity()" style="text-shadow: 0.1em 0.1em 0.15em #1e90ff">
+   			                                  <option>科目</option>
+   			                                  <option>会计实务</option>
+   			                                  <option>经济法</option>
+   			                                  <option>财务管理</option>
+   	                            </select>
+	  	
+	                            <select  id="ssid"  onchange="selectcity1()" style="display:none;text-shadow: 0.1em 0.1em 0.15em #1e90ff">
+   			                      <option>章节</option>
+                              	</select><input id="kmxz" value="章节" ; style="text-shadow: 0.1em 0.1em 0.15em #1e90ff"></p>
+
+  <!-- 按钮 -->
+  <p style=" display: inline-block; width: 60px; height: 26px; line-height: 26px; background-color: #DE5923; color: white; cursor: pointer; text-align: center; border-radius: 2px; text-decoration: none; margin: 0 10px 0px 10px; border: none; " onclick="closeWindow()">
+    确 定
+  </p>
+</div>
 
 
 
-				<ul class="icons">
-					<li>
-						<a target= _blank class="start" href="/blog"  title="点击进入博客"><i class="fa fa-star"></i></a>
-					</li>
-					<li>
-						<a target= _blank class="lx" href="/lx" title="点击进入练习项目"><i class="fa fa-plug"></i></a>
-					</li>
 
-					<li>
-						<a target= _blank class="7xi" href="/7xi" title="点击进入七夕"><i class="fa fa-heart"></i></a>
-					</li>
 
-					<li>
-						<a target= _blank class="about" href="/blog/about" title="点击查看关于"><i class="fa fa-user"></i></a>
-					</li>
-				</ul>
-				Copyright &copy; 2018.7XI All rights reserved.
-			</div>
-		</li>
+  <!-- 
+
+  <input type="button" class="btn1" value="重载" onclick="bstart()">
+  <input type="button" class="btn1" value="计时" id="time_start" onclick="time_start()">
+  <input type="button" class="btn1" value="暂停" onclick="stop()">
+  <input type="button" class="btn1" value="重置" onclick="reset()">
+  <input type="button" class="btn1" value="单刷" onclick="breset()">
+  <input type="button" class="btn1" value="换歌" onclick="bg_start()">
+  <input type="button" class="btn1" value="静音" onclick="bg_stop()">
+  <input type="button" class="btn1" id="about" value="关于" onclick="about()">
+-->
+
+</div>
+<div id='quiz-container'></div>	
+</div>
 
 
 
-<!-- Javascript -->
-<script src="js/plugins.js"></script> 
-<script src="js/jquery.countdown.min.js"></script> 
-<script src="js/main.js"></script>
-
-<script type="text/javascript" src="images/ThreeWebGL.js"></script>
-<script type="text/javascript" src="images/ThreeExtras.js"></script>
-<script type="text/javascript" src="images/Detector.js"></script>
-<script type="text/javascript" src="images/cloud.js"></script>
-
-    <script id="vs" type="x-shader/x-vertex">
-
-			varying vec2 vUv;
-
-			void main() {
-
-				vUv = uv;
-
-				gl_Position = projectionMatrix * modelViewMatrix * vec4( position, 1.0 );
-
-			}
-
-    </script>
-
-    <script id="fs" type="x-shader/x-fragment">
-
-			uniform sampler2D map;
-
-			uniform vec3 fogColor;
-
-			uniform float fogNear;
-
-			uniform float fogFar;
-
-			varying vec2 vUv;
-
-			void main() {
-
-				float depth = gl_FragCoord.z  / gl_FragCoord.w;
-
-				float fogFactor = smoothstep( fogNear, fogFar, depth );
-
-				gl_FragColor = texture2D( map, vUv );
-
-				gl_FragColor.w *= pow( gl_FragCoord.z, 20.0 );
-
-				gl_FragColor = mix( gl_FragColor, vec4( fogColor, gl_FragColor.w ), fogFactor );
-
-			}
-
-    </script>
-
-    
 
 
-
-<script type="text/javascript" src="images/cloud.js"></script>
 </body>
 </html>
-
