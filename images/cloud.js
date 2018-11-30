@@ -1,4 +1,4 @@
-﻿
+
 function init()
 {
     container = document.createElement('div');
