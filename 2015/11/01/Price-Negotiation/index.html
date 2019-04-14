@@ -1,0 +1,800 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    
+
+    <title>Price Negotiation | 成本管理</title>
+    <meta name="author" content="歐陽">
+    
+    <meta name="description" content="成本管理">
+    
+    
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <meta property="og:title" content="Price Negotiation"/>
+    <meta property="og:site_name" content="栖息地"/>
+
+    
+    <meta property="og:image" content="undefined"/>
+    
+
+    <link rel="icon" type="image/png" href="/blog/favicon.png">
+    <link rel="alternate" href="/blog/atom.xml" title="栖息地" type="application/atom+xml">
+    <link rel="stylesheet" href="/blog/css/lib/materialize.min.css">
+    <link rel="stylesheet" href="/blog/css/lib/font-awesome.min.css">
+    <link rel="stylesheet" href="/blog/css/style.css" media="screen" type="text/css">
+    <link rel="stylesheet" href="http://7xi.bid/live2d/assets/waifu.min.css?v=1.4.2"/>
+
+    
+        <link rel="stylesheet" href="/blog/css/lib/prettify-tomorrow-night-eighties.css" type="text/css">
+    
+    <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+</head>
+
+
+<body>
+    <img src="/weixin_favicon.png" style="position: absolute; left: -9999px; opacity: 0; filter: alpha(opacity=0);">
+
+    <nav class="indigo">
+    <div class="nav-wrapper">
+        <a href="#" data-activates="main-menu" class="button-collapse">
+            <i class="fa fa-navicon"></i>
+        </a>
+        <div class="">
+            <a href="/blog/" class="brand-logo hide-on-med-and-down">栖息地</a>
+            <ul class="right hide-on-med-and-down">
+                
+                    <li>
+                        <a class="menu-home " href="/blog/" >
+                            <i class="fa fa-home "></i>
+                            
+                            首页
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a class="menu-archive " href="/blog/archives" >
+                            <i class="fa fa-archive "></i>
+                            
+                            归档
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a class="menu-category category-menu" href="javascript:;" data-activates="category-menu" >
+                            <i class="fa fa-bookmark "></i>
+                            
+                            分类
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a class="menu-reading " href="/blog/reading" >
+                            <i class="fa fa-book "></i>
+                            
+                            读书
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a class="menu-about " href="/blog/about" >
+                            <i class="fa fa-user "></i>
+                            
+                            关于
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a class="menu-search modal-trigger " href="#search" >
+                            <i class="fa fa-search "></i>
+                            
+                            搜索
+                        </a>
+                    </li>
+                
+            </ul>
+            <div>
+    <ul class="side-nav indigo darken-1" id="main-menu">
+        
+        <li class="side-user">
+            <div class="row">
+                <div class="col s4 no-padding">
+                    <img class="avatar-image circle responsive-img" src="/blog/author.jpg" alt="User Avatar">
+                </div>
+                <div class="info col s8 valign-wrapper no-padding">
+                    <div class="valign">
+                        <p class="name">7XI</p>
+                        <p class="desc">生活就像是剧本,越到最后情节越是复杂</p>
+                    </div>
+                </div>
+            </div>
+        </li>
+        
+
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-home " href="/blog/" >
+                    <i class="fa fa-home "></i>
+                    
+                    首页
+                </a>
+            </li>
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-archive " href="/blog/archives" >
+                    <i class="fa fa-archive "></i>
+                    
+                    归档
+                </a>
+            </li>
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-category category-menu" href="javascript:;" data-activates="category-menu" >
+                    <i class="fa fa-bookmark "></i>
+                    
+                    分类
+                </a>
+            </li>
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-reading " href="/blog/reading" >
+                    <i class="fa fa-book "></i>
+                    
+                    读书
+                </a>
+            </li>
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-about " href="/blog/about" >
+                    <i class="fa fa-user "></i>
+                    
+                    关于
+                </a>
+            </li>
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-search modal-trigger " href="#search" >
+                    <i class="fa fa-search "></i>
+                    
+                    搜索
+                </a>
+            </li>
+        
+    </ul>
+
+    <ul class="side-nav indigo darken-1" id="category-menu">
+    
+
+            
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/blog/categories/成本工作/">
+                    成本工作 <span class="right">28 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/blog/categories/会计分录/">
+                    会计分录 <span class="right">3 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/blog/categories/生活相关/">
+                    生活相关 <span class="right">2 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/blog/categories/预测分析/">
+                    预测分析 <span class="right">7 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/blog/categories/EXCEL/">
+                    EXCEL <span class="right">3 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/blog/categories/注会-会计/">
+                    注会-会计 <span class="right">1 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/blog/categories/成本控制管理/">
+                    成本控制管理 <span class="right">3 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/blog/categories/ERP软件/">
+                    ERP软件 <span class="right">1 篇</span></a>
+                </a>
+            </li>
+
+        
+
+    </ul>
+</div>
+
+        </div>
+    </div>
+</nav>
+
+<div id="search" class="modal search-modal">
+    <div class="row">
+        <div class="input-field col s12">
+              <input id="search-input" type="text">
+              <label for="search-input">搜索</label>
+        </div>
+
+    </div>
+    <div id="search-result" class="search-result col s12">
+
+    </div>
+</div>
+
+
+    <main>
+        <div class="container main-container">
+    <nav class="page-nav hide-on-small-only">
+    <div class="nav-wrapper indigo">
+        <span class="breadcrumb">当前位置（分类目录）</span>
+        
+            
+    
+    
+    <a class="breadcrumb" href="/blog/categories/预测分析/">预测分析</a>
+
+
+        
+
+        
+    </div>
+</nav>
+
+<article>
+    <div class="card">
+        <div class="card-content">
+            
+
+            <div class="article-title">
+                
+    
+        <h1>Price Negotiation</h1>
+    
+
+
+            </div>
+            <time class="pink-link-context" datetime="2015-10-31T16:42:04.000Z"><a href="/blog/2015/11/01/Price-Negotiation/">2015-11-01</a></time>
+
+            <span id="busuanzi_container_page_pv" class="read-times-container">
+    <i class="fa fa-eye"></i>
+    <span id="busuanzi_value_page_pv"></span>
+</span>
+
+            
+    <div class="tags-row">
+        
+            <a href="/blog/tags/价格/" class="chip pink lighten-1">价格</a>
+        
+    </div>
+
+
+            <div class="toc pink-link-context hide-on-med-and-down">
+    <ol class="section table-of-contents"><li class="section table-of-contents-item section table-of-contents-level-1"><a class="section table-of-contents-link" href="#谈判与价格-Price_Negotiation"><span class="section table-of-contents-text">谈判与价格-Price Negotiation</span></a></li></ol>
+</div>
+
+
+            <div class="entry pink-link-context">
+                <h1 id="谈判与价格-Price_Negotiation">谈判与价格-Price Negotiation</h1><p>　　在采购活动中，议价是一个勘察和交易的过程（包括计划，总结，分析，让步）。采购人员和销售商都以各自的观点和目的参与其中，期望在采购交易各方面包括价格、服务、规格、技术和品质要求及支付条款等达成相互满意的协议。谈判活动的技巧性很强， 通常对整个谈判工作的规划包括：<br><a id="more"></a><br>　　谈判前： 建立谈判小组；作计划和准备原始数据；订立谈判希望达成的目标和采取的策略 　　<br>   谈判时要注重战略战术和技巧的运用和谈 判小组成员的互相配合<br>　 谈判结束后要按照谈判结果制定书面协议并且将谈判有关的文件整理归档， 以便在进一部谈判时作为基础和依据。<br>　 ## 采购人员谈判基础  ##<br>　　一个成功的谈判应做好两个部分工作，第一部分是了解谈判的过程，第二部分是进行谈判准备。谈判过程包括理解谈判的定义和目 的，何时进行谈判，有效谈判有哪些障碍，成功谈判者的特点，推动谈判的技巧，和谈判中的洞察力。谈判准备包括了解对方的意图，确立你和对手的地位，确定关键问题之所在，制定谈判战略和战术，以及合理地组织。<br>　　<strong>第一部分：谈判过程 </strong><br>　　谈判的定义和目的。谈判的定义是双方达成互相满意的 共识，所以双赢也就成为谈判的目的。 　　<br>　　何时谈判。从买方来讲以下五个因素会导致谈判发生。（1）至少两个以上供应商（2）卖方有意介入 （3）有了清楚的规格（4）投标者间存在差异（5）采购额大到足以涵盖竞标成本。<br>　　成功谈判的阻碍。（1）个人风格与谈判抵触（2）以前和对方有过矛盾（3）认为谈判是输和赢的关系（4）为了”赢”将谈判延续得太长（5）谈判方权限不足以达成协议（6）将复杂的问题简单归结为”输赢”问 题。<br>　　成功谈判者的特点包括计划能力、清晰而敏捷的思路、有强烈成功干、对他人意见的采纳能力、自制力、了解人性、善于倾听等等。但所有 这些都需要经过不断的训练和实践以及团队人员的互相补充。<br>　　推动谈判的技巧。第一个是吸取以往的教训，对刚完成的谈判进行小结，哪里成功，哪 里不对，哪里要改，对方如何，这对以后都有帮助。第二是小组会议，它可用以解决谈判小组内的分歧，对战略战术修订。如是一人的谈判，你可安排让人叫你接听电话，或告诉对方时间有限，晚点再答复。<br>　　谈判中的洞察力包括制造良好的谈判气氛和跨文化问题的处理，这里跨文化还指对不同行业和市场的理解。<br>　 　<strong>第二部分：谈判的准备</strong><br>　　这里要指出的是与对方以往的接触以及将来的合作前景都是重要的考虑因素。另外，如果没有充分地准备，即使口齿伶俐、能 说会道也只能收效甚微。下面列出谈判准备的八个步骤。<br>　　1. 分析对方的方案。评估价格、运送、规格、付款和任何与你的要求有出入的地方。记住对方的方案往往是对他们有利的。<br>　　2. 确立自己的目标。具体定下你的价格、质量、服务、运送、规格、支付等要求并写在纸上，而不是跟对方说”你尽量…..”。<br>　　3. 定下方案。对每个问题要定出最佳方案、目标方案、以及最坏的方案，这可帮你制定相应策略。<br>　　4. 分析对方的地位。你同样可估计一下对方可能的地位，这易于预测其谈判策略。至此你可以大致感觉出谈判的尺度范围。<br>　　5. 确定和组织问题。现在可以组织问题，并列出双方在各个问题上的相同和不同之处。要记住每个争论点都要有可靠的资料加以支持。　　6. 计划你的战略和战术。三个实用战略是A）避谈本方立场，先是试探对方观点。这往往用于对方很想达成协议，而自己又缺乏足够信息。B）直接讲出你的最理想方 案。这通常用于你已了解对方的方案。C）讲出你的最理想方案，紧接着讲出你的目标方案。这往往用于当你处在弱势但又有能力说服对方的时候。战术的合理利用能使计划成功实施。这些战术包括：1）将问题安重要性排序2）聪敏的提问以得到尽量多的信息，而不是”是”或”不是”的回答3）有效地听4）保持主动5） 利用可靠的资料6）利用沉默，这可使对方感到紧张而进行进一步的讨论7）避免情绪化，这会使谈判对人而不是对事8）利用谈判的间隙从新思考，避免给对方牵制8）不要担心说”不”9）清楚最后期限10）注意体态语言11）思路开阔，不要被预想的计划束缚创造性12）把谈判内容记录下来以便转成最终合同。<br>　 　7. 选择谈判团队。选出队长，其他成员必须明确自己的任务并支持队长。<br>   　8. 定出谈判的议程。哪些问题要讨论、谁来讨论以及会议的流程都要预先确定。记住把主场设在自己一方总是有利的。而且要确定谈判对手有否决定权，必要时可以直接问对方的权限。<br>   　　以上的讨论对谈判专家是一个回顾，对新手是个起点。上述技能的应用要根据个人风格和具体情况而定。无论是正式 或非正式的谈判，本文提供的内容都能帮你提高谈判的效力。<br>　　## 和没有经验的销售人员谈判 ##<br>　　要和一个缺乏经验的销售人员谈判，找个第三方 的专家可能是个有效途径。<br>　　当你和重要供应商派来的销售人员谈判时，你会很快意识到这个销售员不光对其产品知之甚少，对专业谈判也是门外汉， 更不知道什么是双赢谈判。最糟糕的是他预先没做任何准备，对你公司也没有了解。如果你们两家公司间关系十分好，如果你有很多重要问题必须要和他讨论，这时你该这么办？你会利用他的弱点得到更多好处吗？当然不能。因为它的管理层一旦发现协议不合理还会要求重开谈判。<br>　　如果简单要求对方重新派人来也 不是明智的做法，最好的办法就是面对现实。你可以将产品知识、行业规范、双赢谈判等理论来教导和帮助他。具体可从以下几方面开始。质量：以事实为依据，客观讲明你所要的质量标准，销售员就很难再争论下去。运送：列出别的供应商所能做到的事实， 销售员很难再反驳。价格：如果你做了价格和成本调查，你也应该提供足够的依据。即使那没有经验的销售人员非常情绪化，他也很难推翻事实。　　<br>　 　万一对方还是十分固执怎么办？那就可利用第三方专家的办法。让对方知道这样做是为了使双方更好地合作，因为第三方在谈判后可在双方面前提供反馈意见。第三方可来自仲裁机构、行业协会、或双方认可的组织，或者你可让销售员指定他自己公司的专业人员来充当第三者。总之，目的是让一个客观的第三者参与谈判。
+　 　</p>
+<blockquote>
+<p>最后要记住两点：第一，责备是毫无意义的，销售员不会因为责备而突然对产品十分了解；第二，不要有情绪感和失败感，销售员不讲道理，可你必须讲道理。当然这说起来容易做起来难，但这正是显示你谈判智慧的时候。 
+　　　</p>
+</blockquote>
+<p>　 　　## 谈判应以成本而不是价格为中心 ##<br>　　成本为基础的谈判能产生上好的协议。谈判前的准备是胜利的关键。</p>
+<p>价格谈判不光是为了和供应商达成成本上的共识，还要看双方对利润是否都满意。如果想以成 本为基础的谈判达成协议，必须做到一下几方面：第一，彻底地理解供应商成本的构成。第二，有诚意和愿望分担这些成本。第三，理解行业的规范。第四，确立目标价格。<br>　　## 了解和探究关键要素  ##　　</p>
+<p>　　要了解供应商的成本构成，应该做成本分类和成本分析，这可帮助供应管理人员定出公平的价 格。成本包括直接成本、间接成本、和总体行政费用。直接成本又分直接劳工和直接物料成本；间接成本可分工程日常费用、物料日常费用、生产日常费用。有时又可把成本分为固定和变动成本两种。 　　信任和忠实很重要<br>　　充分的信任和合作是了解供应商成本和价格的第二个重要因素。如能做到这一点，供应 商往往愿意将有关账目出示给采购方看，当然这需要预先签订保密协议。相互信任的另一好处在于双方有讨论成本降低的可能性，成本降低可通过产品或工艺的改造来实现，这也称为价值工程。<br>　　## 制定目标价格  ##<br>　　最后很重要的一点就是采购方必须了解供应商所在的行业，以及相关的产品和服务的成本信 息，这样就能在谈判之前估算出对方的成本和可能的价格。对供应商行业的竞争程度的了解也至关重要，有多少商家能提供相似的产品？一个产品是否只有极少数的供应商？这都直接影响供应商的利润率。 　　充分准备是谈判成功的关键<br>　　以上所有要素能帮供应管理人员在谈判前确立一个目标价格。如果双方关系 是开诚布公的话，这目标价格很快会促使双方达成双赢协议，买方也能尽早估算出将支出的费用。需要指出的是目标价格必须有数据作支持，供应管理人员在谈判准备阶段就要收集完毕。<br>　　## 实际的谈判 ##</p>
+<p>　　时间和地点要预先确定，会场安排不应该充满敌意，记住双方都应该是胜利者。谈判开始先要 设定指导方针，这有助于确立谈判界限。比如?quot;在开始前我想先回顾一下目前的情况，并对我们的目的作个概述”开场白，有利于双方在开始就有互相的了解。一旦上述要点做到了，你的谈判就已经成功一半了。对成本要素的理解程度和信息的挖掘对谈判成功至关重要，准备过程的每一步骤都会使成功机会更多一 成。<br><strong>作者：Patrick </strong></p>
+
+                
+<p class="pink-link-context">
+    <a href="/blog/2015/11/03/作业成本管理要素与实施/" rel="next" title="作业成本管理要素与实施">
+    上一篇：作业成本管理要素与实施
+  </a>
+</p>
+
+
+
+<p class="pink-link-context">
+    <a href="/blog/2015/11/01/Model-of-cost-analysis/" rel="next" title="Model of cost analysis">
+    下一篇：Model of cost analysis
+  </a>
+</p>
+
+
+            </div>
+
+
+                <section class="reward">
+                    <!-- Donate Module -->
+<div id="donate_module">
+    <style type="text/css">
+        .hidden {
+            display: none;
+        }
+        .donate_bar a.btn_donate {
+            display: inline-block;
+            width: 82px;
+            height: 82px;
+            background: url("http://img.t.sinajs.cn/t5/style/images/apps_PRF/e_media/btn_reward.gif") no-repeat;
+            _background: url("http://img.t.sinajs.cn/t5/style/images/apps_PRF/e_media/btn_reward.gif") no-repeat;
+
+            -webkit-transition: background 0s;
+            -moz-transition: background 0s;
+            -o-transition: background 0s;
+            -ms-transition: background 0s;
+            transition: background 0s;
+        }
+        .donate_bar a.btn_donate:hover {
+            background-position: 0 -82px;
+        }
+        .donate_bar .donate_txt {
+            display: block;
+            color: #9d9d9d;
+            font: 14px/2 "Microsoft Yahei";
+        }
+        .bold {
+            font-weight: bold;
+        }
+
+        img.qrcode {
+            width: 90%;
+            margin-bottom: 10px;
+        }
+        @media only screen and (min-width: 1025px) {
+            img.qrcode {
+                width: 40%;
+                margin-right: 10px;
+            }
+        }
+
+    </style>
+
+    <!-- btn_donate & tips -->
+    <div id="donate_board" class="donate_bar center">
+        <a id="btn_donate" class="btn_donate" target="_self" href="javascript:;" title="Donate 打赏"></a>
+        <span class="donate_txt">能看到这的都是真爱，打个赏呗=。=</span>
+    </div>
+    <!-- /btn_donate & tips -->
+
+    <!-- donate guide -->
+    <div id="donate_guide" class="donate_bar center hidden">
+        
+        <img class="qrcode" src="/blog/wx.png" title="打赏"/>
+        
+    </div>
+    <!-- /donate guide -->
+
+    <!-- donate script -->
+    <script type="text/javascript">
+        document.getElementById('btn_donate').onclick = function() {
+            $('#donate_board').addClass('hidden');
+            $('#donate_guide').removeClass('hidden');
+        }
+
+        function donate_on_web() {
+            $('#donate').submit();
+        }
+    </script>
+    <!-- /donate script -->
+</div>
+<!-- /Donate Module -->
+
+                </section>
+			
+        </div>
+    </div>
+</article>
+
+
+
+
+
+    <section id="comment">
+        <div class="card">
+            <div class="card-content">
+                <!-- Duoshuo Comment BEGIN -->
+                <div class="ds-thread" data-thread-key="2015/11/01/Price-Negotiation/" data-title="Price Negotiation" data-url="http://7xi.bid/blog/2015/11/01/Price-Negotiation/"></div>
+                <script type="text/javascript">
+                    console.log(document.querySelector('.ds-thread'));
+                    var duoshuoQuery = {
+                        short_name: 'ouyli'
+                    };
+                    (function() {
+                        var ds = document.createElement('script');
+                        ds.type = 'text/javascript';
+                        ds.async = true;
+                        ds.src = (document.location.protocol == 'https:'
+                            ? 'https:'
+                            : 'http:') + '//static.duoshuo.com/embed.js';
+                        ds.charset = 'UTF-8';
+                        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
+                    })();
+                </script>
+                <!-- Duoshuo Comment END -->
+            </div>
+        </div>
+    </section>
+
+
+
+
+</div>
+
+        <div class="fixed-action-btn float-sitemap">
+    <a class="btn-floating btn-large pink">
+      <i class="fa fa-caret-square-o-up"></i>
+    </a>
+    <ul>
+      <li><a class="btn-return-top btn-floating waves-effect green" title="回到顶部"><i class="fa fa-arrow-circle-o-up"></i></a></li>
+      <li><a class="btn-floating waves-effect button-collapse yellow darken-1"  data-activates="main-menu" title="菜单"><i class="fa fa-navicon"></i></a></li>
+    </ul>
+  </div>
+
+    </main>
+        <!-- ʵ���϶�Ч���������� JQuery UI -->
+    <script src="http://7xi.bid/live2d/assets/jquery-ui.min.js?v=1.12.1"></script>
+    
+    <div class="waifu">
+        <div class="waifu-tips"></div>
+        <canvas id="live2d" class="live2d"></canvas>
+        <div class="waifu-tool">
+            <span class="fui-home"></span>
+            <span class="fui-chat"></span>
+            <span class="fui-eye"></span>
+            <span class="fui-user"></span>
+            <span class="fui-photo"></span>
+            <span class="fui-info-circle"></span>
+            <span class="fui-cross"></span>
+        </div>
+    </div>
+    <script src="/blog/live2d/waifu-tips.min.js?v=1.4.2"></script>
+    <script src="http://7xi.bid/live2d/assets/live2d.min.js?v=1.0.5"></script>
+    <script type="text/javascript">
+        /* ��ֱ���޸Ĳ��ֲ��� */
+        live2d_settings['modelId'] = 1;                  // Ĭ��ģ�� ID
+        live2d_settings['modelTexturesId'] = 2;         // Ĭ�ϲ��� ID
+        live2d_settings['modelStorage'] = false;         // ������ģ�� ID
+        live2d_settings['showF12Status']        = true;
+        live2d_settings['canSwitchTextures']    = false; 
+        live2d_settings['waifuDraggable'] = 'unlimited';    // ��ק��ʽ
+		live2d_settings['waifuEdgeSide']        = 'left:20'; 
+        /* �� initModel ǰ���� */
+        initModel("http://7xi.bid/live2d/assets/waifu-tips.json?v=1.4.2")
+    </script>
+
+<footer class="page-footer indigo darken-1">
+    
+    <div class="footer-container container">
+        <div class="row">
+            
+            <div class="social-group col m4 s12">
+                <h5 class="white-text">社交</h5>
+                
+                    <a class="social-link" href="http://weibo.com/ouyli" target="_blank">
+                        <i class="fa fa-2x fa-weibo"></i>
+                    </a>
+                
+                    <a class="social-link" href="/blog/atom.xml" target="_blank">
+                        <i class="fa fa-2x fa-rss"></i>
+                    </a>
+                
+                
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+    </script>
+    <div class="site-visitors-container white-text">
+        <span>
+            <i class="fa fa-user"></i>
+            <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+        </span>
+        <span>&nbsp;|&nbsp;</span>
+        <span>
+            <i class="fa fa-eye"></i>
+            <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+        </span>
+    </div>
+
+
+            </div>
+            
+
+            
+            <div class="col m8 s12">
+                <h5 class="white-text">友情链接</h5>
+                
+                    <a class="social-link" href="http://free8.net/" target="_blank">免费吧</a>
+                
+                    <a class="social-link" href="http://ouyli.lofter.com/" target="_blank">lofter</a>
+                
+            </div>
+            
+        </div>
+    </div>
+    
+
+    <div class="footer-copyright pink-link-context">
+        <div class="container">
+            © 2010-2018 7XI.BID, All rights reserved.
+            <p class="right" style="margin-top: 0;">本博客由 <a href="https://hexo.io"  target="_blank">Hexo</a> 强力驱动 | 主题 <a href="https://github.com/raytaylorlin/hexo-theme-raytaylorism"  target="_blank">raytaylorism</a></p>
+        </div>
+    </div>
+</footer>
+
+
+    <noscript>
+    <div class="noscript">
+        <p class="center-align">当前网速较慢或者你使用的浏览器不支持博客特定功能，请尝试刷新或换用Chrome、Firefox等现代浏览器</p>
+    </div>
+</noscript>
+<div class="noscript">
+    <p class="center-align">当前网速较慢或者你使用的浏览器不支持博客特定功能，请尝试刷新或换用Chrome、Firefox等现代浏览器</p>
+</div>
+
+
+<script src="/blog/js/jquery.min.js"></script>
+<script src="/blog/js/materialize.min.js"></script>
+
+<script>
+    (function($) {
+        $(document).ready(function() {
+            // 隐藏禁用javascript（针对微信内置浏览器）的提示
+            $('.noscript').hide();
+
+            // 图片缩放效果
+            var $imgs = $('img').not('.slider-image').not('.avatar-image').not('.carousel-image').not('.card-cover-image').not('.qrcode');
+
+            // 给图片加上点击放大效果（materialbox插件）
+            $imgs.addClass('materialboxed').each(function(i, el) {
+                $(this).attr('data-caption', $(this).attr('alt') || ' ');
+            }).materialbox();
+
+            // 优化表格的显示
+            $('table').each(function() {
+                var $table = $(this);
+                // 除去多行代码的情况
+                if ($table.find('pre').length == 0) {
+                    $table.addClass('responsive-table striped bordered');
+                }
+            });
+
+            // 首页幻灯片
+            $('.slider').slider({indicators: true, full_width: true, interval: 8000});
+
+            $(".button-collapse").sideNav();
+            $(".category-menu").sideNav();
+
+            // 针对gallery post
+            $('.carousel').carousel({full_width: true});
+            $('.carousel-control.prev').click(function() {
+                $('.carousel').carousel('prev');
+            });
+            $('.carousel-control.next').click(function() {
+                $('.carousel').carousel('next');
+            });
+
+            // 文章目录
+            $('article').not('.simple-article').find('h1').add('h2').add('h3').add('h4').add('h5').add('h6').scrollSpy();
+
+            // 目录随屏幕滚动（防止目录过长越过footer）
+            var $toc = $('.toc');
+            var scrollTargetTop = 0;
+            $(window).scroll(function() {
+                var $activeLink = $toc.find('a.active.section');
+                if ($(window).scrollTop() < 100) {
+                    scrollTargetTop = 0;
+                } else {
+                    if ($activeLink[0]) {
+                        scrollTargetTop = $activeLink.offset().top - $toc.offset().top;
+                    }
+                }
+                $toc.css('top', '-' + scrollTargetTop + 'px');
+            });
+
+            // 修正文章目录的left-border颜色
+            var color = $('.table-of-contents-text').css('color');
+            $('.table-of-contents-link').css('border-left-color', color);
+
+            // 针对移动端做的优化：FAB按钮点击一下收回
+            if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+                $('.fixed-action-btn').addClass('click-to-toggle');
+            }
+            // 回到顶部
+            $('.btn-return-top').click(function() {
+                $('body, html').animate({
+                    scrollTop: 0
+                }, 500);
+            });
+
+            // 重置读书页面的Tab标签页的颜色
+            $('li.tab a').hover(function() {
+                $(this).toggleClass('text-lighten-4');
+            });
+            $('.indicator').addClass('pink lighten-2');
+
+            
+            // 添加new标签
+            $('.menu-reading, .menu-about').append('<span class="new badge pink"></span>');
+            
+
+            // 搜索功能
+            $('.modal-trigger').leanModal({
+                // 打开搜索框时自动聚焦
+                ready: function() {
+                    if ($('#search').is(":visible")) {
+                        $('#search-input').focus();
+                    }
+                }
+            });
+            var searchXml = "";
+            if (searchXml.length == 0) {
+             	searchXml = "search.xml";
+            }
+            var searchPath = "/blog/" + searchXml;
+            initSearch(searchPath, 'search-input', 'search-result');
+        });
+
+        // 初始化搜索与匹配函数
+        var initSearch = function(path, search_id, content_id) {
+            'use strict';
+            $.ajax({
+                url: path,
+                dataType: "xml",
+                success: function(xmlResponse) {
+                    // get the contents from search data
+                    var datas = $("entry", xmlResponse).map(function() {
+                        return {
+                            title: $("title", this).text(),
+                            content: $("content", this).text(),
+                            url: $("url", this).text()
+                        };
+                    }).get();
+                    var $input = document.getElementById(search_id);
+                    var $resultContent = document.getElementById(content_id);
+                    $input.addEventListener('input', function() {
+                        var str = '<ul class=\"search-result-list\">';
+                        var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                        $resultContent.innerHTML = "";
+                        if (this.value.trim().length <= 0) {
+                            return;
+                        }
+                        // perform local searching
+                        datas.forEach(function(data) {
+                            var isMatch = true;
+                            var content_index = [];
+                            var data_title = data.title.trim().toLowerCase();
+                            var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                            var data_url = data.url;
+                            var index_title = -1;
+                            var index_content = -1;
+                            var first_occur = -1;
+                            // only match artiles with not empty titles and contents
+                            if (data_title != '' && data_content != '') {
+                                keywords.forEach(function(keyword, i) {
+                                    index_title = data_title.indexOf(keyword);
+                                    index_content = data_content.indexOf(keyword);
+                                    if (index_title < 0 && index_content < 0) {
+                                        isMatch = false;
+                                    } else {
+                                        if (index_content < 0) {
+                                            index_content = 0;
+                                        }
+                                        if (i == 0) {
+                                            first_occur = index_content;
+                                        }
+                                    }
+                                });
+                            }
+                            // show search results
+                            if (isMatch) {
+                                keywords.forEach(function(keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    data_title = data_title.replace(regS, "<span class=\"search-keyword pink lighten-2\">" + keyword + "</span>");
+                                });
+
+                                str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                                var content = data.content.trim().replace(/<[^>]+>/g, "");
+                                if (first_occur >= 0) {
+                                    // cut out 100 characters
+                                    var start = first_occur - 20;
+                                    var end = first_occur + 80;
+                                    if (start < 0) {
+                                        start = 0;
+                                    }
+                                    if (start == 0) {
+                                        end = 100;
+                                    }
+                                    if (end > content.length) {
+                                        end = content.length;
+                                    }
+                                    var match_content = content.substring(start, end);
+                                    // highlight all keywords
+                                    keywords.forEach(function(keyword) {
+                                        var regS = new RegExp(keyword, "gi");
+                                        match_content = match_content.replace(regS, "<span class=\"search-keyword pink lighten-2\">" + keyword + "</span>");
+                                    });
+
+                                    str += "<p class=\"search-result\">..." + match_content + "...</p>"
+                                }
+                                str += "</li>";
+                            }
+                        });
+                        str += "</ul>";
+                        $resultContent.innerHTML = str;
+                    });
+                }
+            });
+        }
+    })(jQuery);
+</script>
+
+
+<script src="/blog/js/prettify.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("pre").addClass("prettyprint");
+        prettyPrint();
+    });
+</script>
+
+
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', '116338260303228780000', 'auto');
+    ga('send', 'pageview');
+
+</script>
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+});
+</script>
+<script type="text/javascript" async
+  src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+
+</body>
+</html>
