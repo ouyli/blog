@@ -1,999 +1,527 @@
-<!DOCTYPE HTML>
 <html>
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-
-    
-
-    <title>成本管理</title>
-    <meta name="author" content="歐陽">
-    
-    <meta name="description" content="成本管理">
-    
-    
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-    
-    <meta property="og:site_name" content="栖息地"/>
-
-    
-    <meta property="og:image" content="undefined"/>
-    
-
-    <link rel="icon" type="image/png" href="/lx/favicon.png">
-    <link rel="alternate" href="/lx/atom.xml" title="栖息地" type="application/atom+xml">
-    <link rel="stylesheet" href="/lx/css/lib/materialize.min.css">
-    <link rel="stylesheet" href="/lx/css/lib/font-awesome.min.css">
-    <link rel="stylesheet" href="/lx/css/style.css" media="screen" type="text/css">
-    <link rel="stylesheet" href="http://7xi.bid/live2d/assets/waifu.min.css?v=1.4.2"/>
-
-    
-        <link rel="stylesheet" href="/lx/css/lib/prettify-tomorrow-night-eighties.css" type="text/css">
-    
-    <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-</head>
-
-
-<body>
-    <img src="/weixin_favicon.png" style="position: absolute; left: -9999px; opacity: 0; filter: alpha(opacity=0);">
-
-    <nav class="indigo">
-    <div class="nav-wrapper">
-        <a href="#" data-activates="main-menu" class="button-collapse">
-            <i class="fa fa-navicon"></i>
-        </a>
-        <div class="">
-            <a href="/blog/" class="brand-logo hide-on-med-and-down">栖息地</a>
-            <ul class="right hide-on-med-and-down">
-                
-                    <li>
-                        <a class="menu-home " href="/blog/" >
-                            <i class="fa fa-home "></i>
-                            
-                            首页
-                        </a>
-                    </li>
-                
-                    <li>
-                        <a class="menu-archive " href="/blog/archives" >
-                            <i class="fa fa-archive "></i>
-                            
-                            归档
-                        </a>
-                    </li>
-                
-                    <li>
-                        <a class="menu-category category-menu" href="javascript:;" data-activates="category-menu" >
-                            <i class="fa fa-bookmark "></i>
-                            
-                            分类
-                        </a>
-                    </li>
-                
-                    <li>
-                        <a class="menu-reading " href="/blog/reading" >
-                            <i class="fa fa-book "></i>
-                            
-                            读书
-                        </a>
-                    </li>
-                
-                    <li>
-                        <a class="menu-about " href="/blog/about" >
-                            <i class="fa fa-user "></i>
-                            
-                            关于
-                        </a>
-                    </li>
-                
-                    <li>
-                        <a class="menu-search modal-trigger " href="#search" >
-                            <i class="fa fa-search "></i>
-                            
-                            搜索
-                        </a>
-                    </li>
-                
-            </ul>
-            <div>
-    <ul class="side-nav indigo darken-1" id="main-menu">
-        
-        <li class="side-user">
-            <div class="row">
-                <div class="col s4 no-padding">
-                    <img class="avatar-image circle responsive-img" src="/blog/author.jpg" alt="User Avatar">
-                </div>
-                <div class="info col s8 valign-wrapper no-padding">
-                    <div class="valign">
-                        <p class="name">7XI</p>
-                        <p class="desc">生活就像是剧本,越到最后情节越是复杂</p>
-                    </div>
-                </div>
-            </div>
-        </li>
-        
-
-        
-            <li class="no-padding">
-                <a class="waves-effect menu-home " href="/blog/" >
-                    <i class="fa fa-home "></i>
-                    
-                    首页
-                </a>
-            </li>
-        
-            <li class="no-padding">
-                <a class="waves-effect menu-archive " href="/blog/archives" >
-                    <i class="fa fa-archive "></i>
-                    
-                    归档
-                </a>
-            </li>
-        
-            <li class="no-padding">
-                <a class="waves-effect menu-category category-menu" href="javascript:;" data-activates="category-menu" >
-                    <i class="fa fa-bookmark "></i>
-                    
-                    分类
-                </a>
-            </li>
-        
-            <li class="no-padding">
-                <a class="waves-effect menu-reading " href="/blog/reading" >
-                    <i class="fa fa-book "></i>
-                    
-                    读书
-                </a>
-            </li>
-        
-            <li class="no-padding">
-                <a class="waves-effect menu-about " href="/blog/about" >
-                    <i class="fa fa-user "></i>
-                    
-                    关于
-                </a>
-            </li>
-        
-            <li class="no-padding">
-                <a class="waves-effect menu-search modal-trigger " href="#search" >
-                    <i class="fa fa-search "></i>
-                    
-                    搜索
-                </a>
-            </li>
-        
-    </ul>
-
-    <ul class="side-nav indigo darken-1" id="category-menu">
-    
-
-            
-
-            <li class="collapse-level-0" collapse-level="0">
-                <a class="no-padding" href="/lx/categories/成本工作/">
-                    成本工作 <span class="right">28 篇</span></a>
-                </a>
-            </li>
-
-        
-
-            <li class="collapse-level-0" collapse-level="0">
-                <a class="no-padding" href="/lx/categories/会计分录/">
-                    会计分录 <span class="right">3 篇</span></a>
-                </a>
-            </li>
-
-        
-
-            <li class="collapse-level-0" collapse-level="0">
-                <a class="no-padding" href="/lx/categories/生活相关/">
-                    生活相关 <span class="right">2 篇</span></a>
-                </a>
-            </li>
-
-        
-
-            <li class="collapse-level-0" collapse-level="0">
-                <a class="no-padding" href="/lx/categories/预测分析/">
-                    预测分析 <span class="right">7 篇</span></a>
-                </a>
-            </li>
-
-        
-
-            <li class="collapse-level-0" collapse-level="0">
-                <a class="no-padding" href="/lx/categories/EXCEL/">
-                    EXCEL <span class="right">3 篇</span></a>
-                </a>
-            </li>
-
-        
-
-            <li class="collapse-level-0" collapse-level="0">
-                <a class="no-padding" href="/lx/categories/注会-会计/">
-                    注会-会计 <span class="right">1 篇</span></a>
-                </a>
-            </li>
-
-        
-
-            <li class="collapse-level-0" collapse-level="0">
-                <a class="no-padding" href="/lx/categories/成本控制管理/">
-                    成本控制管理 <span class="right">3 篇</span></a>
-                </a>
-            </li>
-
-        
-
-            <li class="collapse-level-0" collapse-level="0">
-                <a class="no-padding" href="/lx/categories/ERP软件/">
-                    ERP软件 <span class="right">1 篇</span></a>
-                </a>
-            </li>
-
-        
-
-    </ul>
-</div>
-
-        </div>
-    </div>
-</nav>
-
-<div id="search" class="modal search-modal">
-    <div class="row">
-        <div class="input-field col s12">
-              <input id="search-input" type="text">
-              <label for="search-input">搜索</label>
-        </div>
-
-    </div>
-    <div id="search-result" class="search-result col s12">
-
-    </div>
-</div>
-
-
-    <main>
-        
-
-
-
-<div id="article-list" class="container main-container">
-    
-        <article class="simple-article">
-    <div class="card">
-        <div class="card-content">
-            <div class="article-title">
-                
-    
-        <h1 class="indigo-link-context"><a href="/lx/2018/10/27/PDCA循环/">PDCA循环</a></h1>
-    
-
-
-            </div>
-
-            <time class="pink-link-context" datetime="2018-10-27T05:52:46.000Z"><a href="/lx/2018/10/27/PDCA循环/">2018-10-27</a></time>
-
-            
-    <div class="tags-row">
-        
-            <a href="/lx/tags/PDCA循环/" class="chip pink lighten-1">PDCA循环</a>
-        
-    </div>
-
-
-
-            
-        </div>
-
-        
-    </div>
-</article>
-
-    
-        <article class="simple-article">
-    <div class="card">
-        <div class="card-content">
-            <div class="article-title">
-                
-    
-        <h1 class="indigo-link-context"><a href="/lx/2018/10/27/二八定律/">二八定律</a></h1>
-    
-
-
-            </div>
-
-            <time class="pink-link-context" datetime="2018-10-27T05:26:53.000Z"><a href="/lx/2018/10/27/二八定律/">2018-10-27</a></time>
-
-            
-    <div class="tags-row">
-        
-            <a href="/lx/tags/二八定律/" class="chip pink lighten-1">二八定律</a>
-        
-    </div>
-
-
-
-            
-        </div>
-
-        
-    </div>
-</article>
-
-    
-        <article class="simple-article">
-    <div class="card">
-        <div class="card-content">
-            <div class="article-title">
-                
-    
-        <h1 class="indigo-link-context"><a href="/lx/2018/08/17/七夕节快乐/">七夕节快乐</a></h1>
-    
-
-
-            </div>
-
-            <time class="pink-link-context" datetime="2018-08-16T16:26:04.000Z"><a href="/lx/2018/08/17/七夕节快乐/">2018-08-17</a></time>
-
-            
-    <div class="tags-row">
-        
-            <a href="/lx/tags/七夕/" class="chip pink lighten-1">七夕</a>
-        
-    </div>
-
-
-
-            
-        </div>
-
-        
-    </div>
-</article>
-
-    
-        <article class="simple-article">
-    <div class="card">
-        <div class="card-content">
-            <div class="article-title">
-                
-    
-        <h1 class="indigo-link-context"><a href="/lx/2018/04/17/网络二维码/">网络二维码</a></h1>
-    
-
-
-            </div>
-
-            <time class="pink-link-context" datetime="2018-04-17T15:50:03.000Z"><a href="/lx/2018/04/17/网络二维码/">2018-04-17</a></time>
-
-            
-    <div class="tags-row">
-        
-            <a href="/lx/tags/二维码/" class="chip pink lighten-1">二维码</a>
-        
-    </div>
-
-
-
-            
-                <div class="entry pink-link-context">
-                    <p>扫二维码即可扫出一个地址，网络支付多合一制作请勿随意制作。
-                </div>
-            
-        </div>
-
-        
-        <div class="card-action pink-link-context">
-            <a href="/2018/04/17/网络二维码/">阅读全文</a>
-        </ div>
-        
-    </div>
-</article>
-
-    
-        <article class="simple-article">
-    <div class="card">
-        <div class="card-content">
-            <div class="article-title">
-                
-    
-        <h1 class="indigo-link-context"><a href="/lx/2018/04/16/成本收益分析/">成本收益分析</a></h1>
-    
-
-
-            </div>
-
-            <time class="pink-link-context" datetime="2018-04-16T10:46:52.000Z"><a href="/lx/2018/04/16/成本收益分析/">2018-04-16</a></time>
-
-            
-    <div class="tags-row">
-        
-            <a href="/lx/tags/成本收益分析/" class="chip pink lighten-1">成本收益分析</a>
-        
-    </div>
-
-
-
-            
-                <div class="entry pink-link-context">
-                    <p>成本收益分析是指以货币单位为基础对投入与产出进行估算和衡量的方法。它是一种是预先作出的计划方案。
-                </div>
-            
-        </div>
-
-        
-        <div class="card-action pink-link-context">
-            <a href="/2018/04/16/成本收益分析/">阅读全文</a>
-        </ div>
-        
-    </div>
-</article>
-
-    
-        <article class="simple-article">
-    <div class="card">
-        <div class="card-content">
-            <div class="article-title">
-                
-    
-        <h1 class="indigo-link-context"><a href="/lx/2018/04/16/工艺成本/">工艺成本</a></h1>
-    
-
-
-            </div>
-
-            <time class="pink-link-context" datetime="2018-04-16T10:40:15.000Z"><a href="/lx/2018/04/16/工艺成本/">2018-04-16</a></time>
-
-            
-    <div class="tags-row">
-        
-            <a href="/lx/tags/工艺成本/" class="chip pink lighten-1">工艺成本</a>
-        
-    </div>
-
-
-
-            
-                <div class="entry pink-link-context">
-                    <p>工件的实际生产成本是制造工件所必需的一切费用的总和。
-                </div>
-            
-        </div>
-
-        
-        <div class="card-action pink-link-context">
-            <a href="/2018/04/16/工艺成本/">阅读全文</a>
-        </ div>
-        
-    </div>
-</article>
-
-    
-        <article class="simple-article">
-    <div class="card">
-        <div class="card-content">
-            <div class="article-title">
-                
-    
-        <h1 class="indigo-link-context"><a href="/lx/2018/04/14/增值税税率下降1/">增值税税率下降1%</a></h1>
-    
-
-
-            </div>
-
-            <time class="pink-link-context" datetime="2018-04-14T07:52:55.000Z"><a href="/lx/2018/04/14/增值税税率下降1/">2018-04-14</a></time>
-
-            
-    <div class="tags-row">
-        
-            <a href="/lx/tags/增值税改革，税率注意事项/" class="chip pink lighten-1">增值税改革，税率注意事项</a>
-        
-    </div>
-
-
-
-            
-                <div class="entry pink-link-context">
-                    <p>增值税属于流转税，从字面上看是针对增值部分征收的税。<br>
-                </div>
-            
-        </div>
-
-        
-        <div class="card-action pink-link-context">
-            <a href="/2018/04/14/增值税税率下降1/">阅读全文</a>
-        </ div>
-        
-    </div>
-</article>
-
-    
-        <article class="simple-article">
-    <div class="card">
-        <div class="card-content">
-            <div class="article-title">
-                
-    
-        <h1 class="indigo-link-context"><a href="/lx/2017/02/21/weberp/">weberp</a></h1>
-    
-
-
-            </div>
-
-            <time class="pink-link-context" datetime="2017-02-21T13:40:01.000Z"><a href="/lx/2017/02/21/weberp/">2017-02-21</a></time>
-
-            
-    <div class="tags-row">
-        
-            <a href="/lx/tags/weberp/" class="chip pink lighten-1">weberp</a>
-        
-    </div>
-
-
-
-            
-                <div class="entry pink-link-context">
-                    <p>webERP是一个开源的ERP系统，它支持多公司，多币种，多税种，多库存管理。比较适合中小型的企业。
-                </div>
-            
-        </div>
-
-        
-        <div class="card-action pink-link-context">
-            <a href="/2017/02/21/weberp/">阅读全文</a>
-        </ div>
-        
-    </div>
-</article>
-
-    
-        <article class="simple-article">
-    <div class="card">
-        <div class="card-content">
-            <div class="article-title">
-                
-    
-        <h1 class="indigo-link-context"><a href="/lx/2017/01/10/hello-world/">工序成本控制</a></h1>
-    
-
-
-            </div>
-
-            <time class="pink-link-context" datetime="2017-01-10T15:01:57.000Z"><a href="/lx/2017/01/10/hello-world/">2017-01-10</a></time>
-
-            
-    <div class="tags-row">
-        
-            <a href="/lx/tags/工序成本控制/" class="chip pink lighten-1">工序成本控制</a>
-        
-    </div>
-
-
-
-            
-                <div class="entry pink-link-context">
-                    <p>工序成本控制是作业班组负责各类消耗量的控制，项目经理层和企业层负责各种价格和费用标准的控制。
-                </div>
-            
-        </div>
-
-        
-        <div class="card-action pink-link-context">
-            <a href="/2017/01/10/hello-world/">阅读全文</a>
-        </ div>
-        
-    </div>
-</article>
-
-    
-        <article class="simple-article">
-    <div class="card">
-        <div class="card-content">
-            <div class="article-title">
-                
-    
-        <h1 class="indigo-link-context"><a href="/lx/2016/05/05/营改增-不得开具发票情形/">营改增-不得开具发票情形</a></h1>
-    
-
-
-            </div>
-
-            <time class="pink-link-context" datetime="2016-05-05T13:26:10.000Z"><a href="/lx/2016/05/05/营改增-不得开具发票情形/">2016-05-05</a></time>
-
-            
-    <div class="tags-row">
-        
-            <a href="/lx/tags/营改增，不得开具发票情形/" class="chip pink lighten-1">营改增，不得开具发票情形</a>
-        
-    </div>
-
-
-
-            
-                <div class="entry pink-link-context">
-                    <p>（一）不得向个人开具专用发票；<br>（二）个人不得代开专用发票；</p>
-                </div>
-            
-        </div>
-
-        
-        <div class="card-action pink-link-context">
-            <a href="/2016/05/05/营改增-不得开具发票情形/">阅读全文</a>
-        </ div>
-        
-    </div>
-</article>
-
-    
-
-    <ul class="pagination center-align">
-    <li class="disabled">
-        <a href="/lx/"><i class="fa fa-angle-left"></i></a>
-    </li>
-    
-    
-        <li class="active pink"><a href="/blog/">1</a></li>
-    
-        <li class="waves-effect"><a href="/blog/page/2">2</a></li>
-    
-        <li class="waves-effect"><a href="/blog/page/3">3</a></li>
-    
-        <li class="waves-effect"><a href="/blog/page/4">4</a></li>
-    
-        <li class="waves-effect"><a href="/blog/page/5">5</a></li>
-    
-    
-    <li class="">
-        <a href="/lx/page/2/"><i class="fa fa-angle-right"></i></a>
-    </li>
- </ul>
-
-</div>
-
-        <div class="fixed-action-btn float-sitemap">
-    <a class="btn-floating btn-large pink">
-      <i class="fa fa-caret-square-o-up"></i>
-    </a>
-    <ul>
-      <li><a class="btn-return-top btn-floating waves-effect green" title="回到顶部"><i class="fa fa-arrow-circle-o-up"></i></a></li>
-      <li><a class="btn-floating waves-effect button-collapse yellow darken-1"  data-activates="main-menu" title="菜单"><i class="fa fa-navicon"></i></a></li>
-    </ul>
-  </div>
-
-    </main>
-        <!-- ʵ���϶�Ч���������� JQuery UI -->
-    <script src="http://7xi.bid/live2d/assets/jquery-ui.min.js?v=1.12.1"></script>
-    
-    <div class="waifu">
-        <div class="waifu-tips"></div>
-        <canvas id="live2d" class="live2d"></canvas>
-        <div class="waifu-tool">
-            <span class="fui-home"></span>
-            <span class="fui-chat"></span>
-            <span class="fui-eye"></span>
-            <span class="fui-user"></span>
-            <span class="fui-photo"></span>
-            <span class="fui-info-circle"></span>
-            <span class="fui-cross"></span>
-        </div>
-    </div>
-    <script src="/lx/live2d/waifu-tips.min.js?v=1.4.2"></script>
-    <script src="http://7xi.bid/live2d/assets/live2d.min.js?v=1.0.5"></script>
-    <script type="text/javascript">
-        /* ��ֱ���޸Ĳ��ֲ��� */
-        live2d_settings['modelId'] = 1;                  // Ĭ��ģ�� ID
-        live2d_settings['modelTexturesId'] = 2;         // Ĭ�ϲ��� ID
-        live2d_settings['modelStorage'] = false;         // ������ģ�� ID
-        live2d_settings['showF12Status']        = true;
-        live2d_settings['canSwitchTextures']    = false; 
-        live2d_settings['waifuDraggable'] = 'unlimited';    // ��ק��ʽ
-		live2d_settings['waifuEdgeSide']        = 'left:20'; 
-        /* �� initModel ǰ���� */
-        initModel("http://7xi.bid/live2d/assets/waifu-tips.json?v=1.4.2")
-    </script>
-
-<footer class="page-footer indigo darken-1">
-    
-    <div class="footer-container container">
-        <div class="row">
-            
-            <div class="social-group col m4 s12">
-                <h5 class="white-text">社交</h5>
-                
-                    <a class="social-link" href="http://weibo.com/ouyli" target="_blank">
-                        <i class="fa fa-2x fa-weibo"></i>
-                    </a>
-                
-                    <a class="social-link" href="/blog/atom.xml" target="_blank">
-                        <i class="fa fa-2x fa-rss"></i>
-                    </a>
-                
-                
-    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
-    </script>
-    <div class="site-visitors-container white-text">
-        <span>
-            <i class="fa fa-user"></i>
-            <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
-        </span>
-        <span>&nbsp;|&nbsp;</span>
-        <span>
-            <i class="fa fa-eye"></i>
-            <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
-        </span>
-    </div>
-
-
-            </div>
-            
-
-            
-            <div class="col m8 s12">
-                <h5 class="white-text">友情链接</h5>
-                
-                    <a class="social-link" href="http://free8.net/" target="_blank">免费吧</a>
-                
-                    <a class="social-link" href="http://ouyli.lofter.com/" target="_blank">lofter</a>
-                
-            </div>
-            
-        </div>
-    </div>
-    
-
-    <div class="footer-copyright pink-link-context">
-        <div class="container">
-            © 2010-2018 7XI.BID, All rights reserved.
-            <p class="right" style="margin-top: 0;">本博客由 <a href="https://hexo.io"  target="_blank">Hexo</a> 强力驱动 | 主题 <a href="https://github.com/raytaylorlin/hexo-theme-raytaylorism"  target="_blank">raytaylorism</a></p>
-        </div>
-    </div>
-</footer>
-
-
-    <noscript>
-    <div class="noscript">
-        <p class="center-align">当前网速较慢或者你使用的浏览器不支持博客特定功能，请尝试刷新或换用Chrome、Firefox等现代浏览器</p>
-    </div>
-</noscript>
-<div class="noscript">
-    <p class="center-align">当前网速较慢或者你使用的浏览器不支持博客特定功能，请尝试刷新或换用Chrome、Firefox等现代浏览器</p>
-</div>
-
-
-<script src="/lx/js/jquery.min.js"></script>
-<script src="/lx/js/materialize.min.js"></script>
-
-<script>
-    (function($) {
-        $(document).ready(function() {
-            // 隐藏禁用javascript（针对微信内置浏览器）的提示
-            $('.noscript').hide();
-
-            // 图片缩放效果
-            var $imgs = $('img').not('.slider-image').not('.avatar-image').not('.carousel-image').not('.card-cover-image').not('.qrcode');
-
-            // 给图片加上点击放大效果（materialbox插件）
-            $imgs.addClass('materialboxed').each(function(i, el) {
-                $(this).attr('data-caption', $(this).attr('alt') || ' ');
-            }).materialbox();
-
-            // 优化表格的显示
-            $('table').each(function() {
-                var $table = $(this);
-                // 除去多行代码的情况
-                if ($table.find('pre').length == 0) {
-                    $table.addClass('responsive-table striped bordered');
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>再来一题</title>
+<meta name="keywords" content="再来一题" />
+    <link rel="stylesheet" type="text/css" href="assets/waifu.css"/>
+<link rel="stylesheet" type="text/css" href="styles.css" />
+<style type="text/css">
+body {margin-left: 0px;margin-top: 0px;margin-right: 0px;margin-bottom: 0px;overflow: hidden;}
+.waifu{width:auto; margin:1px auto 2px auto}
+input {padding:2px auto;margin:5px 0;outline:none;color:#4c4c4c;-webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px;text-shadow:0 1px 0 rgba(255,255,255,0.3);-webkit-box-shadow:inset 0 0 0 1px rgba(255,255,255,0.2),inset 0 0 6px 0 rgba(255,255,255,0.3),0 1px 2px rgba(0,0,0,0.4);-moz-box-shadow:inset 0 0 0 1px rgba(255,255,255,0.2),inset 0 0 6px 0 rgba(255,255,255,0.3),0 1px 2px rgba(0,0,0,0.4);box-shadow:inset 0 0 0 1px rgba(255,255,255,0.2),inset 0 0 6px 0 rgba(255,255,255,0.3),0 1px 2px rgba(0,0,0,0.4);background:#f6f6f6;background:-webkit-gradient(linear,left top,left bottom,from(#f6f6f6),to(#d4d4d4));background:-webkit-linear-gradient(#f6f6f6,#d4d4d4);background-image:-moz-linear-gradient(top,#f6f6f6,#d4d4d4);background-image:-moz-gradient(top,#f6f6f6,#d4d4d4);border:1px solid #a1a1a1;}
+.btn1{background:#c3e462;box-shadow:0 1px 5px #0061aa,inset 0 10px 20px #b6f9ff;-o-box-shadow:0 1px 5px #0061aa,inset 0 10px 20px #b6f9ff;-webkit-box-shadow:0 1px 5px #0061aa,inset 0 10px 20px #b6f9ff;-moz-box-shadow:0 1px 5px #0061aa,inset 0 10px 20px #b6f9ff;}
+
+
+
+
+</style>
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="autoPlayAudios.js" ></script>
+<script src="quiz.js"></script>
+<script src="qs.js"></script>
+
+<!--必要样式-->
+<link type="text/css" href="css/style1.css" rel="stylesheet">
+<link href="css/component.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
+<link rel="stylesheet" href="win/win.css"> <!-- CSS reset -->
+
+<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
+
+
+<script type="text/javascript" src="js/modernizr.custom.js"></script>
+<script type="text/javascript" src="js/jquery.dlmenu.js"></script>
+<script src="js/main.js"></script> <!-- Resource jQuery -->
+<script src="win/win.js"></script>
+
+<script type="text/javascript">
+ var y="" ;
+ var ie='';
+ var nav =  navigator.userAgent.toLowerCase();
+ ie = nav.match(/msie([^.]*)/);
+ if(ie){ie='你正在使用IE'+ie[1];
+//alert(ie);
+       document.write('<bgsound src="'+y+'" loop="infinite" id="i_bg">');} 
+	   
+               else{
+                   ie=nav.match(/Trident.*rv.*11/i);
+                   if(ie){ie='你正在使用IE11';
+//alert(ie);
+       document.write('<bgsound src="'+y+'" loop="infinite" id="i_bg">');}
+                    else{
+                         document.write('<audio src="'+y+'" autoplay="autoplay" controls="controls" loop="1" onended="bg_start()"  id="i_bg" hidden></audio>');
+						 
+                         }
+}
+
+
+
+function bg_stop(){
+  i_bg.src="";
+}
+function bg_start(){
+  var y="mp3/"+Math.floor(Math.random()*16)+".mp3" ;
+  i_bg.src=y ;
+  audio.play();
+}
+
+function close(){
+            plus.nativeUI.confirm("退出程序？", function(event) {
+                if (event.index==0) {
+                    plus.runtime.quit();
                 }
-            });
-
-            // 首页幻灯片
-            $('.slider').slider({indicators: true, full_width: true, interval: 8000});
-
-            $(".button-collapse").sideNav();
-            $(".category-menu").sideNav();
-
-            // 针对gallery post
-            $('.carousel').carousel({full_width: true});
-            $('.carousel-control.prev').click(function() {
-                $('.carousel').carousel('prev');
-            });
-            $('.carousel-control.next').click(function() {
-                $('.carousel').carousel('next');
-            });
-
-            // 文章目录
-            $('article').not('.simple-article').find('h1').add('h2').add('h3').add('h4').add('h5').add('h6').scrollSpy();
-
-            // 目录随屏幕滚动（防止目录过长越过footer）
-            var $toc = $('.toc');
-            var scrollTargetTop = 0;
-            $(window).scroll(function() {
-                var $activeLink = $toc.find('a.active.section');
-                if ($(window).scrollTop() < 100) {
-                    scrollTargetTop = 0;
-                } else {
-                    if ($activeLink[0]) {
-                        scrollTargetTop = $activeLink.offset().top - $toc.offset().top;
-                    }
-                }
-                $toc.css('top', '-' + scrollTargetTop + 'px');
-            });
-
-            // 修正文章目录的left-border颜色
-            var color = $('.table-of-contents-text').css('color');
-            $('.table-of-contents-link').css('border-left-color', color);
-
-            // 针对移动端做的优化：FAB按钮点击一下收回
-            if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-                $('.fixed-action-btn').addClass('click-to-toggle');
-            }
-            // 回到顶部
-            $('.btn-return-top').click(function() {
-                $('body, html').animate({
-                    scrollTop: 0
-                }, 500);
-            });
-
-            // 重置读书页面的Tab标签页的颜色
-            $('li.tab a').hover(function() {
-                $(this).toggleClass('text-lighten-4');
-            });
-            $('.indicator').addClass('pink lighten-2');
-
-            
-            // 添加new标签
-            $('.menu-reading, .menu-about').append('<span class="new badge pink"></span>');
-            
-
-            // 搜索功能
-            $('.modal-trigger').leanModal({
-                // 打开搜索框时自动聚焦
-                ready: function() {
-                    if ($('#search').is(":visible")) {
-                        $('#search-input').focus();
-                    }
-                }
-            });
-            var searchXml = "";
-            if (searchXml.length == 0) {
-             	searchXml = "search.xml";
-            }
-            var searchPath = "/lx/" + searchXml;
-            initSearch(searchPath, 'search-input', 'search-result');
-        });
-
-        // 初始化搜索与匹配函数
-        var initSearch = function(path, search_id, content_id) {
-            'use strict';
-            $.ajax({
-                url: path,
-                dataType: "xml",
-                success: function(xmlResponse) {
-                    // get the contents from search data
-                    var datas = $("entry", xmlResponse).map(function() {
-                        return {
-                            title: $("title", this).text(),
-                            content: $("content", this).text(),
-                            url: $("url", this).text()
-                        };
-                    }).get();
-                    var $input = document.getElementById(search_id);
-                    var $resultContent = document.getElementById(content_id);
-                    $input.addEventListener('input', function() {
-                        var str = '<ul class=\"search-result-list\">';
-                        var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
-                        $resultContent.innerHTML = "";
-                        if (this.value.trim().length <= 0) {
-                            return;
-                        }
-                        // perform local searching
-                        datas.forEach(function(data) {
-                            var isMatch = true;
-                            var content_index = [];
-                            var data_title = data.title.trim().toLowerCase();
-                            var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
-                            var data_url = data.url;
-                            var index_title = -1;
-                            var index_content = -1;
-                            var first_occur = -1;
-                            // only match artiles with not empty titles and contents
-                            if (data_title != '' && data_content != '') {
-                                keywords.forEach(function(keyword, i) {
-                                    index_title = data_title.indexOf(keyword);
-                                    index_content = data_content.indexOf(keyword);
-                                    if (index_title < 0 && index_content < 0) {
-                                        isMatch = false;
-                                    } else {
-                                        if (index_content < 0) {
-                                            index_content = 0;
-                                        }
-                                        if (i == 0) {
-                                            first_occur = index_content;
-                                        }
-                                    }
-                                });
-                            }
-                            // show search results
-                            if (isMatch) {
-                                keywords.forEach(function(keyword) {
-                                    var regS = new RegExp(keyword, "gi");
-                                    data_title = data_title.replace(regS, "<span class=\"search-keyword pink lighten-2\">" + keyword + "</span>");
-                                });
-
-                                str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
-                                var content = data.content.trim().replace(/<[^>]+>/g, "");
-                                if (first_occur >= 0) {
-                                    // cut out 100 characters
-                                    var start = first_occur - 20;
-                                    var end = first_occur + 80;
-                                    if (start < 0) {
-                                        start = 0;
-                                    }
-                                    if (start == 0) {
-                                        end = 100;
-                                    }
-                                    if (end > content.length) {
-                                        end = content.length;
-                                    }
-                                    var match_content = content.substring(start, end);
-                                    // highlight all keywords
-                                    keywords.forEach(function(keyword) {
-                                        var regS = new RegExp(keyword, "gi");
-                                        match_content = match_content.replace(regS, "<span class=\"search-keyword pink lighten-2\">" + keyword + "</span>");
-                                    });
-
-                                    str += "<p class=\"search-result\">..." + match_content + "...</p>"
-                                }
-                                str += "</li>";
-                            }
-                        });
-                        str += "</ul>";
-                        $resultContent.innerHTML = str;
-                    });
-                }
-            });
-        }
-    })(jQuery);
+            }, null, ["确定","取消"]); 
+}
 </script>
 
+	<script>
+	var apas = new autoPlayAudios();
+	apas.play();
+	</script>
 
-<script src="/lx/js/prettify.js"></script>
-<script type="text/javascript">
-    $(document).ready(function() {
-        $("pre").addClass("prettyprint");
-        prettyPrint();
+<SCRIPT language=javascript>
+<!-- begin
+ function click() {
+ if (event.button==2) {
+	  win.alert('系统提示', '练习期间，请不要使用右键！');
+// alert('练习期间，请不要使用右键！')
+ }
+ }
+ document.onmousedown=click
+ end -->
+</script>
+<script>
+    document.addEventListener("plusready", function() {
+        // 注册返回按键事件
+        plus.key.addEventListener('backbutton', function() {
+        // 事件处理
+            plus.nativeUI.confirm("退出程序？", function(event) {
+                if (event.index==0) {
+                    plus.runtime.quit();
+                }
+            }, null, ["确定","取消"]);
+        }, false);
     });
 </script>
 
 
 <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    var i1 = 0; //分钟第一位
+    var i2 = 0; //分钟第二位
+    var s1 = 0; //秒第一位
+    var s2 = 0; //秒第二位
+    var ms1 = 0; //百分秒第一位
+    var ms2 = 0; //百分秒第二位
+    var t;　　//计时函数保存
+    function time_start(){
+    	setTimeout('$("#lm").fadeIn(100);', 1);
+        document.getElementById("time_start").disabled = "true";  //开始后使开始按钮失效，防止多次点击计时加快的bug
+        ms2++; //只需百分秒最后一位自加，前面依次进位
+        if(ms2>9){
+            ms2 = 0;
+            ms1++;
+        }
+        if(ms1>9){
+            ms1 = 0;
+            s2++;
+        }
+        if(s2>9){
+            s2 = 0;
+            s1++;
+        }
+        if(s1>5){
+            s1 = 0;
+            i2++;
+        }
+        if(i2>9){
+            i2 = 0;
+            i1++;
+        }
+        if(i1>5){
+            //超出秒表计数范围
+            clearTimeout(t);
+            return false;
+        }
+        document.getElementById("second_watch").innerHTML = ""+i1+i2+":"+s1+s2+":"+ms1+ms2+"";
+        document.getElementById("second_watch").style.color = "black";
+        t = setTimeout("time_start()",10);　　//百分秒百分之一秒执行一次
+    }
 
-    ga('create', '116338260303228780000', 'auto');
-    ga('send', 'pageview');
+    function stop(){
+        clearTimeout(t);
+        document.getElementById("second_watch").style.color = "red";
+        document.getElementById("time_start").disabled = ""; //停止时恢复按钮功能
+    }
 
+    function reset(){
+    	setTimeout('$("#lm").fadeOut(100);', 1);
+        clearTimeout(t);
+        i1 = 0;
+        i2 = 0;
+        s1 = 0;
+        s2 = 0;
+        ms1 = 0;
+        ms2 = 0;
+        document.getElementById("second_watch").innerHTML = ""+i1+i2+":"+s1+s2+":"+ms1+ms2+"";
+        document.getElementById("second_watch").style.color = "black";
+        document.getElementById("time_start").disabled = "";
+        document.getElementById('ct').value='';
+        document.getElementById('answ').checked=false;
+        document.getElementById('about').value="关于";
+    }
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+    function bstart()//重载
+    { 
+		if(document.getElementById('sct').value===document.getElementById('ct').value){
+			win.alert('系统提示', "ARE YOU *ING ME?抽题数本来就是"+document.getElementById('ct').value+"题，你重载个毛线呀！");}
+		//	alert("ARE YOU *ING ME?抽题数本来就是"+document.getElementById('ct').value+"题，你重载个毛线呀！")}
+		else{
+			document.getElementById('about').value="关于";
+      	$('#quiz-container').jquizzy({
+        questions: init.singleSelect});
+        
+		}
+    }
+    function again()//重载
+    { 
+    	document.getElementById('about').value="关于";
+      	$('#quiz-container').jquizzy({
+        questions: init.singleSelect});
+		
+    }
+    function about()//关于
+    { 
+		if(document.getElementById('about').value==="关于"){document.getElementById('about').value="官网";
+        win.alert('系统提示', "访问网站（需流量），注意返回操作：再次点击按钮（人头）即可！");
+	//	alert("访问我的网站（即浏览我的网页），注意返回操作：再次点击按钮（官网）即可！退出APP操作：点击手机返回，弹出窗口，然后选择取消！");
+      	$('#quiz-container').jquizzy({
+        questions: init.singleSelect});
+		}
+		else{
+			document.getElementById('about').value="关于";
+      	$('#quiz-container').jquizzy({
+        questions: init.singleSelect});
+		}
+    }
+    function breset()//单刷
+    { 
+    	document.getElementById('about').value="关于";
+		win.alert('系统提示', '模式：题量设置为1题且显示答案！点击重载进行答题 ');
+    //	alert('模式：题量设置为1题且显示答案！点击重载进行答题 ')
+      	document.getElementById('ct').value=1;
+      	document.getElementById('answ').checked=true;
+		
+    }
+
+   
 </script>
 
-
-
-
-
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+<script>
+//var init={'singleSelect':{'T1':[{'question':'爱是什么？','answers':['不知道','不知道','不知道','以上都不是','以上都是'],'correctAnswer':'A'}]}};
+$(function(){
+	$('#quiz-container').jquizzy({
+        questions: init.singleSelect
+    });
 });
 </script>
-<script type="text/javascript" async
-  src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+
+    <script type="text/javascript">
+		function selectcity(){
+			setTimeout('$("#ssid").fadeIn(100);', 1);
+			var zjkjkm=[["会计总论","存货","固定资产","投资性房地产","长期股权投资","无形资产","非货币性资产交换","资产减值","金融资产","负债及借款费用","债务重组","或有事项","收入","政府补助","所得税","外币折算","会计政策、会计估计变更和差错更正","资产负债表日后事项","财务报告","政府会计","民间非营利组织会计"
+
+],
+						["经济法总论","公司法律制度","其他法律制度","金融法律制度","合同法律制度","增值税法律制度","企业所得税","相关法律制度"
+
+],
+						["财管总论","财务管理基础","预算管理","筹资管理上","筹资管理下","投资管理","营运资金","成本管理","收入与分配","财务分析与评价"
+
+]
+			];
+			var index1=document.getElementById("sid").selectedIndex;//获得用户在省份组合框所选的选项序号  获得所选项的序列号，方便匹配上面二维数组添加
+			var option1=document.getElementById("ssid");//添加到该节点下，需要一一循环
+			option1.options.length=1;//直接设置总长度为1,留一个《请选择》，直接设置长度为1，，可以省去很多移除元素的麻烦
+			for(var x=0;x<zjkjkm[index1-1].length;x++){//zjkjkm是一个中级会计科目的二维数组  lenth zjkjkm[index1]
+				var opt=document.createElement("option");
+				opt.innerHTML=zjkjkm[index1-1][x];
+				opt.value=opt.innerHTML;
+				option1.appendChild(opt);
+				
+			}
+	   	};
+
+function selectcity1(){
+	  document.getElementById("kmxz").value = document.getElementById("ssid").value 
+win.alert('系统提示', document.getElementById("kmxz").value);
+}
+
+
+
+     </script>
+     
+  <script type="text/javascript">
+$(function(){
+	$( '#dl-menu' ).dlmenu();
+});
+</script>   
+
+
+<script language="javascript" type="text/javascript">   
+
+function search1(){
+	document.getElementById("quiz-container").innerHTML = '<object type="text/html" data="ss.html" width="100%" height="85%"></object>'; 
+}
 </script>
 
+<script language="javascript" type="text/javascript">   
+
+    function work(target) {
+
+  document.getElementById("kmxz").value = $(target).text();
+//win.alert('系统提示', document.getElementById("kmxz").value);
+ bstart();
+    }
+
+
+</script>
+
+
+<script type="text/javascript">
+  // 弹窗
+  function showWindow() {
+    $('#showp').show();  //显示弹窗
+    $('#cover').css('display','block'); //显示遮罩层
+    $('#cover').css('height',document.body.clientHeight+'px'); //设置遮罩层的高度为当前页面高度
+  }
+  // 关闭弹窗
+  function closeWindow() {
+    $('#showp').hide();  //隐藏弹窗
+    $('#cover').css('display','none');   //显示遮罩层
+  }
+</script>
+
+
+
+</head>
+<body style="font-family: 'Microsoft YaHei';width:auto;height:auto;">
+
+<header class="header">
+	<a href="#" class="logo"><img src="images/logo.png" alt="答题"></a>
+	<a href="javascript:;"  onClick="search1()" class="search"><span>搜索</span></a>
+	<a href="javascript:;" class="user-icon"   id="about" value="关于"  onclick="about()"><span>关于</span></a>
+
+	<div class="cd-bouncy-nav-modal">
+		<nav>
+			<ul class="cd-bouncy-nav">
+				<li><a class="cd-bouncy-nav-d" href="#"  onclick="bstart()">重载</a></li>
+				<li><a class="cd-bouncy-nav-d" href="#"  onclick="reset()">重置</a></li>
+				<li><a class="cd-bouncy-nav-d" href="#"  onclick="about()">关于</a></li>
+				<li><a class="cd-bouncy-nav-d" href="#" onclick="bg_start()">换歌</a></li>
+				<li><a class="cd-bouncy-nav-d" href="#" onclick="bg_stop()">静音</a></li>
+				<li><a class="cd-bouncy-nav-d" href="#" onclick="breset()">单刷</a></li>
+			</ul>
+		</nav>
+		<a href="#0" class="cd-close">Close modal</a>
+	</div>
+</div>
+
+
+
+
+	<div id="dl-menu" class="dl-menuwrapper">
+		<button id="dl-menu-button">Open Menu</button>
+		<ul class="dl-menu">
+
+			<li>
+				<a href="Line">选择科目</a>
+				<ul class="dl-submenu">
+					<li class="dl-back"><a href="#">返回上一级</a></li>
+								<li>
+				                   <a href="Line">会计实务</a>
+				                   <ul class="dl-submenu">
+					                    <li class="dl-back"><a href="#">返回上一级</a></li>
+<li><a href="#" onclick="work(this)">会计总论</a></li>
+<li><a href="#" onclick="work(this)">存货</a></li>
+<li><a href="#" onclick="work(this)">固定资产</a></li>
+<li><a href="#" onclick="work(this)">投资性房地产</a></li>
+<li><a href="#" onclick="work(this)">长期股权投资</a></li>
+<li><a href="#" onclick="work(this)">无形资产</a></li>
+<li><a href="#" onclick="work(this)">非货币性资产交换</a></li>
+<li><a href="#" onclick="work(this)">资产减值</a></li>
+<li><a href="#" onclick="work(this)">金融资产</a></li>
+<li><a href="#" onclick="work(this)">负债及借款费用</a></li>
+<li><a href="#" onclick="work(this)">债务重组</a></li>
+<li><a href="#" onclick="work(this)">或有事项</a></li>
+<li><a href="#" onclick="work(this)">收入</a></li>
+<li><a href="#" onclick="work(this)">政府补助</a></li>
+<li><a href="#" onclick="work(this)">所得税</a></li>
+<li><a href="#" onclick="work(this)">外币折算</a></li>
+<li><a href="#" onclick="work(this)">会计政策、会计估计变更和差错更正</a></li>
+<li><a href="#" onclick="work(this)">资产负债表日后事项</a></li>
+<li><a href="#" onclick="work(this)">财务报告</a></li>
+<li><a href="#" onclick="work(this)">政府会计</a></li>
+<li><a href="#" onclick="work(this)">民间非营利组织会计</a></li>
+
+
+				                   </ul>
+			                   </li>
+								<li>
+				                   <a href="Line">财务管理</a>
+				                   <ul class="dl-submenu">
+					                    <li class="dl-back"><a href="#">返回上一级</a></li>
+<li><a href="#" onclick="work(this)">财管总论</a></li>
+<li><a href="#" onclick="work(this)">财务管理基础</a></li>
+<li><a href="#" onclick="work(this)">预算管理</a></li>
+<li><a href="#" onclick="work(this)">筹资管理上</a></li>
+<li><a href="#" onclick="work(this)">筹资管理下</a></li>
+<li><a href="#" onclick="work(this)">投资管理</a></li>
+<li><a href="#" onclick="work(this)">营运资金</a></li>
+<li><a href="#" onclick="work(this)">成本管理</a></li>
+<li><a href="#" onclick="work(this)">收入与分配</a></li>
+<li><a href="#" onclick="work(this)">财务分析与评价</a></li>
+
+
+				                   </ul>
+			                   </li>
+								<li>
+				                   <a href="Line">经济法</a>
+				                   <ul class="dl-submenu">
+					                    <li class="dl-back"><a href="#">返回上一级</a></li>
+<li><a href="#" onclick="work(this)">经济法总论</a></li>
+<li><a href="#" onclick="work(this)">公司法律制度</a></li>
+<li><a href="#" onclick="work(this)">其他法律制度</a></li>
+<li><a href="#" onclick="work(this)">金融法律制度</a></li>
+<li><a href="#" onclick="work(this)">合同法律制度</a></li>
+<li><a href="#" onclick="work(this)">增值税法律制度</a></li>
+<li><a href="#" onclick="work(this)">企业所得税</a></li>
+<li><a href="#" onclick="work(this)">相关法律制度</a></li>
+
+
+				                   </ul>
+			                   </li>
+				</ul>
+			</li>
+
+
+
+
+		</ul>
+	</div>
+</header>
+
+
+<div class="waifu">
+
+<div class="waifu-tips"></div><canvas id="live2d"  class="live2d"  height="230" ></canvas><div  id="ttmm"  class="ttmm"  style="height: 150px;"></div><div id='quiz-container'></div>
+
+
+
+
+
+<div id='lm' style="text-align:center;color:#4c4c4c;display:none;">
+	
+<p  align="center" id="second_watch" style="font-size: 20px; text-shadow: 0.1em 0.1em 0.15em #1e90ff">00:00:00</p>
+
+</div>
+
+<!-- 遮罩层 -->
+<p id="cover" style="background: #000; position: absolute; left: 0px; top: 0px; width: 100%; filter: alpha(opacity=30); opacity: 0.3; display: none; z-index: 2 ">
+   
+</p>
+<!-- 弹窗 -->
+<div id="showp" style="width: 95%;max-width:500px; margin:  auto; height: 14rem; border: 1px solid #999; text-align:center;
+display: none; position: absolute; top: 0; left: 0; right: 0;bottom: 0; z-index: 999999; background: #fff">
+  <!-- 标题 -->
+  <p style=" position: absolute; height: 36px; width: 100%; text-align: center; border-radius: 4px 4px 0 0; line-height: 36px; vertical-align: middle; background-color: #77BFA3; /*标题背景色*/ border-bottom: 1px solid rgb(233, 233, 233); z-index: 1;" >
+    提示
+  </p>
+  <!-- 内容 -->
+  <br>
+  <br>
+  <p style=" padding: 18px 5px 0px 5px;text-align:left;  font-size: 16px; min-height: 40px; line-height: 22px; text-shadow: 0.1em 0.1em 0.15em #1e90ff ">
+      输入题数：<input type="text" style="width:60%;max-width:350px;height:20px; text-shadow: 0.1em 0.1em 0.15em #1e90ff" id="ct"   placeholder="输入题量" >
+  <input type="hidden" id="sct" value=""><br>							
+                              <select  id="sid" onchange="selectcity()" style="text-shadow: 0.1em 0.1em 0.15em #1e90ff">
+   			                                  <option>科目</option>
+   			                                  <option>会计实务</option>
+   			                                  <option>经济法</option>
+   			                                  <option>财务管理</option>
+   	                            </select>
+	  	显示答案<input type="checkbox" id="answ" >  仅计算题<input type="checkbox" id="jst" >	<br>
+	                            <select  id="ssid"  onchange="selectcity1()" style="display:none;text-shadow: 0.1em 0.1em 0.15em #1e90ff">
+   			                      <option>章节</option>
+                              	</select><input id="kmxz" value="章节" ; style="text-shadow: 0.1em 0.1em 0.15em #1e90ff"></p>
+
+  <!-- 按钮 -->
+  <p style=" display: inline-block; width: 60px; height: 26px; line-height: 26px; background-color: #DE5923; color: white; cursor: pointer; text-align: center; border-radius: 2px; text-decoration: none; margin: 0 10px 0px 10px; border: none; " onclick="closeWindow()">
+    确 定
+  </p>
+</div>
+
+
+
+
+
+  <!-- 
+
+  <input type="button" class="btn1" value="重载" onclick="bstart()">
+  <input type="button" class="btn1" value="计时" id="time_start" onclick="time_start()">
+  <input type="button" class="btn1" value="暂停" onclick="stop()">
+  <input type="button" class="btn1" value="重置" onclick="reset()">
+  <input type="button" class="btn1" value="单刷" onclick="breset()">
+  <input type="button" class="btn1" value="换歌" onclick="bg_start()">
+  <input type="button" class="btn1" value="静音" onclick="bg_stop()">
+  <input type="button" class="btn1" id="about" value="关于" onclick="about()">
+-->
+
+
+
+    
+<!--    <canvas id="live2d" width="650" height="600" class="live2d" style="width: 325px;height: 300px;"></canvas>-->
+
+
+    <div class="waifu-tool">
+        <span class="fui-home"></span>
+        <span class="fui-eye"></span>
+        <span class="fui-1"></span>
+        <span class="fui-5"></span>
+		<span class="fui-user"></span>
+        <span class="fui-chat"></span>
+        <span class="fui-photo"></span>
+        <span class="fui-info-circle"></span>
+        <span class="fui-6"></span>
+        <span id="time_start" class="fui-2"></span>
+        <span class="fui-3"></span>
+        <span class="fui-4"></span>
+        <span class="fui-7"></span>
+
+        <span class="fui-cross"></span>
+    </div>
+</div>
+
+    <script src="assets/waifu-tips.js"></script>
+    <script src="assets/live2d.js"></script>
+    <script type="text/javascript">
+
+        /* 在 initModel 前添加 */
+        initModel("assets/waifu-tips.json?v=1.4.2")
+    </script>    
 
 
 </body>
