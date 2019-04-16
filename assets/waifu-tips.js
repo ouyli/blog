@@ -216,7 +216,7 @@ function showHitokoto(){
     });
 	*/
 
-	if(zsd=[]){zsd=["知识点获取不到数据！网络有问题。如果网络正常，请联系i@7xi.bid"]}
+	if(zsd[2]=""){zsd=["知识点获取不到数据！网络有问题。如果网络正常，请联系i@7xi.bid"]}
     text=zsd[Math.floor(Math.random()*zsd.length)]
     showMessage(text, 12000);  
     /*
