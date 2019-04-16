@@ -41,18 +41,40 @@
     animation-timing-function: ease-in-out;
 	z-index: 99999;
 }
+.waifu-tips1 {
+    opacity: 0;
+    width: auto;
+    height: auto;
+    top: 150px;
+    right: 40px;
+    padding: 5px 10px;
+    border: 2px solid rgb(57, 57, 57);
+    background-color: #fff;
+    font-size: 13px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    position: absolute;
+    animation-duration: 50s;
+    animation-iteration-count: infinite;
+    animation-name: shake;
+    animation-timing-function: ease-in-out;
+	z-index: 99999;
+}
 .waifu-tool {
     display: none;
     color: #aaa;
     top: 4px;
     right: 10px;
-    font-size: 14px;
+    font-size: 15px;
     position: absolute;
 }
 .waifu:hover .waifu-tool {
     display: block;
 }
-
+#quiz-container.night {
+    background-color: #263238;
+    color: #aaa;
+}
 .waifu-tool span {
     display: block;
     cursor: pointer;
@@ -347,7 +369,10 @@
   content: "\e636";
 }
 .fui-8:before {
-  content: "\e65f";
+  content: "\e63e";
+}
+.fui-9:before {
+  content: "\e630";
 }
 body {
     background-color: #fafafa;

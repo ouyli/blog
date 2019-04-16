@@ -31,6 +31,10 @@ $(document).on('copy', function (){
 });
 
 $('.waifu-tool .fui-home').click(function (){
+	if(document.getElementById("ttmm").style.height!="150px"){
+		document.getElementById("ttmm").style.height="150px";
+		$('.live2d').css('display','block');
+	}
     again();
 });
 
@@ -74,6 +78,7 @@ $('.waifu-tool .fui-4').click(function (){
 
 $('.waifu-tool .fui-5').click(function (){
     breset();
+    again();
     showMessage('1题模式', 3000, true);
 });
 
@@ -88,8 +93,17 @@ $('.waifu-tool .fui-7').click(function (){
 });
 
 $('.waifu-tool .fui-8').click(function (){
-    again();
-    showMessage('重新来一次', 3000, true);
+    document.getElementById("ttmm").style.height="0px";
+    window.setTimeout(function() {$('.live2d').css('display','none');}, 1300);
+    about();
+    showMessage('网站', 3000, true);
+});
+
+$('.waifu-tool .fui-9').click(function (){
+    document.getElementById("ttmm").style.height="0px";
+    window.setTimeout(function() {$('.live2d').css('display','none');}, 1300);
+    search1();
+    showMessage('搜索', 3000, true);
 });
 
 $('.waifu-tool .fui-user').click(function (){
@@ -202,6 +216,10 @@ function showHitokoto(){
     });
 	*/
 
+	if(zsd=[]){zsd=["知识点获取不到数据！网络有问题。如果网络正常，请联系i@7xi.bid"]}
+    text=zsd[Math.floor(Math.random()*zsd.length)]
+    showMessage(text, 12000);  
+    /*
 	$.ajax({
         cache: true,
         url: 'http://7xi.bid/lx/assets/waifu-kd.json',
@@ -214,10 +232,13 @@ function showHitokoto(){
 				   text=result.text[Math.floor(Math.random() * result.text.length + 1)-1]
                     showMessage(text, 12000);         
             });
-		}
-
+		},
+        error:function(err){
+        	showMessage(err.statusText, 12000);  	
+        }
 
           });
+        */
 
 }
 
@@ -276,6 +297,9 @@ function initModel(waifuPath){
                     if(Array.isArray(tips.text)) text = tips.text[Math.floor(Math.random() * tips.text.length + 1)-1];
                     text = text.render({text: $(this).text()});
                     showMessage(text, 3000, true);
+                    $('.waifu-tips1').show(1000);
+                     setTimeout(function(){
+            	     $('.waifu-tips1').hide();},6000);
                 });
             });
             $.each(result.seasons, function (index, tips){
@@ -331,14 +355,13 @@ loadModel(modelId, Math.floor(Math.random()*(35+1)));
 }*/
 
 function switchNightMode(){
-    var night = document.cookie.replace(/(?:(?:^|.*;\s*)night\s*\=\s*([^;]*).*$)|^.*$/, "$1") || '0';
-    if(night == '0'){
+    if(document.body.className!="night"){
         document.body.classList.add('night');
-        document.cookie = "night=1;path=/;expires=Fri, 31 Dec 9999 23:59:59 GMT";
+        document.getElementById("quiz-container").classList.add('night');
         console.log('夜间模式开启');
     }else{
         document.body.classList.remove('night');
-        document.cookie = "night=0;path=/;expires=Fri, 31 Dec 9999 23:59:59 GMT";
+        document.getElementById("quiz-container").classList.remove('night');
         console.log('夜间模式关闭');
     }
 }

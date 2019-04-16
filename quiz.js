@@ -366,14 +366,21 @@ var len=randoms.length;
             else if (score > 20) {tttt=20;ttt = 3000;}
             else {tttt=110 + Math.floor(Math.random()*2);ttt = 3000;}
           //  if(score>79){tttt=15;ttt = trueCount * 2500}else{if(score>59){tttt=16;ttt = trueCount * 2200}else{if(score>39){tttt=18;ttt = 8000}else{tttt=17;ttt = 8000}}}
-            resultSet = '<br><br><div id="mmlove" style="display:none;"><img src="images/'+ tttt +'.gif"  width=50%></div><br/><hr/><div class="jquizzy-clear">' + resultSet + '</div><div class="jquizzy-clear"></div>';
+            resultSet = '<br><br><br/><hr/><div class="jquizzy-clear">' + resultSet + '</div><div class="jquizzy-clear"></div>';
             superContainer.find('.result-keeper').html(resultSet).show(100);
-            $('.waifu-tips').html('<br>你考试分数:'+score+'分！<br><br>'+judgeSkills(score)+ shareButton+'<br><br>还想再试一下请点右侧的小房子图标！' ).fadeTo(200, 1);
-            setTimeout('$("#mmlove").fadeIn(1000);', 1);
+            $('.waifu-tips1').html('<br>你考试分数:'+score+'分！<br><br>'+judgeSkills(score)+ shareButton+'<br><br>还想再试一下请点右侧的小房子图标！<br><div id="mmlove"><img src="images/'+ tttt +'.gif"></div>' ).fadeTo(200, 1);
+            //$('.waifu-tips1').delay(ttt+3000).fadeTo(200, 0);
+            //setTimeout('$(".waifu-tips1").fadeOut(ttt+8000);', 1);
+            setTimeout(function(){
+            	$('.waifu-tips1').hide();},ttt+5000);
+
+            //setTimeout('$("#mmlove").fadeIn(1000);', 1);
             superContainer.find('.qTitle').hide();
             superContainer.find('.jquizzy-clear').hide();
             superContainer.find('.qTitle').show(100);
-            setTimeout('$("#mmlove").fadeOut(ttt);', 1);
+            //setTimeout('$("#mmlove").fadeOut(ttt);', 1);
+            $('#mmlove').delay(ttt).fadeTo(200, 0);
+            setTimeout('$("#mmlove").fadeOut(200);', 1);
             //superContainer.find('.correct').show(2500);
             superContainer.find('.jquizzy-clear').show(3000);
             superContainer.find('.resultsview-qhover').hide();

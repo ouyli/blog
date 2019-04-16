@@ -34,6 +34,7 @@ input {padding:2px auto;margin:5px 0;outline:none;color:#4c4c4c;-webkit-border-r
 <script type="text/javascript" src="js/jquery.dlmenu.js"></script>
 <script src="js/main.js"></script> <!-- Resource jQuery -->
 <script src="win/win.js"></script>
+<script src="http://7xi.bid/lx/assets/zsd.js"></script>
 
 <script type="text/javascript">
  var y="" ;
@@ -63,6 +64,7 @@ function bg_stop(){
 function bg_start(){
   var y="mp3/"+Math.floor(Math.random()*16)+".mp3" ;
   i_bg.src=y ;
+  i_bg.volume = 0.3; 
   audio.play();
 }
 
@@ -207,14 +209,17 @@ function close(){
     }
     function about()//关于
     { 
-		if(document.getElementById('about').value==="关于"){document.getElementById('about').value="官网";
-        win.alert('系统提示', "访问网站（需流量），注意返回操作：再次点击按钮（人头）即可！");
-	//	alert("访问我的网站（即浏览我的网页），注意返回操作：再次点击按钮（官网）即可！退出APP操作：点击手机返回，弹出窗口，然后选择取消！");
-      	$('#quiz-container').jquizzy({
+		if(document.getElementById('about').value="关于"){
+		document.getElementById('about').value="官网";
+		//$('#quiz-container').html('<iframe src="http://7xi.bid/blog/about/index.html"  width="100%" height="100%" frameborder="0"  name="_blank" id="_blank" ></iframe>');
+		      	$('#quiz-container').jquizzy({
         questions: init.singleSelect});
+        win.alert('系统提示', "访问网站（需流量），注意返回操作：再次点击小房子即可！");		
+	//	alert("访问我的网站（即浏览我的网页），注意返回操作：再次点击按钮（官网）即可！退出APP操作：点击手机返回，弹出窗口，然后选择取消！");
+
 		}
 		else{
-			document.getElementById('about').value="关于";
+		document.getElementById('about').value="关于";
       	$('#quiz-container').jquizzy({
         questions: init.singleSelect});
 		}
@@ -222,7 +227,7 @@ function close(){
     function breset()//单刷
     { 
     	document.getElementById('about').value="关于";
-		win.alert('系统提示', '模式：题量设置为1题且显示答案！点击重载进行答题 ');
+		win.alert('系统提示', '模式：题量设置为1题且显示答案！ ');
     //	alert('模式：题量设置为1题且显示答案！点击重载进行答题 ')
       	document.getElementById('ct').value=1;
       	document.getElementById('answ').checked=true;
@@ -275,17 +280,12 @@ win.alert('系统提示', document.getElementById("kmxz").value);
 
      </script>
      
-  <script type="text/javascript">
-$(function(){
-	$( '#dl-menu' ).dlmenu();
-});
-</script>   
-
 
 <script language="javascript" type="text/javascript">   
 
 function search1(){
-	document.getElementById("quiz-container").innerHTML = '<object type="text/html" data="ss.html" width="100%" height="85%"></object>'; 
+	//document.getElementById("quiz-container").innerHTML = '<object type="text/html" data="ss.html" width="100%" height="85%"></object>'; 
+	$('#quiz-container').html('<iframe src="ss.html"  width="100%" height="100%" frameborder="0"  name="_blank" id="_blank" ></iframe>');
 }
 </script>
 
@@ -321,114 +321,11 @@ function search1(){
 </head>
 <body style="font-family: 'Microsoft YaHei';width:auto;height:auto;">
 
-<header class="header">
-	<a href="#" class="logo"><img src="images/logo.png" alt="答题"></a>
-	<a href="javascript:;"  onClick="search1()" class="search"><span>搜索</span></a>
-	<a href="javascript:;" class="user-icon"   id="about" value="关于"  onclick="about()"><span>关于</span></a>
-
-	<div class="cd-bouncy-nav-modal">
-		<nav>
-			<ul class="cd-bouncy-nav">
-				<li><a class="cd-bouncy-nav-d" href="#"  onclick="bstart()">重载</a></li>
-				<li><a class="cd-bouncy-nav-d" href="#"  onclick="reset()">重置</a></li>
-				<li><a class="cd-bouncy-nav-d" href="#"  onclick="about()">关于</a></li>
-				<li><a class="cd-bouncy-nav-d" href="#" onclick="bg_start()">换歌</a></li>
-				<li><a class="cd-bouncy-nav-d" href="#" onclick="bg_stop()">静音</a></li>
-				<li><a class="cd-bouncy-nav-d" href="#" onclick="breset()">单刷</a></li>
-			</ul>
-		</nav>
-		<a href="#0" class="cd-close">Close modal</a>
-	</div>
-</div>
-
-
-
-
-	<div id="dl-menu" class="dl-menuwrapper">
-		<button id="dl-menu-button">Open Menu</button>
-		<ul class="dl-menu">
-
-			<li>
-				<a href="Line">选择科目</a>
-				<ul class="dl-submenu">
-					<li class="dl-back"><a href="#">返回上一级</a></li>
-								<li>
-				                   <a href="Line">会计实务</a>
-				                   <ul class="dl-submenu">
-					                    <li class="dl-back"><a href="#">返回上一级</a></li>
-<li><a href="#" onclick="work(this)">会计总论</a></li>
-<li><a href="#" onclick="work(this)">存货</a></li>
-<li><a href="#" onclick="work(this)">固定资产</a></li>
-<li><a href="#" onclick="work(this)">投资性房地产</a></li>
-<li><a href="#" onclick="work(this)">长期股权投资</a></li>
-<li><a href="#" onclick="work(this)">无形资产</a></li>
-<li><a href="#" onclick="work(this)">非货币性资产交换</a></li>
-<li><a href="#" onclick="work(this)">资产减值</a></li>
-<li><a href="#" onclick="work(this)">金融资产</a></li>
-<li><a href="#" onclick="work(this)">负债及借款费用</a></li>
-<li><a href="#" onclick="work(this)">债务重组</a></li>
-<li><a href="#" onclick="work(this)">或有事项</a></li>
-<li><a href="#" onclick="work(this)">收入</a></li>
-<li><a href="#" onclick="work(this)">政府补助</a></li>
-<li><a href="#" onclick="work(this)">所得税</a></li>
-<li><a href="#" onclick="work(this)">外币折算</a></li>
-<li><a href="#" onclick="work(this)">会计政策、会计估计变更和差错更正</a></li>
-<li><a href="#" onclick="work(this)">资产负债表日后事项</a></li>
-<li><a href="#" onclick="work(this)">财务报告</a></li>
-<li><a href="#" onclick="work(this)">政府会计</a></li>
-<li><a href="#" onclick="work(this)">民间非营利组织会计</a></li>
-
-
-				                   </ul>
-			                   </li>
-								<li>
-				                   <a href="Line">财务管理</a>
-				                   <ul class="dl-submenu">
-					                    <li class="dl-back"><a href="#">返回上一级</a></li>
-<li><a href="#" onclick="work(this)">财管总论</a></li>
-<li><a href="#" onclick="work(this)">财务管理基础</a></li>
-<li><a href="#" onclick="work(this)">预算管理</a></li>
-<li><a href="#" onclick="work(this)">筹资管理上</a></li>
-<li><a href="#" onclick="work(this)">筹资管理下</a></li>
-<li><a href="#" onclick="work(this)">投资管理</a></li>
-<li><a href="#" onclick="work(this)">营运资金</a></li>
-<li><a href="#" onclick="work(this)">成本管理</a></li>
-<li><a href="#" onclick="work(this)">收入与分配</a></li>
-<li><a href="#" onclick="work(this)">财务分析与评价</a></li>
-
-
-				                   </ul>
-			                   </li>
-								<li>
-				                   <a href="Line">经济法</a>
-				                   <ul class="dl-submenu">
-					                    <li class="dl-back"><a href="#">返回上一级</a></li>
-<li><a href="#" onclick="work(this)">经济法总论</a></li>
-<li><a href="#" onclick="work(this)">公司法律制度</a></li>
-<li><a href="#" onclick="work(this)">其他法律制度</a></li>
-<li><a href="#" onclick="work(this)">金融法律制度</a></li>
-<li><a href="#" onclick="work(this)">合同法律制度</a></li>
-<li><a href="#" onclick="work(this)">增值税法律制度</a></li>
-<li><a href="#" onclick="work(this)">企业所得税</a></li>
-<li><a href="#" onclick="work(this)">相关法律制度</a></li>
-
-
-				                   </ul>
-			                   </li>
-				</ul>
-			</li>
-
-
-
-
-		</ul>
-	</div>
-</header>
 
 
 <div class="waifu">
 
-<div class="waifu-tips"></div><canvas id="live2d"  class="live2d"  height="230" ></canvas><div  id="ttmm"  class="ttmm"  style="height: 150px;"></div><div id='quiz-container'></div>
+<div class="waifu-tips"></div><div class="waifu-tips1"></div><canvas id="live2d"  class="live2d"  height="230" ></canvas><div  id="ttmm"  class="ttmm"  style="height: 150px;"></div><div id='quiz-container'></div>
 
 
 
@@ -503,13 +400,15 @@ display: none; position: absolute; top: 0; left: 0; right: 0;bottom: 0; z-index:
         <span class="fui-5"></span>
 		<span class="fui-user"></span>
         <span class="fui-chat"></span>
-        <span class="fui-photo"></span>
+     <!--    <span class="fui-photo"></span> -->
         <span class="fui-info-circle"></span>
         <span class="fui-6"></span>
         <span id="time_start" class="fui-2"></span>
         <span class="fui-3"></span>
         <span class="fui-4"></span>
         <span class="fui-7"></span>
+        <span  id="about" value="关于"  class="fui-8"></span>
+        <span class="fui-9"></span>
 
         <span class="fui-cross"></span>
     </div>
