@@ -96,16 +96,19 @@
 }
 .waifu #live2d{
     width:auto;
-    height:auto;
+	top: -22px;
+	left: -50px;
+    height:225px;
     position: absolute;
 	z-index: 999;
 }
+/*
 .waifu #ttmm{
 	width:auto;
     height:auto;
     position: relative;
 }
-
+*/
 @keyframes shake {
     2% {
         transform: translate(0.5px, -1.5px) rotate(-0.5deg);
@@ -339,7 +342,7 @@
   content: "\e62c";
 }
 .fui-chat:before {
-  content: "\e62d";
+  content: "\e616";
 }
 .fui-home:before {
   content: "\e62e";
@@ -354,7 +357,7 @@
   content: "\e62b";
 }
 .fui-3:before {
-  content: "\e615";
+  content: "\e62d";
 }
 .fui-4:before {
   content: "\e61d";
@@ -373,6 +376,12 @@
 }
 .fui-9:before {
   content: "\e630";
+}
+.fui-10:before {
+  content: "\e615";
+}
+.fui-11:before {
+  content: "\e65a";
 }
 body {
     background-color: #fafafa;

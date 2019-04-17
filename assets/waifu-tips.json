@@ -18,7 +18,7 @@
         },
         {
             "selector": ".fui-info-circle",
-            "text": ["播放音乐"]
+            "text": ["想要听点音乐吗"]
         },
         {
             "selector": ".fui-1",
@@ -50,15 +50,23 @@
         },
         {
             "selector": ".fui-8",
-            "text": ["做完不过瘾，再来一次！！！！"]
+            "text": ["访问网站，需要流量的哦！！！！"]
+        },
+        {
+            "selector": ".fui-9",
+            "text": ["进入搜索题库。"]
+        },
+        {
+            "selector": "#tuichu,.fui-cross",
+            "text": ["人物开启切换。"]
         },
         {
             "selector": "#tor_show",
             "text": ["翻页比较麻烦吗，点击可以显示这篇文章的目录呢"]
         },
         {
-            "selector": "#comment_go,.fui-chat",
-            "text": ["知识点"]
+            "selector": "#comment_go,#chatt,.fui-chat",
+            "text": ["知识点轮播开关切换"]
         },
         {
             "selector": "#night_mode",
@@ -109,12 +117,16 @@
             "text": ["找不到想看的内容？搜索看看吧"]
         },
         {
-            "selector": ".previous",
-            "text": ["去上一页看看吧"]
+            "selector": ".prev",
+            "text": ["去上题看看吧"]
         },
         {
             "selector": ".next",
-            "text": ["去下一页看看吧"]
+            "text": ["先做完这题才能做下题哦"]
+        },
+        {
+            "selector": ".final",
+            "text": ["题目全部做完，开始对答案啦！！！"]
         },
         {
             "selector": ".dropdown-toggle",

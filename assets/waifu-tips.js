@@ -31,10 +31,6 @@ $(document).on('copy', function (){
 });
 
 $('.waifu-tool .fui-home').click(function (){
-	if(document.getElementById("ttmm").style.height!="150px"){
-		document.getElementById("ttmm").style.height="150px";
-		$('.live2d').css('display','block');
-	}
     again();
 });
 
@@ -43,7 +39,14 @@ $('.waifu-tool .fui-eye').click(function (){
     showMessage('你会做眼保健操吗？', 3000, true);
 });
 
-$('.waifu-tool .fui-chat').click(function (){
+$('.waifu-tool #chatt').click(function (){
+    if(document.getElementById("chatt").className!="fui-chat"){
+       document.getElementById("chatt").className="fui-chat";
+	   showMessage('已经开启知识点', 3000, true);
+    }else{
+        document.getElementById("chatt").className="fui-10";
+		showMessage('已经关闭知识点', 3000, true);
+    }
     showHitokoto();
 });
 
@@ -93,14 +96,12 @@ $('.waifu-tool .fui-7').click(function (){
 });
 
 $('.waifu-tool .fui-8').click(function (){
-    document.getElementById("ttmm").style.height="0px";
     window.setTimeout(function() {$('.live2d').css('display','none');}, 1300);
     about();
     showMessage('网站', 3000, true);
 });
 
 $('.waifu-tool .fui-9').click(function (){
-    document.getElementById("ttmm").style.height="0px";
     window.setTimeout(function() {$('.live2d').css('display','none');}, 1300);
     search1();
     showMessage('搜索', 3000, true);
@@ -111,14 +112,14 @@ loadotherModel();
 });
 
 $('.waifu-tool .fui-cross').click(function (){
-	if(document.getElementById("ttmm").style.height!="150px"){
-		document.getElementById("ttmm").style.height="150px";
+	if(document.getElementById("tuichu").className!="fui-cross"){
+		document.getElementById("tuichu").className="fui-cross"
 		showMessage('想我了吗？人家可是很想你呢！', 1300, true);
 		$('.live2d').css('display','block');
 	}else{
    sessionStorage.setItem('waifu-dsiplay', 'none');
     showMessage('愿你有一天能与重要的人重逢', 1300, true);
-    document.getElementById("ttmm").style.height="0px";
+    document.getElementById("tuichu").className="fui-11"
     window.setTimeout(function() {$('.live2d').css('display','none');}, 1300);}
 });
 
@@ -216,9 +217,10 @@ function showHitokoto(){
     });
 	*/
 
+	if(document.getElementById("chatt").className!="fui-10"){
 	if(zsd[2]=""){zsd=["知识点获取不到数据！网络有问题。如果网络正常，请联系i@7xi.bid"]}
     text=zsd[Math.floor(Math.random()*zsd.length)]
-    showMessage(text, 12000);  
+    showMessage(text, 12000); } 
     /*
 	$.ajax({
         cache: true,
@@ -358,10 +360,10 @@ function switchNightMode(){
     if(document.body.className!="night"){
         document.body.classList.add('night');
         document.getElementById("quiz-container").classList.add('night');
-        console.log('夜间模式开启');
+       // console.log('夜间模式开启');
     }else{
         document.body.classList.remove('night');
         document.getElementById("quiz-container").classList.remove('night');
-        console.log('夜间模式关闭');
+      //  console.log('夜间模式关闭');
     }
 }

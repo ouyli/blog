@@ -27,7 +27,7 @@
         }
        
        if (aboutmy==="官网") {
-           $(this).html('<iframe src="http://7xi.bid/blog/about/index.html"  width="100%" height="100%" frameborder="0"  name="_blank" id="_blank" ></iframe>');
+           $(this).html('<object type="text/html" data="http://7xi.bid/blog/about/index.html" width="100%" height="100%"></object>');
             return;
        }
 
@@ -35,12 +35,12 @@
          var num = document.getElementById('ct');
         if(isNaN(num.value)&&num.value!=0){
 			ct=Math.floor(Math.random()*7)+1;
-			    win.alert('系统提示', '你输入的不是数字，我帮你改为'+ct+'题了。请知悉！');
+			    win.alert('系统提示', '非数字，系统改为'+ct+'题。');
 			//	alert('你输入的不是数字，我帮你改为'+ct+'题了。请知悉！');
                 document.getElementById("ct").value = ct
 				}else{
-					if(document.getElementById('ct').value==0){	ct=Math.floor(Math.random()*15)+1;
-					win.alert('系统提示', '随机取'+ct+'题。做题时【切勿点击】重载！！！');
+					if(document.getElementById('ct').value==0){	ct=Math.floor(Math.random()*7)+1;
+					win.alert('系统提示', '随机取'+ct+'题，做题时勿重载！');
 			//	alert('随机取'+ct+'题。做题时【切勿点击】重载！！！')
 				}else{
                 ct=Number(document.getElementById('ct').value)
@@ -50,7 +50,7 @@
 		document.getElementById("sct").value = ct;
         var superContainer = $(this),
         answers = [],      
-        introFob = '	<div class="intro-container slide-container"><a class="nav-start" href="#">抽选' + ct + '题，题库' + config.questions.length + '道。☟开始。<br/><br/><span><img src="images/'+ Math.floor(Math.random()*6) +'.gif"  width=50%></span></a></div>	',
+        introFob = '	<div class="intro-container slide-container"><a class="nav-start" href="#">NOTICE BY 7XI.BID<hr>抽选' + ct + '题<br>题库' + config.questions.length + '道<br/><span><img src="images/'+ Math.floor(Math.random()*6) +'.gif"  width=50%></span></a></div>	',
         exitFob = '<div class="results-container slide-container"><div class="question-number">' + config.endText + '</div><div class="result-keeper"></div></div><div class="notice">骚年，必须选择一个！</div><div class="progress-keeper" ><div class="progress"></div></div>',
         contentFob = '',
         questionsIteratorIndex,
@@ -159,7 +159,7 @@ var len=randoms.length;
         for (i = 0; i < ct; i++) {
 			questionsIteratorIndex = randoms[i]
 			 if (config.questions[questionsIteratorIndex].ans.length==1){if (config.questions[questionsIteratorIndex].answers.length==2){ tx='判断题：'}else{if (config.questions[questionsIteratorIndex].type=="4"){tx='计算题：'}else{tx='单选题：'}}}else{tx='多选题：'}
-            contentFob += '<div class="slide-container"><div class="question">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NO.['+ (i + 1) + '/'+ct+'] '+tx+'<hr>' + config.questions[questionsIteratorIndex].title + '<br></div><ul class="answers"><div class="correct1"><P>考核章节：'+ config.questions[questionsIteratorIndex].km+'<P></div>';
+            contentFob += '<div class="slide-container"><div class="question"><img src="images/hb.png"  align="left"  width="120px" height="135px">['+ (i + 1) + '/'+ct+'] '+tx+'<hr>' + config.questions[questionsIteratorIndex].title + '<br></div><ul class="answers"><div class="correct1"><P>考核章节：'+ config.questions[questionsIteratorIndex].km+'<P></div>';
 
 			for (answersIteratorIndex = 0; answersIteratorIndex < config.questions[questionsIteratorIndex].answers.length; answersIteratorIndex++) {
 				if(tx=='多选题：'){	         
@@ -366,7 +366,7 @@ var len=randoms.length;
             else if (score > 20) {tttt=20;ttt = 3000;}
             else {tttt=110 + Math.floor(Math.random()*2);ttt = 3000;}
           //  if(score>79){tttt=15;ttt = trueCount * 2500}else{if(score>59){tttt=16;ttt = trueCount * 2200}else{if(score>39){tttt=18;ttt = 8000}else{tttt=17;ttt = 8000}}}
-            resultSet = '<br><br><br/><hr/><div class="jquizzy-clear">' + resultSet + '</div><div class="jquizzy-clear"></div>';
+            resultSet = '<br><br><br><br><br/><hr/><br><br><br><br><br><div class="jquizzy-clear">' + resultSet + '</div><div class="jquizzy-clear"></div>';
             superContainer.find('.result-keeper').html(resultSet).show(100);
             $('.waifu-tips1').html('<br>你考试分数:'+score+'分！<br><br>'+judgeSkills(score)+ shareButton+'<br><br>还想再试一下请点右侧的小房子图标！<br><div id="mmlove"><img src="images/'+ tttt +'.gif"></div>' ).fadeTo(200, 1);
             //$('.waifu-tips1').delay(ttt+3000).fadeTo(200, 0);

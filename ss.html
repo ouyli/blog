@@ -17,8 +17,9 @@
     <div class="load-frame"></div>
     <div id="root">
         <h2>题库 <small>总题数{{questions.allLength}}</small>
-
-		<a href="javascript:;" class="fr weui-btn weui-btn_mini weui-btn_primary" id="showPicker">选题型</a>
+        
+		<a href="zsd.html" class="fr weui-btn weui-btn_mini weui-btn_primary" id="showPi">知识点</a>
+		
         </h2>
         <div class="search-panel">
             <div class="weui-cell weui-cell_vcode">
@@ -94,8 +95,8 @@
 		答案解析： <label id="an">{{question.jiexi}}</label></div>
 		※※※※※※※※※※※※※※※※※※※※※※※※※※※※
 		<div>
-			<div id="fs"  style="display:none;"></div>
-			<label id="defen" style="display:none;"></label>
+			<div id="fs"  style="display:none;" ></div>
+			<label id="defen" style="display:none;"  onclick="xianshi()"></label>
 			
 		</div>
 	   </div>
@@ -154,7 +155,7 @@
 <script type="text/javascript">
 	$(function () {
 		$("#b1").click(function () {
-				  
+			
 //if(document.getElementById("b1").innerText==="下一题"){document.getElementById("b1").innerText="答完查看"; document.getElementById("next1").click();}else{document.getElementById("b1").innerText="下一题";
 			if (document.getElementById("xxx").innerText !== "[多选题]"){
 				var rl1 = $('#q1 input:radio[name="rd1"]:checked').val();
@@ -183,6 +184,7 @@
                     setTimeout('$("#r1").slideDown()', 1);setTimeout('$("#r1").slideDown()', 100);
                     setTimeout('$("#r1").slideUp()', 2000);}else	
 	                                       {setTimeout('$("#w1").slideDown()', 1);setTimeout('$("#w1").slideDown()', 100);setTimeout('$("#w1").slideUp()', 2000);}
+										   document.getElementById("q1").style.display="none";
                                             setTimeout('$("#fs").slideDown()', 2000);
                                             setTimeout('$("#fs").slideUp()', 3500);
                                             setTimeout('$("#defen").slideDown()', 4000);
@@ -203,7 +205,7 @@
                 tm=document.getElementById("tm").innerText
 
 }
-				document.getElementById("defen").innerText ="累计答对"+a1+"题,累计答错"+b1+"题！"
+				document.getElementById("defen").innerText ="累计答对"+a1+"题,累计答错"+b1+"题！点击显示选项"
 
 				sc = Math.floor(a1*10/(a1+b1));
 				var div = document.getElementById('fs');
@@ -247,8 +249,11 @@
 
 });
 </script>
-
-
+<script type="text/javascript">
+function xianshi(){
+document.getElementById("q1").style.display="";
+}
+</script>
 </body>
 
 </html>

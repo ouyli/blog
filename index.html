@@ -2,39 +2,29 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<title>再来一题</title>
-<meta name="keywords" content="再来一题" />
+<title>中级财务考试练习题</title>
+<meta name="keywords" content="中级财务考试练习题" />
     <link rel="stylesheet" type="text/css" href="assets/waifu.css"/>
-<link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
 <style type="text/css">
 body {margin-left: 0px;margin-top: 0px;margin-right: 0px;margin-bottom: 0px;overflow: hidden;}
-.waifu{width:auto; margin:1px auto 2px auto}
+.waifu{ margin:1px -1px 2px 0px;}
 input {padding:2px auto;margin:5px 0;outline:none;color:#4c4c4c;-webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px;text-shadow:0 1px 0 rgba(255,255,255,0.3);-webkit-box-shadow:inset 0 0 0 1px rgba(255,255,255,0.2),inset 0 0 6px 0 rgba(255,255,255,0.3),0 1px 2px rgba(0,0,0,0.4);-moz-box-shadow:inset 0 0 0 1px rgba(255,255,255,0.2),inset 0 0 6px 0 rgba(255,255,255,0.3),0 1px 2px rgba(0,0,0,0.4);box-shadow:inset 0 0 0 1px rgba(255,255,255,0.2),inset 0 0 6px 0 rgba(255,255,255,0.3),0 1px 2px rgba(0,0,0,0.4);background:#f6f6f6;background:-webkit-gradient(linear,left top,left bottom,from(#f6f6f6),to(#d4d4d4));background:-webkit-linear-gradient(#f6f6f6,#d4d4d4);background-image:-moz-linear-gradient(top,#f6f6f6,#d4d4d4);background-image:-moz-gradient(top,#f6f6f6,#d4d4d4);border:1px solid #a1a1a1;}
 .btn1{background:#c3e462;box-shadow:0 1px 5px #0061aa,inset 0 10px 20px #b6f9ff;-o-box-shadow:0 1px 5px #0061aa,inset 0 10px 20px #b6f9ff;-webkit-box-shadow:0 1px 5px #0061aa,inset 0 10px 20px #b6f9ff;-moz-box-shadow:0 1px 5px #0061aa,inset 0 10px 20px #b6f9ff;}
-
-
-
-
+.close-btn:hover { background-color: #8ca3ff; text-decoration:none;}
+a {text-decoration:none;}
 </style>
-<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
-<script type="text/javascript" src="autoPlayAudios.js" ></script>
-<script src="quiz.js"></script>
-<script src="qs.js"></script>
+    <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="autoPlayAudios.js" ></script>
+    <script src="quiz.js"></script>
+    <script src="qs.js"></script>
 
 <!--必要样式-->
-<link type="text/css" href="css/style1.css" rel="stylesheet">
-<link href="css/component.css" rel="stylesheet" type="text/css" />
-<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
-<link rel="stylesheet" href="win/win.css"> <!-- CSS reset -->
+    <link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
+    <link rel="stylesheet" href="win/win.css"> <!-- CSS reset -->
 
-<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
-
-
-<script type="text/javascript" src="js/modernizr.custom.js"></script>
-<script type="text/javascript" src="js/jquery.dlmenu.js"></script>
-<script src="js/main.js"></script> <!-- Resource jQuery -->
-<script src="win/win.js"></script>
-<script src="http://7xi.bid/lx/assets/zsd.js"></script>
+    <script src="win/win.js"></script>
+    <script src="http://7xi.bid/lx/assets/zsd.js"></script>
 
 <script type="text/javascript">
  var y="" ;
@@ -61,6 +51,7 @@ input {padding:2px auto;margin:5px 0;outline:none;color:#4c4c4c;-webkit-border-r
 function bg_stop(){
   i_bg.src="";
 }
+
 function bg_start(){
   var y="mp3/"+Math.floor(Math.random()*16)+".mp3" ;
   i_bg.src=y ;
@@ -77,10 +68,10 @@ function close(){
 }
 </script>
 
-	<script>
+<script>
 	var apas = new autoPlayAudios();
 	apas.play();
-	</script>
+</script>
 
 <SCRIPT language=javascript>
 <!-- begin
@@ -106,7 +97,6 @@ function close(){
         }, false);
     });
 </script>
-
 
 <script>
     var i1 = 0; //分钟第一位
@@ -170,23 +160,13 @@ function close(){
         document.getElementById("time_start").disabled = "";
         document.getElementById('ct').value='';
         document.getElementById('answ').checked=false;
+		document.getElementById('jst').checked=false;
         document.getElementById('about').value="关于";
+		document.getElementById('kmxz').value="章节";
+		win.alert('系统提示', "选题设置已重置。");
     }
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+		
 
     function bstart()//重载
     { 
@@ -200,6 +180,8 @@ function close(){
         
 		}
     }
+
+
     function again()//重载
     { 
     	document.getElementById('about').value="关于";
@@ -207,6 +189,8 @@ function close(){
         questions: init.singleSelect});
 		
     }
+
+
     function about()//关于
     { 
 		if(document.getElementById('about').value="关于"){
@@ -224,6 +208,8 @@ function close(){
         questions: init.singleSelect});
 		}
     }
+
+
     function breset()//单刷
     { 
     	document.getElementById('about').value="关于";
@@ -246,7 +232,7 @@ $(function(){
 });
 </script>
 
-    <script type="text/javascript">
+<script type="text/javascript">
 		function selectcity(){
 			setTimeout('$("#ssid").fadeIn(100);', 1);
 			var zjkjkm=[["会计总论","存货","固定资产","投资性房地产","长期股权投资","无形资产","非货币性资产交换","资产减值","金融资产","负债及借款费用","债务重组","或有事项","收入","政府补助","所得税","外币折算","会计政策、会计估计变更和差错更正","资产负债表日后事项","财务报告","政府会计","民间非营利组织会计"
@@ -273,19 +259,17 @@ $(function(){
 
 function selectcity1(){
 	  document.getElementById("kmxz").value = document.getElementById("ssid").value 
-win.alert('系统提示', document.getElementById("kmxz").value);
+//win.alert('系统提示', document.getElementById("kmxz").value);
 }
 
-
-
-     </script>
+</script>
      
 
 <script language="javascript" type="text/javascript">   
 
 function search1(){
-	//document.getElementById("quiz-container").innerHTML = '<object type="text/html" data="ss.html" width="100%" height="85%"></object>'; 
-	$('#quiz-container').html('<iframe src="ss.html"  width="100%" height="100%" frameborder="0"  name="_blank" id="_blank" ></iframe>');
+	document.getElementById("quiz-container").innerHTML = '<object type="text/html" data="ss.html" width="100%" height="90%"></object>'; 
+	//$('#quiz-container').html('<iframe src="ss.html"  width="100%" height="100%" frameborder="0"  name="_blank" id="_blank" ></iframe>');
 }
 </script>
 
@@ -315,57 +299,51 @@ function search1(){
     $('#cover').css('display','none');   //显示遮罩层
   }
 </script>
-
-
-
 </head>
+
+
+
 <body style="font-family: 'Microsoft YaHei';width:auto;height:auto;">
-
-
-
 <div class="waifu">
-
-<div class="waifu-tips"></div><div class="waifu-tips1"></div><canvas id="live2d"  class="live2d"  height="230" ></canvas><div  id="ttmm"  class="ttmm"  style="height: 150px;"></div><div id='quiz-container'></div>
-
-
-
-
-
-<div id='lm' style="text-align:center;color:#4c4c4c;display:none;">
-	
-<p  align="center" id="second_watch" style="font-size: 20px; text-shadow: 0.1em 0.1em 0.15em #1e90ff">00:00:00</p>
-
+    <div class="waifu-tips"></div>
+	<div class="waifu-tips1"></div>
+	<canvas id="live2d"  class="live2d"  height="290" ></canvas>
+	<!-- <div  id="ttmm"  class="ttmm"  style="height: 0px;"></div> -->
+           <div id='quiz-container'></div>
+<div id='lm' style='text-align:center;color:#4c4c4c;display:none;'>
+	<p align="center" id="second_watch" style="font-size: 20px; text-shadow: 0.1em 0.1em 0.15em #1e90ff">00:00:00</p>
 </div>
 
 <!-- 遮罩层 -->
-<p id="cover" style="background: #000; position: absolute; left: 0px; top: 0px; width: 100%; filter: alpha(opacity=30); opacity: 0.3; display: none; z-index: 2 ">
-   
+<p id="cover" style="background: #000; position: absolute; left: 0px; top: 0px; width: 100%; filter: alpha(opacity=30); opacity: 0.3; display: none; z-index: 2 ">  
 </p>
 <!-- 弹窗 -->
-<div id="showp" style="width: 95%;max-width:500px; margin:  auto; height: 14rem; border: 1px solid #999; text-align:center;
-display: none; position: absolute; top: 0; left: 0; right: 0;bottom: 0; z-index: 999999; background: #fff">
-  <!-- 标题 -->
-  <p style=" position: absolute; height: 36px; width: 100%; text-align: center; border-radius: 4px 4px 0 0; line-height: 36px; vertical-align: middle; background-color: #77BFA3; /*标题背景色*/ border-bottom: 1px solid rgb(233, 233, 233); z-index: 1;" >
-    提示
-  </p>
+<div id="showp" style="width: 95%;max-width:500px; margin:  auto; height: 14rem; border-radius: 4px 4px 4px 4px; solid #999; text-align:center;display: none; position: absolute; top: 0; left: 0; right: 0;bottom: 0; z-index: 999999; background: #fff">
+ <!-- 标题 -->
+ <p style=" position: absolute; height: 36px; width: 100%; text-align: center; border-radius: 4px 4px 0 0; line-height: 36px; vertical-align: middle; background-color: #77BFA3; /*标题背景色*/ border-bottom: 1px solid rgb(233, 233, 233); z-index: 1;" >
+    选题设置
+  </p><p style=" display: block; text-align: center; vertical-align: middle; position: absolute; width: 36px; height: 36px; line-height: 36px; right: 0px; text-decoration: none; font-size: 24px; color: black; background-color: #77BFA3; border-radius: 2px; z-index: 1;"><a href="javascript:void(0)"  onclick="closeWindow()" class="close-btn" title="关闭">×</a></P>
   <!-- 内容 -->
   <br>
   <br>
   <p style=" padding: 18px 5px 0px 5px;text-align:left;  font-size: 16px; min-height: 40px; line-height: 22px; text-shadow: 0.1em 0.1em 0.15em #1e90ff ">
-      输入题数：<input type="text" style="width:60%;max-width:350px;height:20px; text-shadow: 0.1em 0.1em 0.15em #1e90ff" id="ct"   placeholder="输入题量" >
-  <input type="hidden" id="sct" value=""><br>							
-                              <select  id="sid" onchange="selectcity()" style="text-shadow: 0.1em 0.1em 0.15em #1e90ff">
+  已选章节：      <input id="kmxz" value="章节" ; style="text-shadow: 0.1em 0.1em 0.15em #1e90ff;border-radius: 6px 6px 6px 6px;">
+  <br>设置题数：      <input type="text" style="width:60%;max-width:350px;height:20px; text-shadow: 0.1em 0.1em 0.15em #1e90ff" id="ct"   placeholder="输入题量，不用管↑已选章节。" >
+  <input type="hidden" id="sct" value="">
+  <br>设置题型：					
+                              <select  id="sid" onchange="selectcity()" style="text-shadow: 0.1em 0.1em 0.15em #1e90ff ;border-radius: 6px 6px 6px 6px;">
    			                                  <option>科目</option>
    			                                  <option>会计实务</option>
    			                                  <option>经济法</option>
    			                                  <option>财务管理</option>
    	                            </select>
-	  	显示答案<input type="checkbox" id="answ" >  仅计算题<input type="checkbox" id="jst" >	<br>
-	                            <select  id="ssid"  onchange="selectcity1()" style="display:none;text-shadow: 0.1em 0.1em 0.15em #1e90ff">
+	显示答案<input type="checkbox" id="answ" style="text-shadow: 0.1em 0.1em 0.15em #1e90ff ;border-radius: 6px 6px 6px 6px;" >  仅计算题<input type="checkbox" id="jst" >	
+	<br>设置章节：
+	                            <select  id="ssid"  onchange="selectcity1()" style="display:none;text-shadow: 0.1em 0.1em 0.15em #1e90ff;border-radius: 6px 6px 6px 6px;">
    			                      <option>章节</option>
-                              	</select><input id="kmxz" value="章节" ; style="text-shadow: 0.1em 0.1em 0.15em #1e90ff"></p>
+                              	</select></p>
 
-  <!-- 按钮 -->
+  <!-- 选题按钮 -->
   <p style=" display: inline-block; width: 60px; height: 26px; line-height: 26px; background-color: #DE5923; color: white; cursor: pointer; text-align: center; border-radius: 2px; text-decoration: none; margin: 0 10px 0px 10px; border: none; " onclick="closeWindow()">
     确 定
   </p>
@@ -375,22 +353,7 @@ display: none; position: absolute; top: 0; left: 0; right: 0;bottom: 0; z-index:
 
 
 
-  <!-- 
-
-  <input type="button" class="btn1" value="重载" onclick="bstart()">
-  <input type="button" class="btn1" value="计时" id="time_start" onclick="time_start()">
-  <input type="button" class="btn1" value="暂停" onclick="stop()">
-  <input type="button" class="btn1" value="重置" onclick="reset()">
-  <input type="button" class="btn1" value="单刷" onclick="breset()">
-  <input type="button" class="btn1" value="换歌" onclick="bg_start()">
-  <input type="button" class="btn1" value="静音" onclick="bg_stop()">
-  <input type="button" class="btn1" id="about" value="关于" onclick="about()">
--->
-
-
-
-    
-<!--    <canvas id="live2d" width="650" height="600" class="live2d" style="width: 325px;height: 300px;"></canvas>-->
+  <!-- 按钮-->
 
 
     <div class="waifu-tool">
@@ -399,7 +362,7 @@ display: none; position: absolute; top: 0; left: 0; right: 0;bottom: 0; z-index:
         <span class="fui-1"></span>
         <span class="fui-5"></span>
 		<span class="fui-user"></span>
-        <span class="fui-chat"></span>
+        <span id="chatt"  class="fui-10"></span>
      <!--    <span class="fui-photo"></span> -->
         <span class="fui-info-circle"></span>
         <span class="fui-6"></span>
@@ -409,11 +372,11 @@ display: none; position: absolute; top: 0; left: 0; right: 0;bottom: 0; z-index:
         <span class="fui-7"></span>
         <span  id="about" value="关于"  class="fui-8"></span>
         <span class="fui-9"></span>
-
-        <span class="fui-cross"></span>
+        <span  id="tuichu" class="fui-cross"></span>
     </div>
+	<!-- 按钮结束-->
 </div>
-
+ <!-- 引入JS-->
     <script src="assets/waifu-tips.js"></script>
     <script src="assets/live2d.js"></script>
     <script type="text/javascript">
