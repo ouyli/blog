@@ -1,6 +1,6 @@
 /* xlsx.js (C) 2013-present SheetJS -- http://sheetjs.com */
 importScripts('shim.js');
-importScripts('xlsx.full.min.js');
+importScripts('xlsx.core.min.js');
 postMessage({t:"ready"});
 
 onmessage = function (evt) {
