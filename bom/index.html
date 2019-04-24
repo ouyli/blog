@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<!-- 使用xlsx.js的导入导出功能xlsx.js SheetJS http://sheetjs.com。BOM的整理为循环嵌套 (C) 2019-by 7xi.bid use  -->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>BOM Live Demo 7xi.bid by欧阳</title>
+<link rel="stylesheet" href="css/style.css">
+<style>
+#drop{
+	border:2px dashed #000;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	border-radius:5px;
+	padding:25px;
+	text-align:center;
+	background-color: #16a085;
+	font:20pt bold,"Vollkorn";color:#fff;
+}
+#drop table { width: 200px; min-height: 25px; line-height: 25px; text-align: center; border-collapse: collapse;}   
+#drop th,#drop td { border: 1px dashed #000; solid black; }
+#b64data{
+	width:100%;
+}
+a { text-decoration: none }
+.xport, .btn {
+	display: inline;
+	text-align:center;
+}
+a { text-decoration: none }
+#data-table, #data-table th, #data-table td { border: 1px solid black }
+</style>
+</head>
+<body>
+<!--[if lte IE 9]>
+<script type="text/javascript" src="shim.js"></script>
+<script type="text/javascript" src="xlsx.core.min.js"></script>
+
+<script type="text/javascript" src="Blob.js"></script>
+<script type="text/javascript" src="FileSaver.js"></script>
+<![endif]-->
+
+<!--[if lte IE 9]>
+<script type="text/javascript" src="swfobject.js"></script>
+<script type="text/javascript" src="downloadify.min.js"></script>
+<script type="text/javascript" src="base64.min.js"></script>
+<![endif]-->
+<script>
+function doit(type, fn, dl) {
+	var elt = document.getElementById('data-table');
+	var wb = XLSX.utils.table_to_book(elt, {sheet:"Sheet 7XI by欧阳"});
+	return dl ?
+		XLSX.write(wb, {bookType:type, bookSST:true, type: 'base64'}) :
+		XLSX.writeFile(wb, fn || ('test-BOM-成本.' + (type || 'xlsx')));
+}
+</script>
+<pre>
+<div style="Display:none">
+Output Format (树形只支持 json): <select name="format" onchange="setfmt()">
+<option value="csv"> CSV</option>
+<option value="json" selected> JSON</option>
+<option value="form"> FORMULAE</option>
+<option value="html"> HTML</option>
+</select><br /></div>
+<div id="drop">该区域内拖入BOM文件(演示最多30条bom数据),excel Sheet1数据要求:<table align="center"><td>id</td><td>pid</td><td>name</td><td>pname</td><td>num</td><td>pri</td><tr><td>子件</td><td>父件</td><td>子件名</td><td>父件名</td><td>用量</td><td>单价（材料/加工）</td></table></div>
+<input type="file" name="xlfile" id="xlf" /> 导入EXCEL
+
+Use Web Workers: (when available) <input type="checkbox" name="useworker" checked>
+Use readAsBinaryString: (when available) <input type="checkbox" name="userabs" checked>
+Display source: (need more resource) <input type="checkbox" name="shuju">
+Export Data: (Download xlsx or others) <input type="checkbox" name="daochu" onclick="ShowModel();">
+</pre>
+<div id="daochu1" style="Display:none">
+<table id="xport">
+<tr><td>
+	<p id="xportxlsx" class="xport"><input type="submit" value="Export to XLSX!" onclick="doit('xlsx');"></p>
+	<p id="xlsxbtn" class="btn">Flash required for actually downloading the generated file.</p>
+
+	<p id="xportxlsb" class="xport"><input type="submit" value="Export to XLSB!" onclick="doit('xlsb');"></p>
+	<p id="xlsbbtn" class="btn">Flash required for actually downloading the generated file.</p>
+
+
+	<p id="xportbiff8" class="xport"><input type="submit" value="Export to XLS!"  onclick="doit('biff8', 'test.xls');"></p>
+	<p id="biff8btn" class="btn">Flash required for actually downloading the generated file.</p>
+
+
+	<p id="xportods" class="xport"><input type="submit" value="Export to ODS!"  onclick="doit('ods');"></p>
+	<p id="odsbtn" class="btn">Flash required for actually downloading the generated file.</p>
+
+
+	<p id="xportfods" class="xport"><input type="submit" value="Export to FODS!"  onclick="doit('fods', 'test.fods');"></p>
+	<p id="fodsbtn" class="btn">Flash required for actually downloading the generated file.</p>
+</td></tr>
+</table>
+</div>
+<script type="text/javascript">
+function tableau(pid, iid, fmt, ofile) {
+	if(typeof Downloadify !== 'undefined') Downloadify.create(pid,{
+			swf: 'downloadify.swf',
+			downloadImage: 'download.png',
+			width: 100,
+			height: 30,
+			filename: ofile, data: function() { return doit(fmt, ofile, true); },
+			transparent: false,
+			append: false,
+			dataType: 'base64',
+			onComplete: function(){ alert('Your File Has Been Saved!'); },
+			onCancel: function(){ alert('You have cancelled the saving of this file.'); },
+			onError: function(){ alert('You must put something in the File Contents or there will be nothing to save!'); }
+	}); else document.getElementById(pid).innerHTML = "";
+}
+tableau('biff8btn', 'xportbiff8', 'biff8', 'test.xls');
+tableau('odsbtn',   'xportods',   'ods',   'test.ods');
+tableau('fodsbtn',  'xportfods',  'fods',  'test.fods');
+tableau('xlsbbtn',  'xportxlsb',  'xlsb',  'test.xlsb');
+tableau('xlsxbtn',  'xportxlsx',  'xlsx',  'test.xlsx');
+function ShowModel(){
+var daochu = document.getElementsByName("daochu")[0];
+if(daochu.checked === true){
+	 document.getElementById("daochu1").style.display="block";  
+	 document.getElementById("menuTree").style.display="none";
+
+ aoa1=document.getElementById("json").innerHTML;
+ aoa2=aoa1.split(',');
+
+if(aoa2.length <2){
+	document.getElementById("menuTree").style.display="block";
+	alert("显示：无数据显示示例树状BOM，有数据点击可切换树状及表格数据！")
+}else{
+
+var aoa = [];
+for(var i=0;i<aoa2.length;i+=5){
+    aoa.push(aoa2.slice(i,i+5));
+}
+
+
+var ws = XLSX.utils.aoa_to_sheet(aoa);
+var html_string = XLSX.utils.sheet_to_html(ws, { id: "data-table", editable: true });
+document.getElementById("container").innerHTML = html_string;
+}
+	
+
+	      
+
+}else{document.getElementById("daochu1").style.display="none";
+document.getElementById("menuTree").style.display="block";
+document.getElementById("data-table").style.display="none";
+}}
+
+
+
+</script>
+<pre id="out"></pre>
+<div id="htmlout"></div>
+<hr>
+<div class="btn"> 
+<input name="" type="button" id="btn_open" value="全部展开" /> 
+<input name="" type="button" id="btn_close" value="全部收缩" /> 
+</div> 
+<div class="wrapper" style="width: auto;">
+  <div id ="menuTree" class="tree">
+    <ul>
+      <li>
+        <span>产品BOM示例</span><b>**用量：1</b>
+        <ul>
+          <li>
+            <span>半成品1</span><b>**BOM用量：1**。相对用量：1**加工成本：1元。</b>
+            <ul>
+              <li>原材料1<b>**BOM用量：1**。相对用量：1**材料成本：1元。</b></li>
+              <li>原材料2<b>**BOM用量：1**。相对用量：1**材料成本：1元。</b></li>
+              <li>原材料3<b>**BOM用量：1**。相对用量：1**材料成本：1元。</b></li>
+              <li>原材料4<b>**BOM用量：1**。相对用量：1**材料成本：1元。</b></li>
+              <li><span>半成品2</span><b>**BOM用量：1**。相对用量：1**加工成本：1元。</b>
+			  <ul><li><span>半成品3</span><b>**BOM用量：1**。相对用量：1**加工成本：1元。</b>
+			  <ul><li><span>半成品5</span><b>**BOM用量：1**。相对用量：1**加工成本：1元。</b>
+			  <ul><li><span>半成品6</span><b>**BOM用量：1**。相对用量：1**加工成本：1元。</b>
+			  <ul><li>原材料5<b>**BOM用量：1**。相对用量：1**材料成本：1元。</b></li></ul></li></ul></li></ul></li></ul>
+			  
+			  </li>
+            </ul>
+          </li>
+    </ul>
+  </div>
+
+<hr>
+<div id="container"></div>
+
+<div id="json" style="Display:none"> 
+</div> 
+<div id="temp" > 
+</div> 
+</div>
+
+<script type="text/javascript" src="Blob.js"></script>
+<script type="text/javascript" src="FileSaver.js"></script>
+<script src="shim.js"></script>
+<script src="xlsx.core.min.js"></script>
+<script type="text/javascript"  src="worksave.js"></script>
+<script type="text/javascript"  src="worksaver.js"></script>
+ <script src='js/jquery.min.js'></script>
+ <script type="text/javascript"  src="menu.js"></script>
+</body>
+</html>
