@@ -1,0 +1,65 @@
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>再来一题</title>
+<meta name="keywords" content="再来一题" />
+    <link rel="stylesheet" type="text/css" href="assets/waifu1.css"/>
+		<link rel="stylesheet" href="dist/botui.min.css" />
+    	<link rel="stylesheet" href="dist/botui-theme-default.css" />
+		<link rel="stylesheet" href="css/font-awesome.min.css" />
+<style type="text/css">
+body {margin-left: 0px;margin-top: 0px;margin-right: 0px;margin-bottom: 0px;overflow: hidden;}
+.waifu{ margin:1px -1px 2px 0px;}
+input {padding:2px auto;margin:5px 0;outline:none;color:#4c4c4c;-webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px;text-shadow:0 1px 0 rgba(255,255,255,0.3);-webkit-box-shadow:inset 0 0 0 1px rgba(255,255,255,0.2),inset 0 0 6px 0 rgba(255,255,255,0.3),0 1px 2px rgba(0,0,0,0.4);-moz-box-shadow:inset 0 0 0 1px rgba(255,255,255,0.2),inset 0 0 6px 0 rgba(255,255,255,0.3),0 1px 2px rgba(0,0,0,0.4);box-shadow:inset 0 0 0 1px rgba(255,255,255,0.2),inset 0 0 6px 0 rgba(255,255,255,0.3),0 1px 2px rgba(0,0,0,0.4);background:#f6f6f6;background:-webkit-gradient(linear,left top,left bottom,from(#f6f6f6),to(#d4d4d4));background:-webkit-linear-gradient(#f6f6f6,#d4d4d4);background-image:-moz-linear-gradient(top,#f6f6f6,#d4d4d4);background-image:-moz-gradient(top,#f6f6f6,#d4d4d4);border:1px solid #a1a1a1;}
+.btn1{background:#c3e462;box-shadow:0 1px 5px #0061aa,inset 0 10px 20px #b6f9ff;-o-box-shadow:0 1px 5px #0061aa,inset 0 10px 20px #b6f9ff;-webkit-box-shadow:0 1px 5px #0061aa,inset 0 10px 20px #b6f9ff;-moz-box-shadow:0 1px 5px #0061aa,inset 0 10px 20px #b6f9ff;}
+.close-btn:hover { background-color: #8ca3ff; text-decoration:none;}
+a {text-decoration:none;}
+</style>
+    <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+
+    <script src="qs.js"></script>
+
+
+</head>
+
+
+
+<body style="font-family: 'Microsoft YaHei';width:auto;height:auto;">
+				<div class="botui-app-container" id="home-demo">
+			      <bot-ui></bot-ui>
+
+			</div>
+<div class="waifu">
+    <div class="waifu-tips"></div>
+	<div class="waifu-tips1"></div>
+	<canvas id="live2d"  class="live2d"  height="550" ></canvas>
+
+
+
+<!-- 按钮-->
+
+
+    <div class="waifu-tool">
+        <span class="fui-home"></span>
+        <span class="fui-eye"></span>
+		<span class="fui-user"></span>
+        <span class="fui-info-circle"></span>
+        <span  id="tuichu" class="fui-cross"></span>
+    </div>
+	<!-- 按钮结束-->
+</div>
+ <!-- 引入JS-->
+    <script src="assets/waifu-tips1.js"></script>
+    <script src="assets/live2d.js"></script>
+    <script type="text/javascript">
+
+        /* 在 initModel 前添加 */
+        initModel("assets/waifu-tips.json?v=1.4.2")
+    </script>    
+ 				   
+<script type="text/javascript" src="vue.min.js"></script>
+<script src="dist/botui.js"></script>
+<script src="quiz1.js"></script>
+</body>
+</html>
