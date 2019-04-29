@@ -50,8 +50,8 @@
       link: /\[([^\[]+)\]\(([^\)]+)\)(\^?)/igm // [text](link) ^ can be added at end to set the target as 'blank'
     },
     _fontAwesome = '',
-    _esPromisePollyfill = '../dist/es6-promise.min.js', // mostly for IE
-    _searchselect =  "../dist/vue-select.js";
+    _esPromisePollyfill = './dist/es6-promise.min.js', // mostly for IE
+    _searchselect =  './dist/vue-select.js';
 
     root.Vue = root.Vue || opts.vue;
 

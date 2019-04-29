@@ -31,7 +31,7 @@ $(document).on('copy', function (){
 });
 
 $('.waifu-tool .fui-home').click(function (){
-    again();
+    showMessage('请专♥答题？', 5000, true);
 });
 
 $('.waifu-tool .fui-eye').click(function (){
@@ -44,19 +44,12 @@ $('.waifu-tool .fui-eye').click(function (){
     loadRandModel();
 });*/
 
-$('.waifu-tool .fui-info-circle').click(function (){
-    bg_start();
-    showMessage('播放音乐', 3000, true);
-});
-
-
-
 
 $('.waifu-tool .fui-user').click(function (){
 loadotherModel();
 });
 
-$('.waifu-tool .fui-cross').click(function (){
+$('#tuichu').click(function (){
 	if(document.getElementById("tuichu").className!="fui-cross"){
 		document.getElementById("tuichu").className="fui-cross"
 		showMessage('想我了吗？人家可是很想你呢！', 1300, true);
@@ -64,7 +57,7 @@ $('.waifu-tool .fui-cross').click(function (){
 	}else{
    sessionStorage.setItem('waifu-dsiplay', 'none');
     showMessage('愿你有一天能与重要的人重逢', 1300, true);
-    document.getElementById("tuichu").className="fui-11"
+    document.getElementById("tuichu").className="fui-info-circle"
     window.setTimeout(function() {$('.live2d').css('display','none');}, 1300);}
 });
 
@@ -117,69 +110,7 @@ $('.waifu-tool .fui-cross').click(function (){
     showMessage(text, 6000);
 })();
 
-window.hitokotoTimer = window.setInterval(showHitokoto,20000);
-/* 检测用户活动状态，并在空闲时 定时显示一言 */
-var getActed = false;
-window.hitokotoTimer = 0;
-var hitokotoInterval = false;
 
-$(document).mousemove(function(e){getActed = true;}).keydown(function(){getActed = true;});
-setInterval(function() { if (!getActed) ifActed(); else elseActed(); }, 1000);
-
-function ifActed() {
-    if (!hitokotoInterval) {
-        hitokotoInterval = true;
-        hitokotoTimer = window.setInterval(showHitokoto, 30000);
-    }
-}
-
-function elseActed() {
-    getActed = hitokotoInterval = false;
-    window.clearInterval(hitokotoTimer);
-}
-
-function showHitokoto(){
-	/* 增加 hitokoto.cn API */
-    //$.getJSON('waifu-tips.json',function(result){
-       /* var text = '这句一言来自 <span style="color:#0099cc;">『{source}』</span>，是 <span style="color:#0099cc;">{creator}</span> 在 hitokoto.cn 投稿的。';
-        text = text.render({source: result.from, creator: result.creator});*/
-       // showMessage(result.hitokoto, 8000);
-		//   showMessage(result.mouseover.length, 8000);
-      //  window.setTimeout(function() {showMessage(text, 3000);}, 15000);
-   // });
-	/*
-	$.getJSON('https://api.fghrsh.net/hitokoto/rand/?encode=jsc&uid=3335',function(result){
-        var text = '这句一言出处是 <span style="color:#0099cc;">『{source}』</span>，是 <span style="color:#0099cc;">FGHRSH</span> 在 {date} 收藏的！';
-        text = text.render({source: result.source, date: result.date});
-        showMessage(result.hitokoto, 5000);
-        window.setTimeout(function() {showMessage(text, 3000);}, 5000);
-    });
-	*/
-	if(document.getElementById("chatt").className!="fui-10"){
-	if(zsd[2]=""){zsd=["知识点获取不到数据！网络有问题。如果网络正常，请联系i@7xi.bid"]}
-    text=zsd[Math.floor(Math.random()*zsd.length)]
-    showMessage(text, 12000); }
-    /*
-	$.ajax({
-        cache: true,
-        url: 'http://7xi.bid/lx/assets/waifu-kd.json',
-        dataType: "json",
-        success: function (result){
-            $.each(result.text, function (index, tips){
-                   // var text = tips.text;
-                   // if(Array.isArray(tips.text)) text = tips.text[Math.floor(Math.random() * tips.text.length + 1)-1];
-                   // text = text.render({text: $(this).text()});
-				   text=result.text[Math.floor(Math.random() * result.text.length + 1)-1]
-                    showMessage(text, 12000);         
-            });
-		},
-        error:function(err){
-        	showMessage(err.statusText, 12000);  	
-        }
-
-          });
-        */
-}
 
 function showMessage(text, timeout, flag){
     if(flag || sessionStorage.getItem('waifu-text') === '' || sessionStorage.getItem('waifu-text') === null){
