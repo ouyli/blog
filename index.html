@@ -1,390 +1,225 @@
-<html>
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<title>中级财务考试练习题</title>
-<meta name="keywords" content="中级财务考试练习题" />
-    <link rel="stylesheet" type="text/css" href="assets/waifu.css"/>
-    <link rel="stylesheet" type="text/css" href="styles.css" />
-<style type="text/css">
-body {margin-left: 0px;margin-top: 0px;margin-right: 0px;margin-bottom: 0px;overflow: hidden;}
-.waifu{ margin:1px -1px 2px 0px;}
-input {padding:2px auto;margin:5px 0;outline:none;color:#4c4c4c;-webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px;text-shadow:0 1px 0 rgba(255,255,255,0.3);-webkit-box-shadow:inset 0 0 0 1px rgba(255,255,255,0.2),inset 0 0 6px 0 rgba(255,255,255,0.3),0 1px 2px rgba(0,0,0,0.4);-moz-box-shadow:inset 0 0 0 1px rgba(255,255,255,0.2),inset 0 0 6px 0 rgba(255,255,255,0.3),0 1px 2px rgba(0,0,0,0.4);box-shadow:inset 0 0 0 1px rgba(255,255,255,0.2),inset 0 0 6px 0 rgba(255,255,255,0.3),0 1px 2px rgba(0,0,0,0.4);background:#f6f6f6;background:-webkit-gradient(linear,left top,left bottom,from(#f6f6f6),to(#d4d4d4));background:-webkit-linear-gradient(#f6f6f6,#d4d4d4);background-image:-moz-linear-gradient(top,#f6f6f6,#d4d4d4);background-image:-moz-gradient(top,#f6f6f6,#d4d4d4);border:1px solid #a1a1a1;}
-.btn1{background:#c3e462;box-shadow:0 1px 5px #0061aa,inset 0 10px 20px #b6f9ff;-o-box-shadow:0 1px 5px #0061aa,inset 0 10px 20px #b6f9ff;-webkit-box-shadow:0 1px 5px #0061aa,inset 0 10px 20px #b6f9ff;-moz-box-shadow:0 1px 5px #0061aa,inset 0 10px 20px #b6f9ff;}
-.close-btn:hover { background-color: #8ca3ff; text-decoration:none;}
-a {text-decoration:none;}
-</style>
-    <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
-    <script type="text/javascript" src="autoPlayAudios.js" ></script>
-    <script src="quiz.js"></script>
-    <script src="qs.js"></script>
-
-<!--必要样式-->
-    <link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
-    <link rel="stylesheet" href="win/win.css"> <!-- CSS reset -->
-
-    <script src="win/win.js"></script>
-    <script src="http://7xi.bid/lx/assets/zsd.js"></script>
-
-<script type="text/javascript">
- var y="" ;
- var ie='';
- var nav =  navigator.userAgent.toLowerCase();
- ie = nav.match(/msie([^.]*)/);
- if(ie){ie='你正在使用IE'+ie[1];
-//alert(ie);
-       document.write('<bgsound src="'+y+'" loop="infinite" id="i_bg">');} 
-	   
-               else{
-                   ie=nav.match(/Trident.*rv.*11/i);
-                   if(ie){ie='你正在使用IE11';
-//alert(ie);
-       document.write('<bgsound src="'+y+'" loop="infinite" id="i_bg">');}
-                    else{
-                         document.write('<audio src="'+y+'" autoplay="autoplay" controls="controls" loop="1" onended="bg_start()"  id="i_bg" hidden></audio>');
-						 
-                         }
-}
-
-
-
-function bg_stop(){
-  i_bg.src="";
-}
-
-function bg_start(){
-  var y="mp3/"+Math.floor(Math.random()*16)+".mp3" ;
-  i_bg.src=y ;
-  i_bg.volume = 0.3; 
-  audio.play();
-}
-
-function close(){
-            plus.nativeUI.confirm("退出程序？", function(event) {
-                if (event.index==0) {
-                    plus.runtime.quit();
-                }
-            }, null, ["确定","取消"]); 
-}
-</script>
-
-<script>
-	var apas = new autoPlayAudios();
-	apas.play();
-</script>
-
-<SCRIPT language=javascript>
-<!-- begin
- function click() {
- if (event.button==2) {
-	  win.alert('系统提示', '练习期间，请不要使用右键！');
-// alert('练习期间，请不要使用右键！')
- }
- }
- document.onmousedown=click
- end -->
-</script>
-<script>
-    document.addEventListener("plusready", function() {
-        // 注册返回按键事件
-        plus.key.addEventListener('backbutton', function() {
-        // 事件处理
-            plus.nativeUI.confirm("退出程序？", function(event) {
-                if (event.index==0) {
-                    plus.runtime.quit();
-                }
-            }, null, ["确定","取消"]);
-        }, false);
-    });
-</script>
-
-<script>
-    var i1 = 0; //分钟第一位
-    var i2 = 0; //分钟第二位
-    var s1 = 0; //秒第一位
-    var s2 = 0; //秒第二位
-    var ms1 = 0; //百分秒第一位
-    var ms2 = 0; //百分秒第二位
-    var t;　　//计时函数保存
-    function time_start(){
-    	setTimeout('$("#lm").fadeIn(100);', 1);
-        document.getElementById("time_start").disabled = "true";  //开始后使开始按钮失效，防止多次点击计时加快的bug
-        ms2++; //只需百分秒最后一位自加，前面依次进位
-        if(ms2>9){
-            ms2 = 0;
-            ms1++;
-        }
-        if(ms1>9){
-            ms1 = 0;
-            s2++;
-        }
-        if(s2>9){
-            s2 = 0;
-            s1++;
-        }
-        if(s1>5){
-            s1 = 0;
-            i2++;
-        }
-        if(i2>9){
-            i2 = 0;
-            i1++;
-        }
-        if(i1>5){
-            //超出秒表计数范围
-            clearTimeout(t);
-            return false;
-        }
-        document.getElementById("second_watch").innerHTML = ""+i1+i2+":"+s1+s2+":"+ms1+ms2+"";
-        document.getElementById("second_watch").style.color = "black";
-        t = setTimeout("time_start()",10);　　//百分秒百分之一秒执行一次
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>栖息地之6卫 - 成本管控</title><meta name="author" content="欧阳"><meta name="copyright" content="欧阳"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="成本管理、RPA">
+<meta property="og:type" content="website">
+<meta property="og:title" content="栖息地之6卫">
+<meta property="og:url" content="http://vvvvvv.top/index.html">
+<meta property="og:site_name" content="栖息地之6卫">
+<meta property="og:description" content="成本管理、RPA">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://vvvvvv.top/img/logo.png">
+<meta property="article:author" content="欧阳">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://vvvvvv.top/img/logo.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://vvvvvv.top/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":1,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简"},
+  noticeOutdate: {"limitDay":200,"position":"top","messagePrev":"It has been","messageNext":"days since the last update, the content of the article may be outdated."},
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":200},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"limitCount":250,"languages":{"author":"作者: 欧阳","link":"链接: ","source":"来源: 栖息地之6卫","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
     }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '栖息地之6卫',
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2022-07-12 02:05:44'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
 
-    function stop(){
-        clearTimeout(t);
-        document.getElementById("second_watch").style.color = "red";
-        document.getElementById("time_start").disabled = ""; //停止时恢复按钮功能
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
     }
-
-    function reset(){
-    	setTimeout('$("#lm").fadeOut(100);', 1);
-        clearTimeout(t);
-        i1 = 0;
-        i2 = 0;
-        s1 = 0;
-        s2 = 0;
-        ms1 = 0;
-        ms2 = 0;
-        document.getElementById("second_watch").innerHTML = ""+i1+i2+":"+s1+s2+":"+ms1+ms2+"";
-        document.getElementById("second_watch").style.color = "black";
-        document.getElementById("time_start").disabled = "";
-        document.getElementById('ct').value='';
-        document.getElementById('answ').checked=false;
-		document.getElementById('jst').checked=false;
-        document.getElementById('about').value="关于";
-		document.getElementById('kmxz').value="章节";
-		win.alert('系统提示', "选题设置已重置。");
-    }
-	
-		
-
-    function bstart()//重载
-    { 
-		if(document.getElementById('sct').value===document.getElementById('ct').value){
-			win.alert('系统提示', "ARE YOU *ING ME?抽题数本来就是"+document.getElementById('ct').value+"题，你重载个毛线呀！");}
-		//	alert("ARE YOU *ING ME?抽题数本来就是"+document.getElementById('ct').value+"题，你重载个毛线呀！")}
-		else{
-			document.getElementById('about').value="关于";
-      	$('#quiz-container').jquizzy({
-        questions: init.singleSelect});
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
         
-		}
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.2.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/logo.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">52</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">34</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">9</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fa fa-heartbeat"></i><span> 文档</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 存档</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="not-top-img" id="page-header"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">栖息地之6卫</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page group hide" href="javascript:void(0);"><i class="fa-fw fa fa-heartbeat"></i><span> 文档</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 存档</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left"><a href="/2019/07/12/43a8c952805f/" title="SAP标准成本计划及发布CK40N"><img class="post_bg" src="/img/default_bg.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="SAP标准成本计划及发布CK40N"></a></div><div class="recent-post-info"><a class="article-title" href="/2019/07/12/43a8c952805f/" title="SAP标准成本计划及发布CK40N">SAP标准成本计划及发布CK40N</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2019-07-11T18:01:09.000Z" title="发表于 2019-07-12 02:01:09">2019-07-12</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%88%90%E6%9C%AC%E5%B7%A5%E4%BD%9C/">成本工作</a></span></div><div class="content">事务代码（CK40N）完成成本计划和发布。CK40N输入“成本运行”的代号、日期和描述，代号根据内部规则输入即可，日期一般输入标准价要生效的日期，然后点击“新建”创建一个“成本运行”的变式。按照TAB依次输入相关参数并保存。按照从上到下的顺序依次执行这6个步骤就能完成标准成本的测算、标记和发布了，每一步的操作都相似，有的步骤数据较多可能需要后台运行。
+</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2019/07/11/2e0542c63274/" title="VBA中的10种循环语句"><img class="post_bg" src="/img/default_bg.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="VBA中的10种循环语句"></a></div><div class="recent-post-info"><a class="article-title" href="/2019/07/11/2e0542c63274/" title="VBA中的10种循环语句">VBA中的10种循环语句</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2019-07-11T13:40:00.000Z" title="发表于 2019-07-11 21:40:00">2019-07-11</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/VBA%E7%BC%96%E7%A8%8B/">VBA编程</a></span></div><div class="content">1、For – Next
+‘循环数组
+ArraySum &#x3D; 0For i &#x3D; 1 To 10ArraySum &#x3D; ArraySum + MyArray(i)Next i
+2、For Each – Next
+‘循环单元格集合
+SelectionSum &#x3D; 0For Each cell In SelectionSelectionSum &#x3D; SelectionSum + cell.ValueNext cell
+3、Do – Loop Until
+‘循环至件成立
+Row &#x3D; 0DoRow &#x3D; Row + 1Loop Until Cells(Row, 1).Value &#x3D; “”MsgBox “First empty cell is in Row “ &amp; Row
+4、Do While – Loop
+’循环至条件为真
+Row &#x3D; 1Do While Cells(Row, 1) &lt;&gt; “”Row &#x3D; Row + 1LoopMsgBox “First empty cell is in  ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2018/10/27/0f31968150f8/" title="PDCA循环"><img class="post_bg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="PDCA循环"></a></div><div class="recent-post-info"><a class="article-title" href="/2018/10/27/0f31968150f8/" title="PDCA循环">PDCA循环</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2018-10-27T05:52:46.000Z" title="发表于 2018-10-27 13:52:46">2018-10-27</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%88%90%E6%9C%AC%E6%8E%A7%E5%88%B6%E7%AE%A1%E7%90%86/">成本控制管理</a></span></div><div class="content">PDCA循环是美国质量管理专家休哈特博士首先提出的，由戴明采纳、宣传，获得普及，所以又称戴明环。全面质量管理的思想基础和方法依据就是PDCA循环。PDCA循环的含义是将质量管理分为四个阶段，即计划（plan）、执行（do）、检查（check）、处理（Act）。在质量管理活动中，要求把各项工作按照作出计划、计划实施、检查实施效果，然后将成功的纳入标准，不成功的留待下一循环去解决。这一工作方法是质量管理的基本方法，也是企业管理各项工作的一般规律。1、计划阶段。要通过市场调查、用户访问等，摸清用户对产品质量的要求，确定质量政策、质量目标和质量计划等。包括现状调查、分析、确定要因、制定计划。2、设计和执行阶段。实施上一阶段所规定的内容。根据质量标准进行产品设计、试制、试验及计划执行前的人员培训。3、检查阶段。主要是在计划执行过程之中或执行之后，检查执行情况，看是否符合计划的预期结果效果。4、处理阶段。主要是根据检查结果，采取相应的措施。巩固成绩，把成功的经验尽可能纳入标准，进行标准化，遗留问题则转入下一个PDCA循环去解决。中国成长型企业结合自身的管理实践，把PDCA简化为4Y管理模式，让这一 ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2018/10/27/fc9762c3801d/" title="二八定律"><img class="post_bg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="二八定律"></a></div><div class="recent-post-info"><a class="article-title" href="/2018/10/27/fc9762c3801d/" title="二八定律">二八定律</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2018-10-27T05:26:53.000Z" title="发表于 2018-10-27 13:26:53">2018-10-27</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%88%90%E6%9C%AC%E6%8E%A7%E5%88%B6%E7%AE%A1%E7%90%86/">成本控制管理</a></span></div><div class="content">二八定律是一项对提高人类效率影响深远的法则就是要让有限的时间产生出更多的成果。二八原理告诉人们：在投入和产出、努力与收获、原因和结果之间，普遍存在着不平衡关系。少的投入，可以得到多的产出；小的努力，可以获得大的成绩；关键的少数，往往是决定整个组织的产出、盈利和成败的主要因素。
+“长尾理论”被认为是对传统的“二八定律”的彻底叛逆。#传统的二八定律（或称20&#x2F;80定律）认为20%的品种带来了80%的销量，所以应该只保留这部分，其余的都应舍弃。长尾理论则关注另外80%的长尾巴，认为这部分积少成多，可以积累成足够大、甚至超过前面20%部分的市场份额。但也有很多失败者并没有真正理解长尾理论的实现条件。没有任何一种活动不受80&#x2F;20法则的影响。一位著名的管理学家说过，成功的人若分析自己成功的原因，就会知道80&#x2F;20法则是成立的，80%的成长活力和满意来自于20%的对象，公司至少应知道这20%是谁，才会清楚看到未来成长的方向。
+生活运用80&#x2F;20 思想如果运用到日常生活中，能帮助人们改变行为并把注意力集中到最重要的20%的事情上。80&#x2F;20思想的行动 ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2018/08/17/2018d624f663/" title="七夕节快乐"><img class="post_bg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="七夕节快乐"></a></div><div class="recent-post-info"><a class="article-title" href="/2018/08/17/2018d624f663/" title="七夕节快乐">七夕节快乐</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2018-08-16T16:26:04.000Z" title="发表于 2018-08-17 00:26:04">2018-08-17</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%94%9F%E6%B4%BB%E7%9B%B8%E5%85%B3/">生活相关</a></span></div><div class="content">节日快乐   点击进入
+</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2018/04/17/774741273691/" title="网络二维码"><img class="post_bg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="网络二维码"></a></div><div class="recent-post-info"><a class="article-title" href="/2018/04/17/774741273691/" title="网络二维码">网络二维码</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2018-04-17T15:50:03.000Z" title="发表于 2018-04-17 23:50:03">2018-04-17</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%94%9F%E6%B4%BB%E7%9B%B8%E5%85%B3/">生活相关</a></span></div><div class="content">扫二维码即可扫出一个地址，网络支付多合一制作请勿随意制作。其原理为扫合并后二维码，得到一个网址，然后根据客户端相应进入你制作前的付款地址。所以，在你扫描得到的地址是控制在别人手上，随时可以转向其他的的收款地址！下图为演示，当然请不要付款！账号不是我的。
+</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2018/04/16/ecd370518811/" title="成本收益分析"><img class="post_bg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="成本收益分析"></a></div><div class="recent-post-info"><a class="article-title" href="/2018/04/16/ecd370518811/" title="成本收益分析">成本收益分析</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2018-04-16T10:46:52.000Z" title="发表于 2018-04-16 18:46:52">2018-04-16</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%88%90%E6%9C%AC%E5%B7%A5%E4%BD%9C/">成本工作</a></span></div><div class="content">成本收益分析是指以货币单位为基础对投入与产出进行估算和衡量的方法。它是一种是预先作出的计划方案。 在市场经济条件下，任何一个经济主体在进行经济活动时，都要考虑具体经济行为在经济价值上的得失，以便对投入与产出关系有一个尽可能科学的估计。
+# 成本收益分析 #
+是一种量入为出的经济性理念，它要求对未来行动有预期目标，并对预期目标的几率有所把握。
+经济学的成本收益分析方法是一个普遍的方法。成本收益分析方法的前提是追求效用的最大化。从事经济活动的主体，从追求利润最大化出发，总要力图用最小的成本获取最大的收益。在经济活动中，人们之所以要进行成本收益分析，就是要以最少的投入获得最大的收益。
+成本收益分析的特征是：自利性、经济性、计算性。
+自利性这种方法的内在精神是追求最大收益，但这种对效益的追求带有强烈的自利性。成本收益分析的出发点和目的是追求行为者自身的利益，它只不过是行为者获得自身利益的一种计算工具。成本收益分析追求的效用是行为者自己的效用，不是他人的效用，这是其指向性，即自利性。
+经济性由于行为者具有自利的动机，总是试图在经济活动中以最少的投入获得最大的收益，使经济活动经济、高效。成本收益分 ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2018/04/16/bd4371bd01d4/" title="工艺成本"><img class="post_bg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="工艺成本"></a></div><div class="recent-post-info"><a class="article-title" href="/2018/04/16/bd4371bd01d4/" title="工艺成本">工艺成本</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2018-04-16T10:40:15.000Z" title="发表于 2018-04-16 18:40:15">2018-04-16</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%88%90%E6%9C%AC%E5%B7%A5%E4%BD%9C/">成本工作</a></span></div><div class="content">工件的实际生产成本是制造工件所必需的一切费用的总和。工艺成本是指生产成本中与工艺过程有关的那一部分成本，如毛胚或原材料费用、生产工人的工资、机床电费（设备的使用）、折旧费和维修费、工艺装备的折旧费和修理费以及车间和工厂的管理费用等。 
+工艺成本的组成
+工艺成本按照与年产量的关系，分为可变费用Ｖ和不变费用Ｓ两部分。
+
+（1）可变费用Ｖ　　它是与年产量直接有关，即随年产量的增减而成比例变动的费用。它包括材料或毛坯费、操作工人的工资、机床电费、通用机床的折旧费和维修费以及通用工装（夹具、刀具和辅具等）的折旧费和维修费等。可变费用的单位是 元&#x2F;件。
+（2）不可变费用Ｓ 它是与年产量无直接关系，不随年产量的增减而变化的费用。它包括调整工人的工资、专用机床的折旧费和专用工装（夹具）专为某工件的某加工工序所用，它不能被其他工序所用。当产量不足、负荷不满时，就只能闲置不用；而专用机床和专用工装（夹具）的折旧年限是确定的。因此，专用机床和专用工装（夹具）的费用不随年产量的增减而变化。
+判别可变费用和不可变费用的另一种方法是费用的单位，前者的单位是 元&#x2F;件 ，后者的单位是 元&#x2F ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2018/04/14/d4dcefbc2ca6/" title="增值税税率下降1%"><img class="post_bg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="增值税税率下降1%"></a></div><div class="recent-post-info"><a class="article-title" href="/2018/04/14/d4dcefbc2ca6/" title="增值税税率下降1%">增值税税率下降1%</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2018-04-14T07:52:55.000Z" title="发表于 2018-04-14 15:52:55">2018-04-14</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%88%90%E6%9C%AC%E5%B7%A5%E4%BD%9C/">成本工作</a></span></div><div class="content">增值税属于流转税，从字面上看是针对增值部分征收的税。
+
+我们都知道计算交的税应该为销项增值税-进项增值税（不考虑进项税额转出等其他因素）。其实从计税来看。增值额*税率 才是应该交的税，只不过会计划分会计期间了。下面推导税率对应交增值税的影响。
+购进材料——材料成本
+生产产品——材料成本+加工成本
+销售产品——销售收入
+增值——销售收入-材料成本
+以上最终计算增值税：（销售收入-材料成本）税率而销售收入&#x3D;毛利+销售成本&#x3D;毛利+材料成本+加工成本所以计算值为：（毛利+加工成本）税率如果税率下降1%，则少交（毛利+加工成本）1%的增值税。考虑到这部分利润全部要交25%的所得税，最终税额减少（毛利+加工成本）0.75*1%
+</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2017/02/21/655c8fdbdcc3/" title="weberp"><img class="post_bg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="weberp"></a></div><div class="recent-post-info"><a class="article-title" href="/2017/02/21/655c8fdbdcc3/" title="weberp">weberp</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2017-02-21T13:40:01.000Z" title="发表于 2017-02-21 21:40:01">2017-02-21</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/ERP%E8%BD%AF%E4%BB%B6/">ERP软件</a></span></div><div class="content">webERP是一个开源的ERP系统，它支持多公司，多币种，多税种，多库存管理。比较适合中小型的企业。
+地址
+通用特性： 完全基于网络
+可以在任何支持PHP的网络服务器上运行-可以使用ISP来替代自己建立和维护服务器。+
+使用最少的Java-script，使得最大程度地兼容所有网络浏览器和支持网络的设备。+
+生成PDF报告-用于精确定位文本的PDF。+
+所有的报告和脚本可以轻松的以PHP语言的方式修改。 +
+多语言支持-每一个用户都可以看到他们自己首选语言的界面。 +
+多主题-每一个用户都可以看到他们首选的图形界面主题。 +
+可以与Wiki集成，以保存物料，供应商，客户的描述等。
+安全性 用户可以被定义成只能访问特定的选项，使用一个基于规则的模型。
+适合于这些规则的选项可以通过图形方式配置，并且用户定义的规则可以像既定的规则一样。
+不正确的密码输入（超过三次）会被阻止，直到系统管理员复位该用户。这样可以阻止密码黑客破坏系统的安全性。
+页面可以使用SSL加密，并且webERP可以被配置成只显示SSL页面，以确保所有通过互联网的信息被加密。
+用户可以并定义成只使用主菜单中的特定模块，所以那些 ...</div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span><a class="page-number" href="/page/2/#content-inner">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/#content-inner">6</a><a class="extend next" rel="next" href="/page/2/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/logo.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">欧阳</div><div class="author-info__description">成本管理、RPA</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">52</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">34</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">9</div></a></div><div class="card-info-social-icons is-center"><a class="social-icon" href="/s" target="_blank" title=""><i></i></a><a class="social-icon" href="/e" target="_blank" title=""><i class="1"></i></a><a class="social-icon" href="/a" target="_blank" title=""><i class="2"></i></a><a class="social-icon" href="/r" target="_blank" title=""><i class="3"></i></a><a class="social-icon" href="/c" target="_blank" title=""><i class="4"></i></a><a class="social-icon" href="/h" target="_blank" title=""><i class="5"></i></a><a class="social-icon" href="/" target="_blank" title=""><i class="6"></i></a><a class="social-icon" href="/(" target="_blank" title=""><i class="7"></i></a><a class="social-icon" href="/%E6%90%9C" target="_blank" title=""><i class="8"></i></a><a class="social-icon" href="/%E7%B4%A2" target="_blank" title=""><i class="9"></i></a><a class="social-icon" href="/)" target="_blank" title=""><i class="10"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2019/07/12/43a8c952805f/" title="SAP标准成本计划及发布CK40N"><img src="/img/default_bg.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="SAP标准成本计划及发布CK40N"/></a><div class="content"><a class="title" href="/2019/07/12/43a8c952805f/" title="SAP标准成本计划及发布CK40N">SAP标准成本计划及发布CK40N</a><time datetime="2019-07-11T18:01:09.000Z" title="发表于 2019-07-12 02:01:09">2019-07-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2019/07/11/2e0542c63274/" title="VBA中的10种循环语句"><img src="/img/default_bg.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="VBA中的10种循环语句"/></a><div class="content"><a class="title" href="/2019/07/11/2e0542c63274/" title="VBA中的10种循环语句">VBA中的10种循环语句</a><time datetime="2019-07-11T13:40:00.000Z" title="发表于 2019-07-11 21:40:00">2019-07-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2018/10/27/0f31968150f8/" title="PDCA循环"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="PDCA循环"/></a><div class="content"><a class="title" href="/2018/10/27/0f31968150f8/" title="PDCA循环">PDCA循环</a><time datetime="2018-10-27T05:52:46.000Z" title="发表于 2018-10-27 13:52:46">2018-10-27</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2018/10/27/fc9762c3801d/" title="二八定律"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="二八定律"/></a><div class="content"><a class="title" href="/2018/10/27/fc9762c3801d/" title="二八定律">二八定律</a><time datetime="2018-10-27T05:26:53.000Z" title="发表于 2018-10-27 13:26:53">2018-10-27</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2018/08/17/2018d624f663/" title="七夕节快乐"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="七夕节快乐"/></a><div class="content"><a class="title" href="/2018/08/17/2018d624f663/" title="七夕节快乐">七夕节快乐</a><time datetime="2018-08-16T16:26:04.000Z" title="发表于 2018-08-17 00:26:04">2018-08-17</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>分类</span>
+            <a class="card-more-btn" href="/categories/" title="查看更多">
+    <i class="fas fa-angle-right"></i></a>
+            </div>
+            <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/ERP%E8%BD%AF%E4%BB%B6/"><span class="card-category-list-name">ERP软件</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/EXCEL/"><span class="card-category-list-name">EXCEL</span><span class="card-category-list-count">3</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/VBA%E7%BC%96%E7%A8%8B/"><span class="card-category-list-name">VBA编程</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E4%BC%9A%E8%AE%A1%E5%88%86%E5%BD%95/"><span class="card-category-list-name">会计分录</span><span class="card-category-list-count">3</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%88%90%E6%9C%AC%E5%B7%A5%E4%BD%9C/"><span class="card-category-list-name">成本工作</span><span class="card-category-list-count">29</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%88%90%E6%9C%AC%E6%8E%A7%E5%88%B6%E7%AE%A1%E7%90%86/"><span class="card-category-list-name">成本控制管理</span><span class="card-category-list-count">3</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%B3%A8%E4%BC%9A-%E4%BC%9A%E8%AE%A1/"><span class="card-category-list-name">注会-会计</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E7%94%9F%E6%B4%BB%E7%9B%B8%E5%85%B3/"><span class="card-category-list-name">生活相关</span><span class="card-category-list-count">2</span></a></li>
+            </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/PDCA%E5%BE%AA%E7%8E%AF/" style="font-size: 1.1em; color: #999">PDCA循环</a> <a href="/tags/SAP/" style="font-size: 1.1em; color: #999">SAP</a> <a href="/tags/VBA/" style="font-size: 1.1em; color: #999">VBA</a> <a href="/tags/excel/" style="font-size: 1.2em; color: #999da3">excel</a> <a href="/tags/weberp/" style="font-size: 1.1em; color: #999">weberp</a> <a href="/tags/%E4%B8%83%E5%A4%95/" style="font-size: 1.1em; color: #999">七夕</a> <a href="/tags/%E4%BA%8C%E5%85%AB%E5%AE%9A%E5%BE%8B/" style="font-size: 1.1em; color: #999">二八定律</a> <a href="/tags/%E4%BA%8C%E7%BB%B4%E7%A0%81/" style="font-size: 1.1em; color: #999">二维码</a> <a href="/tags/%E4%BB%B7%E6%A0%BC/" style="font-size: 1.1em; color: #999">价格</a> <a href="/tags/%E4%BD%9C%E4%B8%9A%E6%88%90%E6%9C%AC/" style="font-size: 1.1em; color: #999">作业成本</a> <a href="/tags/%E4%BF%9D%E6%9C%AC%E7%82%B9/" style="font-size: 1.1em; color: #999">保本点</a> <a href="/tags/%E5%88%B0%E6%9C%9F%E6%97%A5/" style="font-size: 1.1em; color: #999">到期日</a> <a href="/tags/%E5%88%B6%E9%80%A0/" style="font-size: 1.5em; color: #99a9bf">制造</a> <a href="/tags/%E5%8A%A3%E8%B4%A8%E6%88%90%E6%9C%AC/" style="font-size: 1.1em; color: #999">劣质成本</a> <a href="/tags/%E5%A2%9E%E5%80%BC%E7%A8%8E%E6%94%B9%E9%9D%A9%EF%BC%8C%E7%A8%8E%E7%8E%87%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/" style="font-size: 1.1em; color: #999">增值税改革，税率注意事项</a> <a href="/tags/%E5%B7%A5%E5%BA%8F%E6%88%90%E6%9C%AC%E6%8E%A7%E5%88%B6/" style="font-size: 1.1em; color: #999">工序成本控制</a> <a href="/tags/%E5%B7%A5%E8%89%BA%E6%88%90%E6%9C%AC/" style="font-size: 1.1em; color: #999">工艺成本</a> <a href="/tags/%E5%BA%9F%E5%93%81%E7%8E%87/" style="font-size: 1.1em; color: #999">废品率</a> <a href="/tags/%E6%88%90%E6%9C%AC/" style="font-size: 1.4em; color: #99a5b6">成本</a> <a href="/tags/%E6%88%90%E6%9C%AC%E5%88%86%E6%9E%90/" style="font-size: 1.1em; color: #999">成本分析</a> <a href="/tags/%E6%88%90%E6%9C%AC%E5%AD%98%E8%B4%A7/" style="font-size: 1.1em; color: #999">成本存货</a> <a href="/tags/%E6%88%90%E6%9C%AC%E6%8E%A7%E5%88%B6/" style="font-size: 1.1em; color: #999">成本控制</a> <a href="/tags/%E6%88%90%E6%9C%AC%E6%94%B6%E7%9B%8A%E5%88%86%E6%9E%90/" style="font-size: 1.1em; color: #999">成本收益分析</a> <a href="/tags/%E6%88%90%E6%9C%AC%E7%AE%A1%E7%90%86/" style="font-size: 1.3em; color: #99a1ac">成本管理</a> <a href="/tags/%E6%8A%A5%E4%BB%B7/" style="font-size: 1.3em; color: #99a1ac">报价</a> <a href="/tags/%E7%9B%88%E4%BA%8F/" style="font-size: 1.1em; color: #999">盈亏</a> <a href="/tags/%E7%9B%88%E4%BA%8F%E5%B9%B3%E8%A1%A1%E7%82%B9/" style="font-size: 1.1em; color: #999">盈亏平衡点</a> <a href="/tags/%E7%A8%8E%E5%8A%A1/" style="font-size: 1.2em; color: #999da3">税务</a> <a href="/tags/%E8%90%A5%E6%94%B9%E5%A2%9E%EF%BC%8C%E4%B8%8D%E5%BE%97%E5%BC%80%E5%85%B7%E5%8F%91%E7%A5%A8%E6%83%85%E5%BD%A2/" style="font-size: 1.1em; color: #999">营改增，不得开具发票情形</a> <a href="/tags/%E8%90%A5%E6%94%B9%E5%A2%9E%EF%BC%8C%E5%90%88%E5%90%8C%E7%AD%BE%E8%AE%A2%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/" style="font-size: 1.1em; color: #999">营改增，合同签订注意事项</a> <a href="/tags/%E8%90%A5%E6%94%B9%E5%A2%9E%EF%BC%8C%E6%8A%B5%E6%89%A3%E5%85%B3%E6%B3%A8%E4%BA%8B%E9%A1%B9/" style="font-size: 1.1em; color: #999">营改增，抵扣关注事项</a> <a href="/tags/%E8%90%A5%E6%94%B9%E5%A2%9E%EF%BC%8C%E6%A0%B8%E7%AE%97%E7%A7%91%E7%9B%AE/" style="font-size: 1.1em; color: #999">营改增，核算科目</a> <a href="/tags/%E8%B4%A2%E5%8A%A1%E4%BC%9A%E8%AE%A1/" style="font-size: 1.2em; color: #999da3">财务会计</a> <a href="/tags/%E8%B4%A8%E9%87%8F%E6%88%90%E6%9C%AC/" style="font-size: 1.1em; color: #999">质量成本</a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span><a class="card-more-btn" href="/archives/" title="查看更多">
+    <i class="fas fa-angle-right"></i></a></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2019/07/"><span class="card-archive-list-date">七月 2019</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2018/10/"><span class="card-archive-list-date">十月 2018</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2018/08/"><span class="card-archive-list-date">八月 2018</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2018/04/"><span class="card-archive-list-date">四月 2018</span><span class="card-archive-list-count">4</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2017/02/"><span class="card-archive-list-date">二月 2017</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2017/01/"><span class="card-archive-list-date">一月 2017</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2016/05/"><span class="card-archive-list-date">五月 2016</span><span class="card-archive-list-count">4</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2016/04/"><span class="card-archive-list-date">四月 2016</span><span class="card-archive-list-count">1</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">52</div></div><div class="webinfo-item"><div class="item-name">已运行时间 :</div><div class="item-count" id="runtimeshow" data-publishDate="2011-12-31T16:00:00.000Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2022-07-11T18:05:44.267Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2012 - 2022 By 欧阳</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="translateLink" type="button" title="简繁转换">简</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><div class="js-pjax"><script>(() => {
+  const $mermaidWrap = document.querySelectorAll('#article-container .mermaid-wrap')
+  if ($mermaidWrap.length) {
+    window.runMermaid = () => {
+      window.loadMermaid = true
+      const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'default'
+
+      Array.from($mermaidWrap).forEach((item, index) => {
+        const mermaidSrc = item.firstElementChild
+        const mermaidThemeConfig = '%%{init:{ \'theme\':\'' + theme + '\'}}%%\n'
+        const mermaidID = 'mermaid-' + index
+        const mermaidDefinition = mermaidThemeConfig + mermaidSrc.textContent
+        mermaid.mermaidAPI.render(mermaidID, mermaidDefinition, (svgCode) => {
+          mermaidSrc.insertAdjacentHTML('afterend', svgCode)
+        })
+      })
     }
 
-
-    function again()//重载
-    { 
-    	document.getElementById('about').value="关于";
-      	$('#quiz-container').jquizzy({
-        questions: init.singleSelect});
-		
+    const loadMermaid = () => {
+      window.loadMermaid ? runMermaid() : getScript('https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js').then(runMermaid)
     }
 
-
-    function about()//关于
-    { 
-		if(document.getElementById('about').value="关于"){
-		document.getElementById('about').value="官网";
-		//$('#quiz-container').html('<iframe src="http://7xi.bid/blog/about/index.html"  width="100%" height="100%" frameborder="0"  name="_blank" id="_blank" ></iframe>');
-		      	$('#quiz-container').jquizzy({
-        questions: init.singleSelect});
-        win.alert('系统提示', "访问网站（需流量），注意返回操作：再次点击小房子即可！");		
-	//	alert("访问我的网站（即浏览我的网页），注意返回操作：再次点击按钮（官网）即可！退出APP操作：点击手机返回，弹出窗口，然后选择取消！");
-
-		}
-		else{
-		document.getElementById('about').value="关于";
-      	$('#quiz-container').jquizzy({
-        questions: init.singleSelect});
-		}
-    }
-
-
-    function breset()//单刷
-    { 
-    	document.getElementById('about').value="关于";
-		win.alert('系统提示', '模式：题量设置为1题且显示答案！ ');
-    //	alert('模式：题量设置为1题且显示答案！点击重载进行答题 ')
-      	document.getElementById('ct').value=1;
-      	document.getElementById('answ').checked=true;
-		
-    }
-
-   
-</script>
-
-<script>
-//var init={'singleSelect':{'T1':[{'question':'爱是什么？','answers':['不知道','不知道','不知道','以上都不是','以上都是'],'correctAnswer':'A'}]}};
-$(function(){
-	$('#quiz-container').jquizzy({
-        questions: init.singleSelect
-    });
-});
-</script>
-
-<script type="text/javascript">
-		function selectcity(){
-			setTimeout('$("#ssid").fadeIn(100);', 1);
-			var zjkjkm=[["会计总论","存货","固定资产","投资性房地产","长期股权投资","无形资产","非货币性资产交换","资产减值","金融资产","负债及借款费用","债务重组","或有事项","收入","政府补助","所得税","外币折算","会计政策、会计估计变更和差错更正","资产负债表日后事项","财务报告","政府会计","民间非营利组织会计"
-
-],
-						["经济法总论","公司法律制度","其他法律制度","金融法律制度","合同法律制度","增值税法律制度","企业所得税","相关法律制度"
-
-],
-						["财管总论","财务管理基础","预算管理","筹资管理上","筹资管理下","投资管理","营运资金","成本管理","收入与分配","财务分析与评价"
-
-]
-			];
-			var index1=document.getElementById("sid").selectedIndex;//获得用户在省份组合框所选的选项序号  获得所选项的序列号，方便匹配上面二维数组添加
-			var option1=document.getElementById("ssid");//添加到该节点下，需要一一循环
-			option1.options.length=1;//直接设置总长度为1,留一个《请选择》，直接设置长度为1，，可以省去很多移除元素的麻烦
-			for(var x=0;x<zjkjkm[index1-1].length;x++){//zjkjkm是一个中级会计科目的二维数组  lenth zjkjkm[index1]
-				var opt=document.createElement("option");
-				opt.innerHTML=zjkjkm[index1-1][x];
-				opt.value=opt.innerHTML;
-				option1.appendChild(opt);
-				
-			}
-	   	};
-
-function selectcity1(){
-	  document.getElementById("kmxz").value = document.getElementById("ssid").value 
-//win.alert('系统提示', document.getElementById("kmxz").value);
-}
-
-</script>
-     
-
-<script language="javascript" type="text/javascript">   
-
-function search1(){
-	document.getElementById("quiz-container").innerHTML = '<object type="text/html" data="ss.html" width="100%" height="90%"></object>'; 
-	//$('#quiz-container').html('<iframe src="ss.html"  width="100%" height="100%" frameborder="0"  name="_blank" id="_blank" ></iframe>');
-}
-</script>
-
-<script language="javascript" type="text/javascript">   
-
-    function work(target) {
-
-  document.getElementById("kmxz").value = $(target).text();
-//win.alert('系统提示', document.getElementById("kmxz").value);
- bstart();
-    }
-
-
-</script>
-
-
-<script type="text/javascript">
-  // 弹窗
-  function showWindow() {
-    $('#showp').show();  //显示弹窗
-    $('#cover').css('display','block'); //显示遮罩层
-    $('#cover').css('height',document.body.clientHeight+'px'); //设置遮罩层的高度为当前页面高度
+    window.pjax ? loadMermaid() : document.addEventListener('DOMContentLoaded', loadMermaid)
   }
-  // 关闭弹窗
-  function closeWindow() {
-    $('#showp').hide();  //隐藏弹窗
-    $('#cover').css('display','none');   //显示遮罩层
-  }
-</script>
-</head>
-
-
-
-<body style="font-family: 'Microsoft YaHei';width:auto;height:auto;">
-<div class="waifu">
-    <div class="waifu-tips"></div>
-	<div class="waifu-tips1"></div>
-	<canvas id="live2d"  class="live2d"  height="290" ></canvas>
-	<!-- <div  id="ttmm"  class="ttmm"  style="height: 0px;"></div> -->
-           <div id='quiz-container'></div>
-<div id='lm' style='text-align:center;color:#4c4c4c;display:none;'>
-	<p align="center" id="second_watch" style="font-size: 20px; text-shadow: 0.1em 0.1em 0.15em #1e90ff">00:00:00</p>
-</div>
-
-<!-- 遮罩层 -->
-<p id="cover" style="background: #000; position: absolute; left: 0px; top: 0px; width: 100%; filter: alpha(opacity=30); opacity: 0.3; display: none; z-index: 2 ">  
-</p>
-<!-- 弹窗 -->
-<div id="showp" style="width: 95%;max-width:500px; margin:  auto; height: 14rem; border-radius: 4px 4px 4px 4px; solid #999; text-align:center;display: none; position: absolute; top: 0; left: 0; right: 0;bottom: 0; z-index: 999999; background: #fff">
- <!-- 标题 -->
- <p style=" position: absolute; height: 36px; width: 100%; text-align: center; border-radius: 4px 4px 0 0; line-height: 36px; vertical-align: middle; background-color: #77BFA3; /*标题背景色*/ border-bottom: 1px solid rgb(233, 233, 233); z-index: 1;" >
-    选题设置
-  </p><p style=" display: block; text-align: center; vertical-align: middle; position: absolute; width: 36px; height: 36px; line-height: 36px; right: 0px; text-decoration: none; font-size: 24px; color: black; background-color: #77BFA3; border-radius: 2px; z-index: 1;"><a href="javascript:void(0)"  onclick="closeWindow()" class="close-btn" title="关闭">×</a></P>
-  <!-- 内容 -->
-  <br>
-  <br>
-  <p style=" padding: 18px 5px 0px 5px;text-align:left;  font-size: 16px; min-height: 40px; line-height: 22px; text-shadow: 0.1em 0.1em 0.15em #1e90ff ">
-  已选章节：      <input id="kmxz" value="章节" ; style="text-shadow: 0.1em 0.1em 0.15em #1e90ff;border-radius: 6px 6px 6px 6px;">
-  <br>设置题数：      <input type="text" style="width:60%;max-width:350px;height:20px; text-shadow: 0.1em 0.1em 0.15em #1e90ff" id="ct"   placeholder="输入题量，不用管↑已选章节。" >
-  <input type="hidden" id="sct" value="">
-  <br>设置题型：					
-                              <select  id="sid" onchange="selectcity()" style="text-shadow: 0.1em 0.1em 0.15em #1e90ff ;border-radius: 6px 6px 6px 6px;">
-   			                                  <option>科目</option>
-   			                                  <option>会计实务</option>
-   			                                  <option>经济法</option>
-   			                                  <option>财务管理</option>
-   	                            </select>
-	显示答案<input type="checkbox" id="answ" style="text-shadow: 0.1em 0.1em 0.15em #1e90ff ;border-radius: 6px 6px 6px 6px;" >  仅计算题<input type="checkbox" id="jst" >	
-	<br>设置章节：
-	                            <select  id="ssid"  onchange="selectcity1()" style="display:none;text-shadow: 0.1em 0.1em 0.15em #1e90ff;border-radius: 6px 6px 6px 6px;">
-   			                      <option>章节</option>
-                              	</select></p>
-
-  <!-- 选题按钮 -->
-  <p style=" display: inline-block; width: 60px; height: 26px; line-height: 26px; background-color: #DE5923; color: white; cursor: pointer; text-align: center; border-radius: 2px; text-decoration: none; margin: 0 10px 0px 10px; border: none; " onclick="closeWindow()">
-    确 定
-  </p>
-</div>
-
-
-
-
-
-  <!-- 按钮-->
-
-
-    <div class="waifu-tool">
-        <span class="fui-home"></span>
-        <span class="fui-eye"></span>
-        <span class="fui-1"></span>
-        <span class="fui-5"></span>
-		<span class="fui-user"></span>
-        <span id="chatt"  class="fui-10"></span>
-     <!--    <span class="fui-photo"></span> -->
-        <span class="fui-info-circle"></span>
-        <span class="fui-6"></span>
-        <span id="time_start" class="fui-2"></span>
-        <span class="fui-3"></span>
-        <span class="fui-4"></span>
-        <span class="fui-7"></span>
-        <span  id="about" value="关于"  class="fui-8"></span>
-        <span class="fui-9"></span>
-        <span  id="tuichu" class="fui-cross"></span>
-    </div>
-	<!-- 按钮结束-->
-</div>
- <!-- 引入JS-->
-    <script src="assets/waifu-tips.js"></script>
-    <script src="assets/live2d.js"></script>
-    <script type="text/javascript">
-
-        /* 在 initModel 前添加 */
-        initModel("assets/waifu-tips.json?v=1.4.2")
-    </script>    
-
-
-</body>
-</html>
+})()</script></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
