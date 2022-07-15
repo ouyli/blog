@@ -6,7 +6,7 @@
   <link href="http://vvvvvv.top/atom.xml" rel="self"/>
   
   <link href="http://vvvvvv.top/"/>
-  <updated>2022-07-11T18:05:21.499Z</updated>
+  <updated>2022-07-15T08:56:36.886Z</updated>
   <id>http://vvvvvv.top/</id>
   
   <author>
@@ -15,6 +15,258 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>08_IF分支</title>
+    <link href="http://vvvvvv.top/2020/01/16/65d6055170d8/"/>
+    <id>http://vvvvvv.top/2020/01/16/65d6055170d8/</id>
+    <published>2020-01-16T08:34:32.000Z</published>
+    <updated>2022-07-15T08:56:36.886Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment"># 分支结构</span></span><br><span class="line"><span class="comment"># if : 如果</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># if单分支</span></span><br><span class="line">age = int(input(<span class="string">&quot;请输入年龄:&quot;</span>))</span><br><span class="line"><span class="keyword">if</span> age&gt;=18:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;你成年了,可以去网吧了&quot;</span>)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;还可以玩吃鸡了&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 注意缩进,一般是4个空格或者一个tab</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 双分支: if-else</span></span><br><span class="line"><span class="keyword">if</span> age&gt;=60:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;您老了, 该跳广场舞了&quot;</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;还年轻&quot;</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 多分支: if-elif-else</span></span><br><span class="line"><span class="keyword">if</span> age&lt;18:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;还未成年&quot;</span>)</span><br><span class="line">elif age&lt;40:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;青年&quot;</span>)</span><br><span class="line">elif age&lt;60:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;中年&quot;</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;老年&quot;</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 比较2个数中最大值</span></span><br><span class="line">a = 100</span><br><span class="line">b = 20</span><br><span class="line"><span class="keyword">if</span> a &gt; b:</span><br><span class="line">    <span class="built_in">print</span>(a)</span><br><span class="line">elif a == b:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;a == b&quot;</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="built_in">print</span>(b)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 比较3个数中的最大值</span></span><br><span class="line">a = 20</span><br><span class="line">b = 30</span><br><span class="line">c = 40</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> a&gt;b:</span><br><span class="line">    <span class="keyword">if</span> a&gt;c:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;最大值是:&quot;</span>, a)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;最大值是:&quot;</span>, c)</span><br><span class="line"></span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="keyword">if</span> b&gt;c:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;最大值是:&quot;</span>, b)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;最大值是:&quot;</span>, c)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+    <summary type="html">IF分支</summary>
+    
+    
+    
+    <category term="Python编程" scheme="http://vvvvvv.top/categories/Python%E7%BC%96%E7%A8%8B/"/>
+    
+    
+    <category term="Python代码" scheme="http://vvvvvv.top/tags/Python%E4%BB%A3%E7%A0%81/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>07_位运算符[扩展]</title>
+    <link href="http://vvvvvv.top/2020/01/16/bee8c39c58f8/"/>
+    <id>http://vvvvvv.top/2020/01/16/bee8c39c58f8/</id>
+    <published>2020-01-16T08:34:13.000Z</published>
+    <updated>2022-07-15T08:57:35.613Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"># 位运算符(了解)</span><br><span class="line"># &amp; 位与, | 位或, ~ 位非, ^位异或, &gt;&gt; 右移, &lt;&lt; 左移</span><br><span class="line"></span><br><span class="line"># &amp;</span><br><span class="line">print(10 &amp; 9)</span><br><span class="line">&#x27;&#x27;&#x27;</span><br><span class="line">10 =&gt; 1010</span><br><span class="line"><span class="section">9  =&gt; 1001</span></span><br><span class="line"><span class="section">-------------</span></span><br><span class="line">8  &lt;= 1000</span><br><span class="line">&#x27;&#x27;&#x27;</span><br><span class="line"></span><br><span class="line"># |</span><br><span class="line">print(10 | 9)</span><br><span class="line">&#x27;&#x27;&#x27;</span><br><span class="line">10 =&gt; 1010</span><br><span class="line"><span class="section">9  =&gt; 1001</span></span><br><span class="line"><span class="section">-------------</span></span><br><span class="line">11 &lt;= 1011</span><br><span class="line">&#x27;&#x27;&#x27;</span><br><span class="line"></span><br><span class="line"># ~</span><br><span class="line">print(~10)  # -11</span><br><span class="line">&#x27;&#x27;&#x27;</span><br><span class="line">00000000 00000000 00000000 00001010</span><br><span class="line">11111111 11111111 11111111 11110101  补码 (了解)</span><br><span class="line">10000000 00000000 00000000 00001011  原码, -11</span><br><span class="line">&#x27;&#x27;&#x27;</span><br><span class="line"></span><br><span class="line"># ^ : 相同为0,不同为1</span><br><span class="line">print(10 ^ 9)</span><br><span class="line">&#x27;&#x27;&#x27;</span><br><span class="line">10 =&gt; 1010</span><br><span class="line"><span class="section">9  =&gt; 1001</span></span><br><span class="line"><span class="section">-------------</span></span><br><span class="line">3  &lt;= 0011</span><br><span class="line">&#x27;&#x27;&#x27;</span><br><span class="line"></span><br><span class="line"># &lt;&lt;</span><br><span class="line">print(10 &lt;&lt; 2)</span><br><span class="line">&#x27;&#x27;&#x27;</span><br><span class="line"><span class="section">10 =&gt;   1010</span></span><br><span class="line"><span class="section">-------------</span></span><br><span class="line">40 &lt;= 101000</span><br><span class="line">&#x27;&#x27;&#x27;</span><br><span class="line"></span><br><span class="line"># &gt;&gt;</span><br><span class="line">print(10 &gt;&gt; 2)  # 2</span><br><span class="line">&#x27;&#x27;&#x27;</span><br><span class="line"><span class="section">10 =&gt;   1010</span></span><br><span class="line"><span class="section">-------------</span></span><br><span class="line">2  &lt;=     10</span><br><span class="line">&#x27;&#x27;&#x27;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+    <summary type="html">位运算符[扩展]</summary>
+    
+    
+    
+    <category term="Python编程" scheme="http://vvvvvv.top/categories/Python%E7%BC%96%E7%A8%8B/"/>
+    
+    
+    <category term="Python代码" scheme="http://vvvvvv.top/tags/Python%E4%BB%A3%E7%A0%81/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>06_成员运算符和身份运算符</title>
+    <link href="http://vvvvvv.top/2020/01/16/95a8bed090e6/"/>
+    <id>http://vvvvvv.top/2020/01/16/95a8bed090e6/</id>
+    <published>2020-01-16T08:33:49.000Z</published>
+    <updated>2022-07-15T08:58:27.904Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 成员运算符</span></span><br><span class="line"><span class="comment">#  in,  not in</span></span><br><span class="line">ages = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>]</span><br><span class="line"><span class="built_in">print</span>(<span class="number">1</span> <span class="keyword">in</span> ages)  <span class="comment"># True</span></span><br><span class="line"><span class="built_in">print</span>(<span class="number">33</span> <span class="keyword">not</span> <span class="keyword">in</span> ages)  <span class="comment"># True</span></span><br><span class="line"><span class="comment"># print(not 33 in ages)  # True</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 身份运算符</span></span><br><span class="line"><span class="comment">#  判断内存地址</span></span><br><span class="line"><span class="comment">#  is, is not</span></span><br><span class="line">a = <span class="number">10</span></span><br><span class="line">b = a</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">id</span>(a))  <span class="comment"># 1501996416</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">id</span>(b))  <span class="comment"># 1501996416</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(a <span class="keyword">is</span> b)  <span class="comment"># True</span></span><br><span class="line"><span class="built_in">print</span>(a <span class="keyword">is</span> <span class="keyword">not</span> b)  <span class="comment"># False</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+    <summary type="html">成员运算符和身份运算符</summary>
+    
+    
+    
+    <category term="Python编程" scheme="http://vvvvvv.top/categories/Python%E7%BC%96%E7%A8%8B/"/>
+    
+    
+    <category term="Python代码" scheme="http://vvvvvv.top/tags/Python%E4%BB%A3%E7%A0%81/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>05_逻辑运算符</title>
+    <link href="http://vvvvvv.top/2020/01/16/cadf490d3044/"/>
+    <id>http://vvvvvv.top/2020/01/16/cadf490d3044/</id>
+    <published>2020-01-16T08:33:05.000Z</published>
+    <updated>2022-07-15T08:59:08.489Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment"># 逻辑运算符</span></span><br><span class="line"><span class="comment">#   and与, or或, not非</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># and 与</span></span><br><span class="line"><span class="comment"># and的两边都为真,则结果为真, 否则为假</span></span><br><span class="line"><span class="built_in">print</span>(<span class="literal">True</span> <span class="keyword">and</span> <span class="literal">True</span>)  # <span class="literal">True</span></span><br><span class="line"><span class="built_in">print</span>(<span class="literal">True</span> <span class="keyword">and</span> <span class="literal">False</span>)  # <span class="literal">False</span></span><br><span class="line"><span class="built_in">print</span>(<span class="literal">False</span> <span class="keyword">and</span> <span class="literal">True</span>)  # <span class="literal">False</span></span><br><span class="line"><span class="built_in">print</span>(<span class="literal">False</span> <span class="keyword">and</span> <span class="literal">False</span>)  # <span class="literal">False</span></span><br><span class="line"><span class="built_in">print</span>(3&gt;4 <span class="keyword">and</span> 4&lt;5)  # <span class="literal">False</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># or 或</span></span><br><span class="line"><span class="comment"># or的两边都为假,则结果为假,否则为真</span></span><br><span class="line"><span class="built_in">print</span>(<span class="literal">True</span> <span class="keyword">or</span> <span class="literal">True</span>)  # <span class="literal">True</span></span><br><span class="line"><span class="built_in">print</span>(<span class="literal">True</span> <span class="keyword">or</span> <span class="literal">False</span>)  # <span class="literal">True</span></span><br><span class="line"><span class="built_in">print</span>(<span class="literal">False</span> <span class="keyword">or</span> <span class="literal">True</span>)  # <span class="literal">True</span></span><br><span class="line"><span class="built_in">print</span>(<span class="literal">False</span> <span class="keyword">or</span> <span class="literal">False</span>)  # <span class="literal">False</span></span><br><span class="line"><span class="built_in">print</span>(3&gt;4 <span class="keyword">or</span> 4&lt;5)  # <span class="literal">True</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># not 非</span></span><br><span class="line"><span class="comment"># 一定会得到bool值的结果</span></span><br><span class="line"><span class="built_in">print</span>(<span class="keyword">not</span> <span class="literal">True</span>)  # <span class="literal">False</span></span><br><span class="line"><span class="built_in">print</span>(<span class="keyword">not</span> 3&gt;4)  # <span class="literal">True</span></span><br><span class="line"><span class="built_in">print</span>(<span class="keyword">not</span> 0)  # <span class="literal">True</span></span><br><span class="line"><span class="built_in">print</span>(<span class="keyword">not</span> 3)  # <span class="literal">False</span></span><br><span class="line"><span class="built_in">print</span>(<span class="keyword">not</span> -3)  # <span class="literal">False</span></span><br><span class="line"><span class="built_in">print</span>(<span class="keyword">not</span> None)  # <span class="literal">True</span></span><br><span class="line"><span class="built_in">print</span>(<span class="keyword">not</span> <span class="string">&quot;&quot;</span>)  # <span class="literal">True</span></span><br><span class="line"><span class="built_in">print</span>(<span class="keyword">not</span> <span class="string">&quot; &quot;</span>)  # <span class="literal">False</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 数值中,0为假,其他为真</span></span><br><span class="line"><span class="comment"># None为假</span></span><br><span class="line"><span class="comment"># 字符串中, &quot;&quot;为假,其他为真</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 短路操作</span></span><br><span class="line"><span class="comment"># and</span></span><br><span class="line"><span class="comment"># 从左往右依次判断表达式的值是否为True,</span></span><br><span class="line"><span class="comment">#   1. 如果是True,则继续判断后面的表达式,</span></span><br><span class="line"><span class="comment">#   2. 如果为False则直接返回该表达式的值,且后面不会再判断</span></span><br><span class="line"><span class="comment">#   3. 如果判断到最后一个,则不管真假,直接返回最后的数.</span></span><br><span class="line">a = 10 <span class="keyword">and</span> None <span class="keyword">and</span> -2</span><br><span class="line"><span class="built_in">print</span>(a)  # None</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;-&quot;</span> * 100)  # 重复100次</span><br><span class="line"></span><br><span class="line">b = 3 <span class="keyword">and</span> <span class="built_in">print</span>(1) <span class="keyword">and</span> <span class="built_in">print</span>(3)</span><br><span class="line"><span class="built_in">print</span>(b)  # None</span><br><span class="line"></span><br><span class="line">c = 0 <span class="keyword">and</span> 3 <span class="keyword">and</span> <span class="string">&quot;33&quot;</span>  # 0</span><br><span class="line">c = 3 <span class="keyword">and</span> 4 <span class="keyword">and</span> 5  # 5</span><br><span class="line">c = 3 <span class="keyword">and</span> 4 <span class="keyword">and</span> <span class="string">&quot;&quot;</span>  # <span class="string">&quot;&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(c)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># or</span></span><br><span class="line"><span class="comment"># 从左往右依次判断表达式的值是否为True,</span></span><br><span class="line"><span class="comment">#   1. 如果是False,则继续判断后面的表达式,</span></span><br><span class="line"><span class="comment">#   2. 如果为True则直接返回该表达式的值,且后面不会再判断</span></span><br><span class="line"><span class="comment">#   3. 如果判断到最后一个,则不管真假,直接返回最后的数.</span></span><br><span class="line"></span><br><span class="line">a = 0 <span class="keyword">or</span> 3 <span class="keyword">or</span> 4</span><br><span class="line"><span class="built_in">print</span>(a)  # 3</span><br><span class="line"></span><br><span class="line">b = 0 <span class="keyword">or</span> None <span class="keyword">or</span> 4  # 4</span><br><span class="line">b = 0 <span class="keyword">or</span> 4 <span class="keyword">or</span> <span class="built_in">print</span>(5)  # 4</span><br><span class="line"><span class="built_in">print</span>(b)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 练习</span></span><br><span class="line">x = 3 <span class="keyword">and</span> <span class="literal">True</span>  # <span class="literal">True</span></span><br><span class="line">y = 3 <span class="keyword">or</span> <span class="literal">False</span>  # 3</span><br><span class="line">s = x<span class="number">*5</span> + y</span><br><span class="line"><span class="built_in">print</span>(s)  # 8</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 练习</span></span><br><span class="line"><span class="comment"># 判断闰年,只要满足下面的2个条件之一则是闰年</span></span><br><span class="line"><span class="comment">#   1.能够被4整除,但是不能被100整除</span></span><br><span class="line"><span class="comment">#   2.能够被400整除</span></span><br><span class="line">year = 2020</span><br><span class="line">s = (year%<span class="attribute">4</span>==0 <span class="keyword">and</span> year%100!=0) <span class="keyword">or</span> year%<span class="attribute">400</span>==0</span><br><span class="line"><span class="built_in">print</span>(s)  # <span class="literal">True</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+    <summary type="html">逻辑运算符</summary>
+    
+    
+    
+    <category term="Python编程" scheme="http://vvvvvv.top/categories/Python%E7%BC%96%E7%A8%8B/"/>
+    
+    
+    <category term="Python代码" scheme="http://vvvvvv.top/tags/Python%E4%BB%A3%E7%A0%81/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>04_关系运算符</title>
+    <link href="http://vvvvvv.top/2020/01/16/2a5b732cf35b/"/>
+    <id>http://vvvvvv.top/2020/01/16/2a5b732cf35b/</id>
+    <published>2020-01-16T08:32:42.000Z</published>
+    <updated>2022-07-15T09:00:32.982Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 关系运算符</span></span><br><span class="line"><span class="comment">#  &gt;, &gt;=, &lt;, &lt;=, ==, !=</span></span><br><span class="line"><span class="built_in">print</span>(10 &gt; 3)  # <span class="literal">True</span></span><br><span class="line"><span class="built_in">print</span>(10 &gt;= 3)  # <span class="literal">True</span></span><br><span class="line"><span class="built_in">print</span>(10 &lt; 3)  # <span class="literal">False</span></span><br><span class="line"><span class="built_in">print</span>(10 &lt;= 3)  # <span class="literal">False</span></span><br><span class="line"><span class="built_in">print</span>(10 == 3)  # <span class="literal">False</span></span><br><span class="line"><span class="built_in">print</span>(10 != 3)  # <span class="literal">True</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(3 == 3)  # <span class="literal">True</span></span><br><span class="line"><span class="built_in">print</span>(3 == <span class="string">&#x27;3&#x27;</span>)  # <span class="literal">False</span></span><br><span class="line"><span class="built_in">print</span>(3 != <span class="string">&#x27;3&#x27;</span>)  # <span class="literal">True</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 字符串比较</span></span><br><span class="line"><span class="comment">#  ASCII码</span></span><br><span class="line"><span class="comment">#   A~Z: 65~90</span></span><br><span class="line"><span class="comment">#   a~z: 97~122</span></span><br><span class="line"><span class="comment">#   0~9: 48~57</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;a&#x27;</span> &gt; <span class="string">&#x27;b&#x27;</span>)  # <span class="literal">False</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;A&#x27;</span> &gt; <span class="string">&#x27;a&#x27;</span>)  # <span class="literal">False</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;abcde&#x27;</span> &lt; <span class="string">&#x27;acb&#x27;</span>)  # <span class="literal">True</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;ab&#x27;</span> &lt; <span class="string">&#x27;abc&#x27;</span>)  # <span class="literal">True</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+    <summary type="html">关系运算符</summary>
+    
+    
+    
+    <category term="Python编程" scheme="http://vvvvvv.top/categories/Python%E7%BC%96%E7%A8%8B/"/>
+    
+    
+    <category term="Python代码" scheme="http://vvvvvv.top/tags/Python%E4%BB%A3%E7%A0%81/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>03_算术运算符和赋值运算符</title>
+    <link href="http://vvvvvv.top/2020/01/16/95759801320d/"/>
+    <id>http://vvvvvv.top/2020/01/16/95759801320d/</id>
+    <published>2020-01-16T08:32:19.000Z</published>
+    <updated>2022-07-15T09:01:43.484Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 算术运算符: +, -, *, /, %, **, //</span></span><br><span class="line"><span class="attribute">print</span>(<span class="number">10</span> + <span class="number">3</span>)</span><br><span class="line"><span class="attribute">print</span>(<span class="string">&quot;10&quot;</span> + <span class="string">&quot;3&quot;</span>)  # <span class="string">&quot;103&quot;</span>,字符串拼接</span><br><span class="line"><span class="attribute">print</span>(<span class="string">&quot;10&quot;</span> + str(<span class="number">3</span>))  # 不同类型不可以相加+</span><br><span class="line"><span class="attribute">print</span>(<span class="number">10</span> - <span class="number">3</span>)</span><br><span class="line"><span class="attribute">print</span>(<span class="number">10</span> * <span class="number">3</span>)</span><br><span class="line"><span class="attribute">print</span>(<span class="number">10</span> / <span class="number">3</span>)  # <span class="number">3</span>.<span class="number">3333333333333335</span></span><br><span class="line"><span class="attribute">print</span>(<span class="number">10</span> % <span class="number">3</span>)  # <span class="number">1</span></span><br><span class="line"><span class="attribute">print</span>(<span class="number">10</span> ** <span class="number">3</span>)  # <span class="number">1000</span></span><br><span class="line"><span class="attribute">print</span>(<span class="number">10</span> // <span class="number">3</span>)  # <span class="number">3</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 赋值运算符</span></span><br><span class="line"><span class="comment"># =</span></span><br><span class="line"><span class="comment"># +=, -=, *=,...</span></span><br><span class="line"><span class="attribute">n</span> = <span class="number">100</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 将n自身的值加1</span></span><br><span class="line"><span class="comment"># =赋值运算符: 先运算=号右边的表达式</span></span><br><span class="line"><span class="attribute">n</span> = n + <span class="number">1</span></span><br><span class="line"><span class="attribute">print</span>(n)  # <span class="number">101</span></span><br><span class="line"></span><br><span class="line"><span class="attribute">n</span> += <span class="number">1</span>  # 等价于:n=n+<span class="number">1</span></span><br><span class="line"><span class="attribute">print</span>(n)  # <span class="number">102</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+    <summary type="html">算术运算符和赋值运算符</summary>
+    
+    
+    
+    <category term="Python编程" scheme="http://vvvvvv.top/categories/Python%E7%BC%96%E7%A8%8B/"/>
+    
+    
+    <category term="Python代码" scheme="http://vvvvvv.top/tags/Python%E4%BB%A3%E7%A0%81/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>02_占位符</title>
+    <link href="http://vvvvvv.top/2020/01/16/b80e79e0bae4/"/>
+    <id>http://vvvvvv.top/2020/01/16/b80e79e0bae4/</id>
+    <published>2020-01-16T08:31:54.000Z</published>
+    <updated>2022-07-15T08:52:40.843Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">name = <span class="string">&quot;渣渣辉&quot;</span></span><br><span class="line">age = 50</span><br><span class="line"></span><br><span class="line"><span class="comment"># s = &quot;你好, 渣渣辉, 年龄50, 在贪玩蓝月中等你来砍&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># %s: 字符串</span></span><br><span class="line"><span class="comment"># %d: 整数</span></span><br><span class="line"><span class="comment"># %f: 小数</span></span><br><span class="line"><span class="comment"># s = &quot;你好, %s, 年龄%d, 在贪玩蓝月中等你来砍&quot; % (name, age)</span></span><br><span class="line">s = <span class="string">&quot;你好, 古天乐, 年龄%f, 在贪玩蓝月中等你来砍&quot;</span> % age</span><br><span class="line">s = <span class="string">&quot;你好, 古天乐, 年龄%.2f, 在贪玩蓝月中等你来砍&quot;</span> % age  <span class="comment"># 保留2个小数</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># format</span></span><br><span class="line">s = <span class="string">&quot;你好, &#123;&#125;, 年龄&#123;&#125;, 在贪玩蓝月中等你来砍&quot;</span>.format(name, age)</span><br><span class="line">s = <span class="string">&quot;你好, &#123;n&#125;, 年龄&#123;a&#125;, 在贪玩蓝月中等你来砍&quot;</span>.format(a=age, n=name)</span><br><span class="line"></span><br><span class="line"><span class="comment"># f-string: python3.6及以上</span></span><br><span class="line">s = f<span class="string">&quot;你好, &#123;name&#125;, 年龄&#123;age&#125;, 在贪玩蓝月中等你来砍&quot;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">print(s)</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+    <summary type="html">占位符</summary>
+    
+    
+    
+    <category term="Python编程" scheme="http://vvvvvv.top/categories/Python%E7%BC%96%E7%A8%8B/"/>
+    
+    
+    <category term="Python代码" scheme="http://vvvvvv.top/tags/Python%E4%BB%A3%E7%A0%81/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>01_数据类型</title>
+    <link href="http://vvvvvv.top/2020/01/16/689710d2da35/"/>
+    <id>http://vvvvvv.top/2020/01/16/689710d2da35/</id>
+    <published>2020-01-16T08:31:28.000Z</published>
+    <updated>2022-07-15T08:50:12.649Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string"> 数据类型:</span></span><br><span class="line"><span class="string">    Number:</span></span><br><span class="line"><span class="string">        int 整数</span></span><br><span class="line"><span class="string">        float 小数,浮点数</span></span><br><span class="line"><span class="string">    String: 字符串, &quot;hello&quot;, &#x27;hello&#x27;</span></span><br><span class="line"><span class="string">    Boolean: 布尔类型, True, False</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    List: 列表, [1,2,3]</span></span><br><span class="line"><span class="string">    Tuple: 元组, (1,2,3)</span></span><br><span class="line"><span class="string">    Dict: 字典, &#123;&quot;name&quot;: &quot;蔡徐坤&quot;&#125;</span></span><br><span class="line"><span class="string">    Set: 集合(了解), &#123;1,2,3&#125;</span></span><br><span class="line"><span class="string">    Bytes: 二进制, b&#x27;hello&#x27;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    None: 空值类型, None</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Python是弱类型语言</span></span><br><span class="line">a = <span class="number">10</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(a))  <span class="comment"># &lt;class &#x27;int&#x27;&gt; 整数</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">id</span>(a))  <span class="comment"># 1501996416, 内存地址</span></span><br><span class="line"></span><br><span class="line">a = <span class="number">10.3</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(a))  <span class="comment"># &lt;class &#x27;float&#x27;&gt; 小数</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># string</span></span><br><span class="line">b = <span class="string">&quot;墨西哥发生了8.0级地震&quot;</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(b))  <span class="comment"># &lt;class &#x27;str&#x27;&gt; 字符串</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># boolean</span></span><br><span class="line">c = <span class="literal">True</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(c))  <span class="comment"># &lt;class &#x27;bool&#x27;&gt; 布尔</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># list</span></span><br><span class="line">d = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(d))  <span class="comment"># &lt;class &#x27;list&#x27;&gt; 列表</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># tuple</span></span><br><span class="line">e = (<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(e))  <span class="comment"># &lt;class &#x27;tuple&#x27;&gt; 元组</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># dict</span></span><br><span class="line">f = &#123;<span class="string">&quot;name&quot;</span>: <span class="string">&quot;渣渣辉&quot;</span>, <span class="string">&quot;age&quot;</span>: <span class="number">50</span>&#125;</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(f))  <span class="comment"># &lt;class &#x27;dict&#x27;&gt; 字典</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># set</span></span><br><span class="line">g = &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>&#125;</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(g))  <span class="comment"># &lt;class &#x27;set&#x27;&gt; 集合</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># bytes</span></span><br><span class="line">h = <span class="string">b&#x27;hello&#x27;</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(h))  <span class="comment"># &lt;class &#x27;bytes&#x27;&gt; 二进制</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># None</span></span><br><span class="line">i = <span class="literal">None</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(i))  <span class="comment"># &lt;class &#x27;NoneType&#x27;&gt; 空值</span></span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+    <summary type="html">数据类型</summary>
+    
+    
+    
+    <category term="Python编程" scheme="http://vvvvvv.top/categories/Python%E7%BC%96%E7%A8%8B/"/>
+    
+    
+    <category term="Python代码" scheme="http://vvvvvv.top/tags/Python%E4%BB%A3%E7%A0%81/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Python练习1</title>
+    <link href="http://vvvvvv.top/2020/01/15/309868b091b2/"/>
+    <id>http://vvvvvv.top/2020/01/15/309868b091b2/</id>
+    <published>2020-01-15T09:02:52.000Z</published>
+    <updated>2022-07-15T09:10:00.556Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 1.</span></span><br><span class="line"><span class="comment"># 熟练使用常用DOS命令行进行操作, cd</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># 2.</span></span><br><span class="line"><span class="comment"># 自己安装Python开发环境并清楚配置环境变量的目的</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># 3.</span></span><br><span class="line"><span class="comment"># 写一个初级程序</span></span><br><span class="line"><span class="comment"># 打印：大家好，我是XXX</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;大家好, 我的杨超越&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 4.</span></span><br><span class="line"><span class="comment"># 在控制台打印出古诗如下所示的格式：</span></span><br><span class="line"><span class="comment"># 春眠不觉晓，</span></span><br><span class="line"><span class="comment"># 处处闻啼鸟。</span></span><br><span class="line"><span class="comment"># 夜来风雨声，</span></span><br><span class="line"><span class="comment"># 花落知多少。</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;春眠不觉晓，&quot;</span>, <span class="attribute">end</span>=<span class="string">&#x27;&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;处处闻啼鸟。&quot;</span>, <span class="attribute">end</span>=<span class="string">&#x27;\n&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;&#x27;</span><span class="string">&#x27;春眠不觉晓，</span></span><br><span class="line"><span class="string">处处闻啼鸟。</span></span><br><span class="line"><span class="string">夜来风雨声，</span></span><br><span class="line"><span class="string">花落知多少。&#x27;</span><span class="string">&#x27;&#x27;</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 5.</span></span><br><span class="line"><span class="comment"># 控制台打印出如下格式所示的内容</span></span><br><span class="line"><span class="comment"># ** ** ** ** ** ** *</span></span><br><span class="line"><span class="comment"># 欢迎学习Python</span></span><br><span class="line"><span class="comment"># ** ** ** ** ** ** *</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;*************&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;欢迎学习Python&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;*************&quot;</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 6.</span></span><br><span class="line"><span class="comment"># 进制转换</span></span><br><span class="line"><span class="comment">#   a, 将二进制1100和10111 分别转成八进制、十进制、十六进制</span></span><br><span class="line"><span class="comment">#       1100 =&gt; 14(八进制) =&gt; 12(十进制) =&gt; C(十六进制)</span></span><br><span class="line"><span class="comment">#       10111 =&gt; 27(八进制) =&gt; 23(十进制) =&gt; 17(十六进制)</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment">#   b, 将下列10进制数转成二进制</span></span><br><span class="line"><span class="comment">#       193,            49,        81,          35</span></span><br><span class="line"><span class="comment">#      128+64+1      32+16+1     64+16+1      32+2+1</span></span><br><span class="line"><span class="comment">#      1100 0001     11 0001    101 0001      10 0011</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment">#   c, 将下列二进制数转成八进制、十进制、十六进制</span></span><br><span class="line"><span class="comment">#     100001001 =&gt; 411(八进制) =&gt; 265(十进制) =&gt; 109(十六进制)</span></span><br><span class="line"><span class="comment">#     1100 1101 =&gt; 315(八进制) =&gt; 205(十进制) =&gt; CD(十六进制)</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment">#   d, 把八进制27转换成十六进制</span></span><br><span class="line"><span class="comment">#     27 =&gt; 01 0111(二进制) =&gt; 17(十六进制)</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># 7.</span></span><br><span class="line"><span class="comment"># 自查资料，预习知识点：变量</span></span><br><span class="line"><span class="comment"># 运算符，if语句</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+    <summary type="html">Python练习1</summary>
+    
+    
+    
+    <category term="Python编程" scheme="http://vvvvvv.top/categories/Python%E7%BC%96%E7%A8%8B/"/>
+    
+    
+    <category term="Python代码" scheme="http://vvvvvv.top/tags/Python%E4%BB%A3%E7%A0%81/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>03_输入和输出</title>
+    <link href="http://vvvvvv.top/2020/01/15/3f7d05957955/"/>
+    <id>http://vvvvvv.top/2020/01/15/3f7d05957955/</id>
+    <published>2020-01-15T08:29:23.000Z</published>
+    <updated>2022-07-15T08:47:01.696Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight hsp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"># 输出</span></span><br><span class="line">x = <span class="number">3</span></span><br><span class="line">y = <span class="number">4</span></span><br><span class="line"><span class="keyword">print</span>(<span class="string">&quot;x+y=&quot;</span>, x+y)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="meta"># 输入</span></span><br><span class="line"><span class="meta"># input: 会等待用户输入</span></span><br><span class="line"><span class="meta"># input()</span></span><br><span class="line"><span class="meta"># n = int(input(<span class="string">&quot;请输入您的真实年龄:&quot;</span>))</span></span><br><span class="line"><span class="meta"># print(n)</span></span><br><span class="line"><span class="meta"># print(n + <span class="number">1</span>)</span></span><br><span class="line"></span><br><span class="line"><span class="meta"># ctrl + / : 快速添加或者取消注释</span></span><br><span class="line"></span><br><span class="line"><span class="meta"># death_age = <span class="number">100</span></span></span><br><span class="line"><span class="meta"># age = input(&#x27;请输入您的年龄:&#x27;)</span></span><br><span class="line"><span class="meta">#</span></span><br><span class="line"><span class="meta"># print(death_age - int(age))</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="meta"># int(): 转换成整数</span></span><br><span class="line"><span class="meta"># float(): 转换成小数</span></span><br><span class="line"><span class="meta"># str() : 转换成字符串</span></span><br><span class="line"><span class="keyword">print</span>(<span class="keyword">int</span>(<span class="number">3.8</span>))  <span class="meta"># <span class="number">3</span></span></span><br><span class="line"><span class="keyword">print</span>(<span class="keyword">int</span>(<span class="string">&quot;5&quot;</span>))  <span class="meta"># <span class="number">5</span></span></span><br><span class="line"><span class="meta"># print(int(<span class="string">&quot;5.2&quot;</span>))  # 报错</span></span><br><span class="line"><span class="keyword">print</span>(<span class="keyword">int</span>(float(<span class="string">&quot;5.2&quot;</span>)))  <span class="meta"># <span class="number">5</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">print</span>(<span class="keyword">str</span>(<span class="number">10</span>))  <span class="meta"># <span class="string">&quot;10&quot;</span></span></span><br><span class="line"><span class="keyword">print</span>(<span class="keyword">str</span>(<span class="number">10</span>) + <span class="string">&quot;年&quot;</span>)  <span class="meta"># <span class="string">&quot;10年&quot;</span></span></span><br><span class="line"><span class="meta"># print(<span class="number">10</span> + <span class="string">&quot;年&quot;</span>)  # 报错</span></span><br><span class="line"><span class="keyword">print</span>(<span class="number">10</span>, <span class="string">&quot;年&quot;</span>)  <span class="meta"># <span class="string">&quot;10 年&quot;</span></span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">print</span>(<span class="string">&quot;ok&quot;</span>)</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+    <summary type="html">输入和输出</summary>
+    
+    
+    
+    <category term="Python编程" scheme="http://vvvvvv.top/categories/Python%E7%BC%96%E7%A8%8B/"/>
+    
+    
+    <category term="Python代码" scheme="http://vvvvvv.top/tags/Python%E4%BB%A3%E7%A0%81/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>02_变量</title>
+    <link href="http://vvvvvv.top/2020/01/15/570a1c67d5be/"/>
+    <id>http://vvvvvv.top/2020/01/15/570a1c67d5be/</id>
+    <published>2020-01-15T08:28:39.000Z</published>
+    <updated>2022-07-15T09:10:11.531Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line"># 变量: 可以改变的量</span><br><span class="line"># 定义变量/声明变量</span><br><span class="line">x = <span class="number">10</span></span><br><span class="line">print(x)</span><br><span class="line"></span><br><span class="line">y = <span class="number">3</span></span><br><span class="line">print(x * y)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">y = &quot;hello&quot;</span><br><span class="line">print(y)</span><br><span class="line"></span><br><span class="line">x = y = <span class="number">1</span></span><br><span class="line">print(x, y)</span><br><span class="line"></span><br><span class="line">x, y = <span class="number">2</span>, <span class="number">3</span></span><br><span class="line">print(x, y)  # <span class="number">2</span> <span class="number">3</span></span><br><span class="line"></span><br><span class="line"># 交互<span class="number">2</span>个变量的值</span><br><span class="line">x, y = y, x</span><br><span class="line">print(x, y)  # <span class="number">3</span> <span class="number">2</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># 删除变量</span><br><span class="line">z = <span class="number">1</span></span><br><span class="line">print(z)  # <span class="number">1</span></span><br><span class="line"></span><br><span class="line"># del z</span><br><span class="line"># print(z)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># 关键字</span><br><span class="line"><span class="keyword">import</span> keyword</span><br><span class="line">print(keyword.kwlist)</span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">[</span></span><br><span class="line"><span class="string">    &#x27;</span>Fals<span class="string">e&#x27;, &#x27;</span>Non<span class="string">e&#x27;, &#x27;</span>Tru<span class="string">e&#x27;, &#x27;</span><span class="keyword">and</span><span class="string">&#x27;, &#x27;</span><span class="keyword">as</span><span class="string">&#x27;, &#x27;</span><span class="keyword">assert</span><span class="string">&#x27;, </span></span><br><span class="line"><span class="string">    &#x27;</span>break<span class="string">&#x27;, &#x27;</span><span class="keyword">class</span><span class="string">&#x27;, &#x27;</span>continu<span class="string">e&#x27;, &#x27;</span>def<span class="string">&#x27;, &#x27;</span>del<span class="string">&#x27;, &#x27;</span>elif<span class="string">&#x27;, </span></span><br><span class="line"><span class="string">    &#x27;</span>els<span class="string">e&#x27;, &#x27;</span><span class="keyword">except</span><span class="string">&#x27;, &#x27;</span>finally<span class="string">&#x27;, &#x27;</span><span class="keyword">for</span><span class="string">&#x27;, &#x27;</span><span class="keyword">from</span><span class="string">&#x27;, &#x27;</span><span class="keyword">global</span><span class="string">&#x27;, </span></span><br><span class="line"><span class="string">    &#x27;</span><span class="keyword">if</span><span class="string">&#x27;, &#x27;</span><span class="keyword">import</span><span class="string">&#x27;, &#x27;</span><span class="keyword">in</span><span class="string">&#x27;, &#x27;</span><span class="keyword">is</span><span class="string">&#x27;, &#x27;</span>lambda<span class="string">&#x27;, &#x27;</span>nonlocal<span class="string">&#x27;, &#x27;</span><span class="keyword">not</span><span class="string">&#x27;, </span></span><br><span class="line"><span class="string">    &#x27;</span><span class="keyword">or</span><span class="string">&#x27;, &#x27;</span>pass<span class="string">&#x27;, &#x27;</span>rais<span class="string">e&#x27;, &#x27;</span><span class="keyword">return</span><span class="string">&#x27;, &#x27;</span>try<span class="string">&#x27;, &#x27;</span>whil<span class="string">e&#x27;, &#x27;</span><span class="keyword">with</span><span class="string">&#x27;, &#x27;</span>yield<span class="string">&#x27;</span></span><br><span class="line"><span class="string">]</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"></span><br><span class="line"># <span class="number">13</span>abc  不合法</span><br><span class="line"># abc<span class="number">-12</span>  不合法</span><br><span class="line"># abc_12  可以</span><br><span class="line"># <span class="keyword">and</span>  不合法,是关键字</span><br><span class="line"># _abc  合法</span><br><span class="line"># my_nice_banana 合法, 下划线连接多个单词(推荐)</span><br><span class="line"># myNiceBanana 合法, 驼峰</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+    <summary type="html">变量</summary>
+    
+    
+    
+    <category term="Python编程" scheme="http://vvvvvv.top/categories/Python%E7%BC%96%E7%A8%8B/"/>
+    
+    
+    <category term="Python代码" scheme="http://vvvvvv.top/tags/Python%E4%BB%A3%E7%A0%81/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>01_第一个Python程序</title>
+    <link href="http://vvvvvv.top/2020/01/15/640f37d2406b/"/>
+    <id>http://vvvvvv.top/2020/01/15/640f37d2406b/</id>
+    <published>2020-01-15T08:28:11.000Z</published>
+    <updated>2022-07-15T09:10:20.327Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">&quot;hello python&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 单行注释</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">多行注释</span></span><br><span class="line"><span class="string">多行注释</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">床前明月光</span></span><br><span class="line"><span class="string">疑是地上霜</span></span><br><span class="line"><span class="string">举头望明月</span></span><br><span class="line"><span class="string">低头思故乡</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+    <summary type="html">第一个Python程序</summary>
+    
+    
+    
+    <category term="Python编程" scheme="http://vvvvvv.top/categories/Python%E7%BC%96%E7%A8%8B/"/>
+    
+    
+    <category term="Python代码" scheme="http://vvvvvv.top/tags/Python%E4%BB%A3%E7%A0%81/"/>
+    
+  </entry>
   
   <entry>
     <title>SAP标准成本计划及发布CK40N</title>
@@ -181,264 +433,6 @@
     
     
     <category term="成本收益分析" scheme="http://vvvvvv.top/tags/%E6%88%90%E6%9C%AC%E6%94%B6%E7%9B%8A%E5%88%86%E6%9E%90/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>工艺成本</title>
-    <link href="http://vvvvvv.top/2018/04/16/bd4371bd01d4/"/>
-    <id>http://vvvvvv.top/2018/04/16/bd4371bd01d4/</id>
-    <published>2018-04-16T10:40:15.000Z</published>
-    <updated>2018-04-16T10:44:02.916Z</updated>
-    
-    <content type="html"><![CDATA[<p>工件的实际生产成本是制造工件所必需的一切费用的总和。<span id="more"></span>工艺成本是指生产成本中与工艺过程有关的那一部分成本，如毛胚或原材料费用、生产工人的工资、机床电费（设备的使用）、折旧费和维修费、工艺装备的折旧费和修理费以及车间和工厂的管理费用等。 </p><h1 id="工艺成本的组成"><a href="#工艺成本的组成" class="headerlink" title="工艺成本的组成"></a>工艺成本的组成</h1><blockquote><p>工艺成本按照与年产量的关系，分为可变费用Ｖ和不变费用Ｓ两部分。</p></blockquote><p>（1）可变费用Ｖ　　它是与年产量直接有关，即随年产量的增减而成比例变动的费用。它包括材料或毛坯费、操作工人的工资、机床电费、通用机床的折旧费和维修费以及通用工装（夹具、刀具和辅具等）的折旧费和维修费等。可变费用的单位是 元&#x2F;件。</p><p>（2）不可变费用Ｓ 它是与年产量无直接关系，不随年产量的增减而变化的费用。它包括调整工人的工资、专用机床的折旧费和专用工装（夹具）专为某工件的某加工工序所用，它不能被其他工序所用。当产量不足、负荷不满时，就只能闲置不用；而专用机床和专用工装（夹具）的折旧年限是确定的。因此，专用机床和专用工装（夹具）的费用不随年产量的增减而变化。</p><p><strong>判别可变费用和不可变费用的另一种方法是费用的单位，前者的单位是 元&#x2F;件 ，后者的单位是 元&#x2F;年。</strong></p>]]></content>
-    
-    
-    <summary type="html">工艺成本</summary>
-    
-    
-    
-    <category term="成本工作" scheme="http://vvvvvv.top/categories/%E6%88%90%E6%9C%AC%E5%B7%A5%E4%BD%9C/"/>
-    
-    
-    <category term="工艺成本" scheme="http://vvvvvv.top/tags/%E5%B7%A5%E8%89%BA%E6%88%90%E6%9C%AC/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>增值税税率下降1%</title>
-    <link href="http://vvvvvv.top/2018/04/14/d4dcefbc2ca6/"/>
-    <id>http://vvvvvv.top/2018/04/14/d4dcefbc2ca6/</id>
-    <published>2018-04-14T07:52:55.000Z</published>
-    <updated>2018-04-14T08:20:09.141Z</updated>
-    
-    <content type="html"><![CDATA[<p>增值税属于流转税，从字面上看是针对增值部分征收的税。</p><span id="more"></span><p>我们都知道计算交的税应该为销项增值税-进项增值税（不考虑进项税额转出等其他因素）。其实从计税来看。增值额*税率 才是应该交的税，只不过会计划分会计期间了。下面推导税率对应交增值税的影响。</p><p><strong>购进材料</strong><br>——材料成本</p><p><strong>生产产品</strong><br>——材料成本+加工成本</p><p><strong>销售产品</strong><br>——销售收入</p><p><strong>增值</strong><br>——销售收入-材料成本</p><p>以上最终计算增值税：（销售收入-材料成本）<em>税率<br>而销售收入&#x3D;毛利+销售成本&#x3D;毛利+材料成本+加工成本<br>所以计算值为：（毛利+加工成本）</em>税率<br>如果税率下降1%，则少交（毛利+加工成本）<em>1%的增值税。考虑到这部分利润全部要交25%的所得税，最终税额减少（毛利+加工成本）</em>0.75*1%</p>]]></content>
-    
-    
-    <summary type="html">增值税税率下降1%</summary>
-    
-    
-    
-    <category term="成本工作" scheme="http://vvvvvv.top/categories/%E6%88%90%E6%9C%AC%E5%B7%A5%E4%BD%9C/"/>
-    
-    
-    <category term="增值税改革，税率注意事项" scheme="http://vvvvvv.top/tags/%E5%A2%9E%E5%80%BC%E7%A8%8E%E6%94%B9%E9%9D%A9%EF%BC%8C%E7%A8%8E%E7%8E%87%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>weberp</title>
-    <link href="http://vvvvvv.top/2017/02/21/655c8fdbdcc3/"/>
-    <id>http://vvvvvv.top/2017/02/21/655c8fdbdcc3/</id>
-    <published>2017-02-21T13:40:01.000Z</published>
-    <updated>2017-02-21T13:53:52.126Z</updated>
-    
-    <content type="html"><![CDATA[<p>webERP是一个开源的ERP系统，它支持多公司，多币种，多税种，多库存管理。比较适合中小型的企业。<span id="more"></span></p><p><strong><a href="http://www.weberp.org/">地址</a></strong></p><p>通用特性： 完全基于网络</p><p>可以在任何支持PHP的网络服务器上运行-可以使用ISP来替代自己建立和维护服务器。+</p><p>使用最少的Java-script，使得最大程度地兼容所有网络浏览器和支持网络的设备。+</p><p>生成PDF报告-用于精确定位文本的PDF。+</p><p>所有的报告和脚本可以轻松的以PHP语言的方式修改。 +</p><p>多语言支持-每一个用户都可以看到他们自己首选语言的界面。 +</p><p>多主题-每一个用户都可以看到他们首选的图形界面主题。 +</p><p>可以与Wiki集成，以保存物料，供应商，客户的描述等。</p><p>安全性 用户可以被定义成只能访问特定的选项，使用一个基于规则的模型。</p><p>适合于这些规则的选项可以通过图形方式配置，并且用户定义的规则可以像既定的规则一样。</p><p>不正确的密码输入（超过三次）会被阻止，直到系统管理员复位该用户。这样可以阻止密码黑客破坏系统的安全性。</p><p>页面可以使用SSL加密，并且webERP可以被配置成只显示SSL页面，以确保所有通过互联网的信息被加密。</p><p>用户可以并定义成只使用主菜单中的特定模块，所以那些他们不能访问的菜单项甚至不被显示在屏幕上。</p><p>HTTP的安全性可以通过配置最顶部的内置的安全性，以提供两种水平的安全性，一种只访问服务器，另一种实际访问webERP.</p><p>订单输入 报价单可以按照报价单输入和打印，然后如果客户没有疑议可以直接转变成订单，而不需要重新输入。</p><p>可以输入和维护客户订单，并且可以回溯到客户订单号。</p><p>一个仓库物料在订单上的累计数量，会被转换成仓库的需求。</p><p>一个组装物料在订单上的累计数量，会被转换成其组装元件的需求。</p><p>订单上的未开票数量，可以维护和更新根据发票的增长</p><p>订单可以直接开票只需要很少或不需要输入。</p><p>一张订单可以分多次发货。每次发货后订单会相应更新。</p><p>当发货数量和订单不一样时，差异会被记录下来实时报告每一次的发货。</p><p>价格会根据的客户的销售类型，分公司以及货币而自动返回。</p><p>一系列产品的间断折扣数量，会根据折扣矩阵自动计算。</p><p>装箱单可以通过预先准备的打印信纸打印或打印机打印。</p><p>用户可以选择从那个仓库发货。</p><p>根据运送方式和发货地址可以自动计算运费。订单根据单个物料的重量和体积计算总的重量和体积。</p><p>发货地址可以自由输入-默认是到客户分公司的物理地址。</p><p>税收 非常灵活的税收选项，适合加拿大，美国，南非，英国，澳大利亚，NZ和其他大部分国家。</p><p>税率取决于产品的种类-使用税收目录</p><p>税率取决于发送产品的仓库的位置</p><p>税率取决于客户的位置</p><p>针对不同的税务机构设置了多种缴税方式。</p><p>每笔税收发送到不同的用户定义的总帐账户-如果链接到AR&#x2F;PR。</p><p>应收账款</p><p>仓库管理 无限制的仓库数量和货物数量，可以保存在不设数量的不同位置。</p><p>一个仓库物料的价格可以被设置成按任何货币定义的任意销售类型，以允许最大的价格灵活性。</p><p>自动延迟交货。还没有货运的销售订单可以在开票的时候或在平衡？合理取消订单的时候，会自动延迟交货。</p><p>仓库转移的历史可以按照仓库物料的方式被完全跟踪，包括已经序列化的产品和有标号的产品。</p><p>支持虚拟物料，可以开票，报价，折算成本，但是没有仓库记录的维护，例如工资和服务。</p><p>可以定义套件商品。</p><p>装配商品可以用类似定义套件商品的方式定义。这些商品存在仅仅是为了下单，定价，开票和销售分析。不维护库存平衡</p><p>货物转移到其他仓库地址时会生成转移记事表</p><p>支持重新订货数量</p><p>仓库调整可以产生总帐输入来影响产品的价值。</p><p>仓库成本变化可以产生总帐输入来影响产品的价值。</p><p>受控物料-</p><p>序列化仓库管理允许受控物料以单件引用。不受限的</p><p>采购 销售订单和供应商可以使用任何的货币。</p><p>针对采购物料的供应商物料的描述和价格可以维护。采购订单自动使用这些价格。同样的物料可以从不同的供应商那采购。</p><p>订单数量显示在仓库状态需求上面-通过将接收的仓库的位置。订单数量同样被显示在计划报告中。</p><p>可以输入接收的货物根据采购订单和?</p><p>收到的货物通过一个GRN进行序列化，针对GRN每一次仓库变动都会留下一个记录。</p><p>采购订单记录了接收数量，开票数量已经订单的原始数量。</p><p>采购订单可以被Email到一个定义好的供应商联系邮件地址里。</p><p>可以根据3-4个月的交货期产生仓库的计划报告，来显示建议的采购数量，根据前3个月的最大用量。</p><p>可以为名义上的物料输入采购订单</p><p>可以为同一个供应商的多个采购订单设置运费，只需要选择那些一起被发货的行。</p><p>应付账款</p><p>银行</p><p>总帐</p><p>生产 多层的物料清单-拥有错误捕获功能以防止循环BOM。</p><p>幽灵清单-当一个上层工作单产生是，自动转入元件清单。</p><p>工作订单可以产出多种产品用物料。</p><p>可选的自动反冲或自动消耗原材料。</p><p>工作订单中消耗掉的原材料和接收到的工作订单产生的货物被集成进了仓库管理和GL.</p><p>可以计算消耗的劳力和时间进工作订单。</p><p>工作订单成本-</p><p>使用变动报告到GL中-仓库目录记录决定GL账户。</p><p>工作订单需要的原材料显示在仓库状态需求中。</p><p>完整的MRP-带有生产日程和预测的维持和创建功能的原材料需求计划（MRP)。快速完整的MRP递归算法。（当前版本不可用）</p>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;webERP是一个开源的ERP系统，它支持多公司，多币种，多税种，多库存管理。比较适合中小型的企业。</summary>
-    
-    
-    
-    <category term="ERP软件" scheme="http://vvvvvv.top/categories/ERP%E8%BD%AF%E4%BB%B6/"/>
-    
-    
-    <category term="weberp" scheme="http://vvvvvv.top/tags/weberp/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>工序成本控制</title>
-    <link href="http://vvvvvv.top/2017/01/10/e7699ab9f509/"/>
-    <id>http://vvvvvv.top/2017/01/10/e7699ab9f509/</id>
-    <published>2017-01-10T15:01:57.000Z</published>
-    <updated>2017-02-21T13:01:35.720Z</updated>
-    
-    <content type="html"><![CDATA[<p>工序成本控制是作业班组负责各类消耗量的控制，项目经理层和企业层负责各种价格和费用标准的控制。<span id="more"></span><br>工序成本控制与传统的成本管理方法有所不同，主要的区别是，传统控制指标的量化及下达方式是自上而下，即从厂部到车间、班组，但要下到个人就比较困难。因为指标的理论性、专业性较强，与操作者及相关的行为活动联系不紧密，致使控制工作落不到实处。而工序成本控制首先考虑的是操作者的行为活动与成本运动的关系，通过自下而上的运动程序达到控制整个产品成本的目的。其次工序成本控制实现了从事后被动记录成本发生向事前主动控制的转变，从而引发了一场成本管理上的变革。<br>工序成本控制目前在机械行业得到了普遍的重视，因为：</p><h2 id="1、企业生存和发展的需要"><a href="#1、企业生存和发展的需要" class="headerlink" title="1、企业生存和发展的需要"></a>1、企业生存和发展的需要</h2><p>在计划经济时期，企业为国民经济的发展做出了很大贡献。国家也是百般呵护企业。那段时期，资本的积累和投入都由国家管理，企业考虑的只是千方百计完成国家下达的计划任务，企业发展、职工收入都是由国家统一考虑。进入市场经济后，许多经济活动都是按市场经济规律进行，各类资源的配置都是以市场为主体，政府干预在逐渐减弱，特别是加入WT0后，在WTO全部协议中，就有90%以上的协议是约束政府的，即今后企业靠政府的扶植来发展、生存已经很艰难难。企业只有靠自己，要生存发展必须遵循市场规律，企业资本积累源于盈利能力，发展靠的是效益最大化的支持。从企业角度看，在价格一定的条件下，要提高效益就必须降低费用支出，控制成本、降低成本。现在许多企业都在积极地探索控制成本的有效手段，大家都非常清楚，谁能控制好成本，谁就掌握了企业发展的主动权，因此，企业要生存和发展就必须控制成本。</p><h2 id="2、产品市场竞争的需要"><a href="#2、产品市场竞争的需要" class="headerlink" title="2、产品市场竞争的需要"></a>2、产品市场竞争的需要</h2><p>随着社会主义市场经济的不断发展，产品的竞争会越来越激烈，竞争的焦点也主要集中在价格上。从行业角度分析，同类产品各企业设计模式不同，工艺方法各异，都会反映出各自的成本不一样，也就产生了各企业与社会平均水平的差异，同样价格的产品有的企业盈利，有的企业就不一定能盈利。这就要找出差异存在的原因，问题主要还是在成本水平上，所以要提高产品市场竞争力，必须控制产品成本。</p><h2 id="3、员工收入提高的需要"><a href="#3、员工收入提高的需要" class="headerlink" title="3、员工收入提高的需要"></a>3、员工收入提高的需要</h2><p>企业订单增加了，工人的任务量加大了，如果职工的个人收入与工作量的增加不成比例时，将会直接影响工人的工作热情。工人的干劲调动不起来，订单完不成，企业又如何发展。增加职工个人收入与增加企业经济效益一样重要，企业的各界领导必须把这一指标作为任期的主要任务来完成。党的十七大提出要全面建设小康社会，把提高人民的生活水平作为全党工作重点，企业在这方面更应有所作为。</p><p>从企业生产的角度讲，增加收入的资金来源有两个：一是增加产品收入，提高产品价格，但在长期买方市场条件下，提高价格不符合市场规律，只能是不断地改进产品结构，开发新一代产品，增加产品的科技含量以满足用户；二是降低产品成本，这是企业能做也是应该做的工作，降低成本首先要正确地引导职工自觉主动地控制成本，要使每个职工都能认识到，做好成本控制是增加个人收入的最有效途径。</p>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;工序成本控制是作业班组负责各类消耗量的控制，项目经理层和企业层负责各种价格和费用标准的控制。</summary>
-    
-    
-    
-    <category term="成本控制管理" scheme="http://vvvvvv.top/categories/%E6%88%90%E6%9C%AC%E6%8E%A7%E5%88%B6%E7%AE%A1%E7%90%86/"/>
-    
-    
-    <category term="工序成本控制" scheme="http://vvvvvv.top/tags/%E5%B7%A5%E5%BA%8F%E6%88%90%E6%9C%AC%E6%8E%A7%E5%88%B6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>营改增-不得开具发票情形</title>
-    <link href="http://vvvvvv.top/2016/05/05/1433bf750c78/"/>
-    <id>http://vvvvvv.top/2016/05/05/1433bf750c78/</id>
-    <published>2016-05-05T13:26:10.000Z</published>
-    <updated>2016-05-05T13:29:45.014Z</updated>
-    
-    <content type="html"><![CDATA[<p>（一）不得向个人开具专用发票；<br>（二）个人不得代开专用发票；</p><span id="more"></span><p>（三）免征增值税不得开专用发票；<br>（四）小规模纳税人不能自行开具专用发票（只能由税务机关代开专用发票）；<br>（五）一般纳税人销售自己使用过的固定资产，按简易办法依3%征收率减按2%征收增值税，不得开具增值税专用发票；<br>（六）零税率应税服务不得开具增值税专用发票；<br>（七）纳税人销售旧货，不得开增值税专用发票；<br>（八）一般纳税人销售废旧物资，不得开增值税专用发票；<br>（九）凡达到增值税一般纳税人标准不申请办理认定手续的纳税人，不得开具专用发票；<br>（十）一般纳税人会计核算不健全，或者不能够提供准确税务资料的纳税人，不得使用增值税专用发票；<br>（十一）简易计税方法不开专票情况（销售使用过的固定资产、销售旧货）</p>]]></content>
-    
-    
-    <summary type="html">营改增-不得开具发票情形</summary>
-    
-    
-    
-    <category term="成本工作" scheme="http://vvvvvv.top/categories/%E6%88%90%E6%9C%AC%E5%B7%A5%E4%BD%9C/"/>
-    
-    
-    <category term="营改增，不得开具发票情形" scheme="http://vvvvvv.top/tags/%E8%90%A5%E6%94%B9%E5%A2%9E%EF%BC%8C%E4%B8%8D%E5%BE%97%E5%BC%80%E5%85%B7%E5%8F%91%E7%A5%A8%E6%83%85%E5%BD%A2/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>营改增-合同签订注意事项</title>
-    <link href="http://vvvvvv.top/2016/05/05/0d7f148bbe4f/"/>
-    <id>http://vvvvvv.top/2016/05/05/0d7f148bbe4f/</id>
-    <published>2016-05-05T13:25:27.000Z</published>
-    <updated>2016-05-05T13:34:21.593Z</updated>
-    
-    <content type="html"><![CDATA[<p>（一）明确按规定提供发票的义务<br>企业向供应商（承包商）采购货物或提供劳务，应当在合同中明确供应商（承包商）按规定提供发票的义务。</p><span id="more"></span><p>（二）明确提供发票的时间要求<br>购买、销售货物或提供劳务，有不同的结算方式，采购接受时，必须结合自身的情况，在合同中明确结算方式，并明确供应商（承包商）提供发票的时间。在合同中明确提供发票的时间如按进度等，但供应商（承包商）在开具发票时必须先通知企业，并在验证发票符合规定后方付款。<br>（三）明确提供发票类型、税率的要求<br>同一税种可能存在多种税目，各税目的税率差别也较大。供应商（承包商）在开具发票时，为了减轻自己的税负，可能会开具低税率的发票，甚至提供与实际业务不符的发票。在合同中明确供应商（承包商）提供发票的类型和适用税率。<br>（四）明确发票不符合规定所导致的赔偿责任<br>企业采购时不能取得发票，或者取得的发票不符合规定都会导致企业的损失。为防止发票问题所导致的损失，企业在采购合同中应当明确供应商（承包商）对发票问题的赔偿责任，明确以下内容：<br>1、明确因供应商（承包商）不及时提供、交付发票或提供的发票不符合规定而造成本企业损失的，供应商（承包商）负有民事赔偿责任的规定。<br>2、明确企业因供应商（承包商）提供的发票而被税务机关调查，供应商（承包商）有协助配合企业做好调查、解释、说明工作的义务。<br>3、明确若存在退货退款、返利、折让等事项，供应商（承包商）应提供证明和开具红字专用发票的义务。<br>（五）合同中必须明确价格和增值税额<br>增值税属于价外税，价格和税金是分离的，这一点与营业税是完全不同的。增值税的含税价和不含税价，不仅仅对企业的税负有不同的影响，其对企业收入和费用的影响是很大的。<br>营业税时代：旅店（一般纳税人）向客户（一般纳税人）收取住宿费10000元，缴纳营业税额为：500元，企业收入为：10000元。客户：费用10000元。<br>增值税时代：增值税：566元，收入：10000-566&#x3D;9434元。客户：进项税额566元，费用9434元。<br>分析：之前甲旅店开具的是营业税发票，客户不能抵扣其增值税，客户通常是不支付营业税款的。营改增之后，客户因为取得增值税专用发票可以抵扣，就如例子中所述的，虽是和营改增之前一样价格的住宿费，营改增之后对客户而言真实花费比之前打了94折；而旅店收入却减少了566元，不调整价格的话，对旅店业绩打击太大。此时甲旅店就必须要与客户沟通协商或修订合同条款以明确服务收费和增值税款。<br>（六）增加双方详细信息栏<br>营改增后，开具增值税专用发票对合同双方名称、地址等的企业信息准确性要远高于原来的营业税开票要求。营改增后，在签订合同时就增加双方详细信息栏。<br>要求买方在合同签订时就把公司名称、纳税人识别号、地址、电话、开户行、账号信息放在详细信息栏，避免开具增值税发票时出现错误。<br>（七）合同中描述清楚不同税率服务内容<br>营改增之后，企业的所有业务都纳入增值税范围了，此时同一家公司可能提供多种税率的服务，甚至同一个合同中包含多种税率的项目的情况也会经常发生。此时一定要在合同中明确不同税率项目的金额，清楚地根据交易的实质描述具体服务内容，以免到时候与税务机关对不同税率服务的实质内容和金额产生争议，带来税务风险。<br>（八）提前筹划跨期合同<br>营改增之后很多的合同处于执行期，这就造成很多合同跨期。此时企业抓紧找对方沟通营改增后税金承担方式等合同细节。营改增之前的缴纳营业税，营改增之后需要缴纳增值税，税务机关是以开具发票的时间点来把控的，跟对方沟通由于营改增后税率变动较大，签订补充协议规避因税制改革给企业带来的税负损失。<br>（九）关注履约期限、地点和方式等细节<br>营改增之后，增值税服务的范围大幅增加，很多的业务可能是跨境服务。这样履约地点、履约方式、履行的地点决定了是否需要缴纳增值税。根据营改增的税收优惠政策规定，境内单位在境外建筑服务、文体业服务是暂免征收增值税的。此时企业在合同中应对履约地点、期限、方式等进行明确，以便税务机关审查时能够准确认定是否符合免税政策。<br>（十）修改发票、付款时间条款<br>增值税专用发票涉及到抵扣环节，取得不了增值税专用发票或者增值税发票不合规，都将对受票方造成法律和经济损失。一般纳税人企业在营改增后可考虑在采购合同中增加“取得的合规增值税专用发票才支付款项”的条款，规避提前款项支付，后来发现认证不了、虚假发票等情况发生。</p>]]></content>
-    
-    
-    <summary type="html">营改增-合同签订注意事项</summary>
-    
-    
-    
-    <category term="成本工作" scheme="http://vvvvvv.top/categories/%E6%88%90%E6%9C%AC%E5%B7%A5%E4%BD%9C/"/>
-    
-    
-    <category term="营改增，合同签订注意事项" scheme="http://vvvvvv.top/tags/%E8%90%A5%E6%94%B9%E5%A2%9E%EF%BC%8C%E5%90%88%E5%90%8C%E7%AD%BE%E8%AE%A2%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>营改增-抵扣关注事项</title>
-    <link href="http://vvvvvv.top/2016/05/05/1070f4e5ef39/"/>
-    <id>http://vvvvvv.top/2016/05/05/1070f4e5ef39/</id>
-    <published>2016-05-05T13:24:34.000Z</published>
-    <updated>2016-05-05T13:34:09.049Z</updated>
-    
-    <content type="html"><![CDATA[<p>（一）相同内容不同名称的发票<br>A公司（一般纳税人）3月20日，收到B公司开具的增值税专用发票两张，其中一张发票开具内容为“技术服务费”，价税合计1万元；一张发票内容为“LED租赁费”，价税合计也是1万元。经核实，第一张发票为B公司上个月提供租赁LED显示屏开具的；第二张发票为本月提供租赁LED显示屏开具的。两张发票对应的合同也是一样的，金额和服务内容一样。</p><span id="more"></span><p>风险提示：<br>同一公司（B）同一服务项目（租赁服务），合同约定服务内容也是一样的，但是开具的发票内容却不一致。<br>（二）内容与实际不符的发票<br>接上例，A公司在C大酒店组织了一次文化论坛，共花费5万元，其中场地租赁费3万元，住宿费5000元，餐饮服务费15000元。C酒店直接将5万元的总费用开具成服务费发票给A公司。<br>风险提示：<br>将实际为租赁场地和餐饮住宿等有关费用，却写成“服务费，显然与事实不符，这样的增值税专用发票是不可以抵扣的。<br>（三）非中文发票<br>A公司通过北京ABC进出口公司进口材料一批，收到ABC公司开具的增值税专用发票3万元，开具内容为“TNU费”。发票实际内容为A办理收取的报关服务费。<br>风险提示：<br>发票开具不规范，使用英文代替。营改增之后所有的收到的所有增值税专用发票要以中文开票，不可以用外文。<br>（四）缺少佐证的发票<br>A公司5月份参加北京某展销会，收到D公司开具的增值税专用发票一张，金额10万元，开票内容为“服务费”，没有如展位费、餐饮住宿费等关于服务费的详细内容。<br>风险提示：<br>开具的增值税专用发票只列明为“服务费”，没有任何费用清单，没有相关证明材料，属于原始凭证缺失，到底服务费金额是没法确定，这样的专票自然不可以抵扣。<br>（五）要件不全的通用缴款书<br>A公司购买了美国一家公司的应税服务50万元，并取得了中华人民共和国税收通用缴款书，但是双方没有签订书面合同。<br>风险提示：<br>根据增值税相关规定，虽然取得了这种应税凭证，但是因为要件不全，仍不可以抵扣。所以A公司即使取得了应税凭证，也不符合增值税抵扣要求。<br>（六）货款没有支付的海关专用缴款书<br>A公司进口了一批货物，金额20万元，已经取得了增值税专用缴款书，但是货款没有支付。<br>风险提示：<br>这种情况是不仅可以抵扣的，而且还得要注意稽核比对的时间限制。</p>]]></content>
-    
-    
-    <summary type="html">营改增-抵扣关注事项</summary>
-    
-    
-    
-    <category term="成本工作" scheme="http://vvvvvv.top/categories/%E6%88%90%E6%9C%AC%E5%B7%A5%E4%BD%9C/"/>
-    
-    
-    <category term="营改增，抵扣关注事项" scheme="http://vvvvvv.top/tags/%E8%90%A5%E6%94%B9%E5%A2%9E%EF%BC%8C%E6%8A%B5%E6%89%A3%E5%85%B3%E6%B3%A8%E4%BA%8B%E9%A1%B9/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>营改增-核算科目</title>
-    <link href="http://vvvvvv.top/2016/05/05/71cc8803040b/"/>
-    <id>http://vvvvvv.top/2016/05/05/71cc8803040b/</id>
-    <published>2016-05-05T13:23:39.000Z</published>
-    <updated>2016-05-05T13:33:56.377Z</updated>
-    
-    <content type="html"><![CDATA[<p>(一)进项税额：应交税费–应交增值税（进项税额）企业购入货物或接受应税劳务和应税服务而支付的、准予从销项税额中抵扣的增值税额。企业购入货物或接受应税劳务和应税服务支付的进项税额，用蓝字登记。</p><span id="more"></span><p>(二)减免税款：应交税费——应交增值税（减免税款）用于记录该企业按规定抵减的增值税应纳税额。初次购买增值税税控系统专用设备支付的费用以及缴纳的技术维护费允许在增值税应纳税额中全额抵减的，应在“应交税费–应交增值税”科目下增设“减免税款”专栏，用于记录该企业按规定抵减的增值税应纳税额。</p><p>(三)已交税金：应交税费–未交增值税（已交税金）记录企业已缴纳的增值税额，企业已缴纳的增值税额用蓝字登记。注意：当月上交上月应交未交的增值税时，借记“应交税费–未交增值税”科目，贷记“银行存款”。</p><p>(四)转出未交增值税：应交税费–应交增值税（转出未交增值税）“转出未交增值税”专栏，记录企业月末转出应交未交的增值税。企业转出当月发生的应交未交的增值税额用蓝字登记。</p><p>(五)销项税额：应交税费–应交增值税（销项税额）“销项税额”专栏，记录企业销售不动产或提供应税服务应收取的增值税额。企业销售不动产或提供应税服务应收取的销项税额，用蓝字登记；发生销售退回或按照税法规定允许扣减的增值税额应冲减销项税额，用红字或负数登记。</p><p>(六)进项税额转出：应交税费——应交增值税（进项税额转出）“进项税额转出”专栏，记录由于各类原因而不应从销项税额中抵扣，按规定转出的进项税额。</p><p>(七)转出多交增值税：应交税费–应交增值税（转出多交增值税）“转出多交增值税”专栏，记录企业月末转出多交的增值税。企业转出当月发生的多交的增值税额用蓝字登记。</p><p>(八)未交增值税：应交增值税–未交增值税“未交增值税”明细科目，核算企业月末转入的应交未交增值税额，转入多交的增值税也在本明细科目核算。</p><p>(九)待抵扣进项税额：应交税费——待抵扣进项税额“待抵扣进项税额”明细科目，核算企业按税法规定不符合抵扣条件，暂不予在本期申报抵扣的进项税额。</p><p>(十)增值税留抵税额：应交税费–增值税留抵税额“增值税留抵税额”明细科目，核算一般纳税人试点当月按照规定不得从应税服务的销项税额中抵扣的月初增值税留抵税额。</p><p>(十一)取得过渡性财政扶持资金：企业“营改增”转换期间因实际税负增加的，将有可能向财税部门申请取得财政扶持资金，期末有确凿证据表明企业能够符合财政扶持政策规定的相关条件且预计能够收到财政扶持资金时，按应收的金额确认营业外收入。</p>]]></content>
-    
-    
-    <summary type="html">营改增-核算科目</summary>
-    
-    
-    
-    <category term="成本工作" scheme="http://vvvvvv.top/categories/%E6%88%90%E6%9C%AC%E5%B7%A5%E4%BD%9C/"/>
-    
-    
-    <category term="营改增，核算科目" scheme="http://vvvvvv.top/tags/%E8%90%A5%E6%94%B9%E5%A2%9E%EF%BC%8C%E6%A0%B8%E7%AE%97%E7%A7%91%E7%9B%AE/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>劣质成本</title>
-    <link href="http://vvvvvv.top/2016/04/26/8afe035186b1/"/>
-    <id>http://vvvvvv.top/2016/04/26/8afe035186b1/</id>
-    <published>2016-04-26T14:37:03.000Z</published>
-    <updated>2016-04-26T14:41:04.084Z</updated>
-    
-    <content type="html"><![CDATA[<p>　　现代质量管理的焦点是在实现顾客满意目标的同时，取得最佳的财务贡献，使劣质成本降到最低限度。<br>在实际管理中，诸多的质量成本项目中，只有显而易见的项目才被考虑。正如冰山浮出水面的只是其中一角。<br>如浪费、报废、返工&#x2F;返修、测试和检验成本（分析不合格原因）、顾客投诉、退货等。<br>其总额约占总成本的5%～10%，占销售额4%～5%.而冰山下面的则是其中的大部分，约占营运成本的15%，<br>包括：加班过多、上门服务支出过多、文件延迟、对现状缺少跟踪、报价或结账错误、未正确完成销售定单、不必要的快递、人员流动过于频繁、顾客赔偿备用金（保险）等等。<br>而这些成本大多并未直接计人损益表或资产负债表。这些真正“隐藏”的成本在系水平面以下部分。</p><p>　　随着对劣质成本的认识的不断提高，人们逐渐发现：<br>质量相关的成本较财务报表所透露的数字高（约占销售额的20%到40%）；质量成本不仅发生在实现过程，同样发生在支持过程；<br>不仅产品制造或服务提供部门有，同样其他辅助部门也有；这些成本大多是可以避免的，但在一般企业里却没有人负责消灭它们。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;　　现代质量管理的焦点是在实现顾客满意目标的同时，取得最佳的财务贡献，使劣质成本降到最低限度。&lt;br&gt;在实际管理中，诸多的质量成本项目中，只有显而易见的项目才被考虑。正如冰山浮出水面的只是其中一角。&lt;br&gt;如浪费、报废、返工&amp;#x2F;返修、测试和检验成本（分析不合格原因）</summary>
-      
-    
-    
-    
-    <category term="成本工作" scheme="http://vvvvvv.top/categories/%E6%88%90%E6%9C%AC%E5%B7%A5%E4%BD%9C/"/>
-    
-    
-    <category term="劣质成本" scheme="http://vvvvvv.top/tags/%E5%8A%A3%E8%B4%A8%E6%88%90%E6%9C%AC/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>行尸走肉</title>
-    <link href="http://vvvvvv.top/2016/03/08/45552597812e/"/>
-    <id>http://vvvvvv.top/2016/03/08/45552597812e/</id>
-    <published>2016-03-08T09:58:32.000Z</published>
-    <updated>2016-04-26T14:43:10.272Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="质量成本构成"><a href="#质量成本构成" class="headerlink" title="质量成本构成"></a>质量成本构成</h1><h2 id="1-质量策划费用"><a href="#1-质量策划费用" class="headerlink" title="1.质量策划费用"></a>1.质量策划费用</h2><p>　　质量策划费用是指有关部门或人员用于策划所需时间的费用支出：例如规划质量体系的具体细节所需的时间；根据产品设计和顾客对质量的要求，编制用于材料、工序和产品质量控制的方法、程序、指导书等所需的时间。质量策划费用还包括从事其他质量策划工作所需时间的费用支出，如可靠性研究，试生产质量分析，为编制试验、检验和工序控制的指导书或操作规程等所需时间。</p><h2 id="2-过程控制费用"><a href="#2-过程控制费用" class="headerlink" title="2.过程控制费用"></a>2.过程控制费用</h2><p>　　过程控制费用是为质量控制和改进现有过程能力的研究和分析制造过程（包括供应商的制造工序）所需全部时间的费用支出；为有效实施或执行质量规划而对车间工作人员提供技术指导所需的费用支出；在生产操作过程中自始至终进行控制所支出的费用。</p><h2 id="3-顾客调查费用"><a href="#3-顾客调查费用" class="headerlink" title="3.顾客调查费用"></a>3.顾客调查费用</h2><p>　　顾客调查费用是为了掌握顾客的需求所开展的相关调查研究和分析所花费的费用。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;质量成本构成&quot;&gt;&lt;a href=&quot;#质量成本构成&quot; class=&quot;headerlink&quot; title=&quot;质量成本构成&quot;&gt;&lt;/a&gt;质量成本构成&lt;/h1&gt;&lt;h2 id=&quot;1-质量策划费用&quot;&gt;&lt;a href=&quot;#1-质量策划费用&quot; class=&quot;headerlink&quot; </summary>
-      
-    
-    
-    
-    <category term="成本工作" scheme="http://vvvvvv.top/categories/%E6%88%90%E6%9C%AC%E5%B7%A5%E4%BD%9C/"/>
-    
-    
-    <category term="质量成本" scheme="http://vvvvvv.top/tags/%E8%B4%A8%E9%87%8F%E6%88%90%E6%9C%AC/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>excel求到期日</title>
-    <link href="http://vvvvvv.top/2016/01/07/839a3da24f5c/"/>
-    <id>http://vvvvvv.top/2016/01/07/839a3da24f5c/</id>
-    <published>2016-01-07T13:52:59.000Z</published>
-    <updated>2016-01-07T14:03:49.217Z</updated>
-    
-    <content type="html"><![CDATA[<p>许多企业以25号为结账日期，并以25号与客户对账。</p><span id="more"></span><p>客户回款有期限，如20天 30天，那么如何登记台账呢<br>比如：<br>   在excel中，D列为发货日期  E列为回款期限  要在F列显示回款最后日期<br>如：发货日期 2014-10-26 回款期 30天。  那么对账日期为2014-11-25，加30天即2014-12-25为回款最后日期。</p><p>所以在F2可以写入公式 <code>=IF(DAY(D2)&gt;25,DATE(YEAR(D2),MONTH(D2)+1,25+E2),DATE(YEAR(D2),MONTH(D2),25+E2))</code></p>]]></content>
-    
-    
-    <summary type="html">excel求到期日</summary>
-    
-    
-    
-    <category term="EXCEL" scheme="http://vvvvvv.top/categories/EXCEL/"/>
-    
-    
-    <category term="到期日" scheme="http://vvvvvv.top/tags/%E5%88%B0%E6%9C%9F%E6%97%A5/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>流水生产中废品率的计算应用</title>
-    <link href="http://vvvvvv.top/2016/01/02/cd291eeb4aa8/"/>
-    <id>http://vvvvvv.top/2016/01/02/cd291eeb4aa8/</id>
-    <published>2016-01-02T15:49:18.000Z</published>
-    <updated>2016-01-02T16:01:27.079Z</updated>
-    
-    <content type="html"><![CDATA[<p>   计算废品率公式：废品数&#x2F;投入数<em>100%，或者 废品数&#x2F;（废品数+合格数）</em>100%</p><span id="more"></span><p>对于流水生产企业实际工作中应用此公式会造成生产情况的偏差。<br>一般流水生产习惯按工艺设定工序：A工序，B工序，C工序。。。<br>计算废品率公式应当用相对数法<br>  废品率&#x3D;1-各工序合格率之积<br>究其原因是公式的分母（母体）可能不一样！</p>]]></content>
-    
-    
-    <summary type="html">流水生产中废品率的计算应用</summary>
-    
-    
-    
-    <category term="成本工作" scheme="http://vvvvvv.top/categories/%E6%88%90%E6%9C%AC%E5%B7%A5%E4%BD%9C/"/>
-    
-    
-    <category term="废品率" scheme="http://vvvvvv.top/tags/%E5%BA%9F%E5%93%81%E7%8E%87/"/>
     
   </entry>
   
