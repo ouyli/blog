@@ -291,10 +291,10 @@
   
   <entry>
     <title>SAP标准成本计划及发布CK40N</title>
-    <link href="http://vvvvvv.top/2019/07/12/43a8c952805f/"/>
-    <id>http://vvvvvv.top/2019/07/12/43a8c952805f/</id>
-    <published>2019-07-11T18:01:09.000Z</published>
-    <updated>2022-07-11T18:05:21.499Z</updated>
+    <link href="http://vvvvvv.top/2019/07/12/d942fbcad2d2/"/>
+    <id>http://vvvvvv.top/2019/07/12/d942fbcad2d2/</id>
+    <published>2019-07-12T04:01:09.000Z</published>
+    <updated>2019-07-12T02:09:21.487Z</updated>
     
     <content type="html"><![CDATA[<p>事务代码（CK40N）完成成本计划和发布。<br>CK40N输入“成本运行”的代号、日期和描述，代号根据内部规则输入即可，日期一般输入标准价要生效的日期，然后点击“新建”创建一个“成本运行”的变式。<br>按照TAB依次输入相关参数并保存。<br>按照从上到下的顺序依次执行这6个步骤就能完成标准成本的测算、标记和发布了，每一步的操作都相似，有的步骤数据较多可能需要后台运行。</p>]]></content>
     
